@@ -6,7 +6,8 @@ import {
   CommonFlag,
   CommonCity,
   CommonCountry,
-  PCenter
+  PCenter,
+  DivMaxW296
 } from "../../commonComponents";
 import rusFlag from "../../res/images/flag-russia.png";
 import armFlag from "../../res/images/flag-armenia.png";
@@ -22,6 +23,8 @@ const Group = styled.img`
 `;
 
 const CitiesAndPrices = styled.div`
+  display: block;
+  justify-content: center;
   margin-bottom: 80px;
 `;
 
@@ -46,7 +49,7 @@ export default () => (
     <H2Center>Лучшие цены на авиабилеты за последний месяц</H2Center>
     <CitiesAndPrices>
       <div className="row">
-        <div className="col-md-3 col-sm-offset-1">
+        <div className="col-md-3 col-md-offset-1">
           <div className="row">
             <div className="col-xs-2">
               <Flag src={rusFlag} />
@@ -84,41 +87,43 @@ export default () => (
           </div>
         </div>
         <div className="col-md-4">
-          <div className="row">
-            <div className="col-xs-2">
-              <Flag src={rusFlag} />
+          <DivMaxW296>
+            <div className="row">
+              <div className="col-xs-2">
+                <Flag src={rusFlag} />
+              </div>
+              <div className="col-xs-10">
+                <City>Ереван</City>
+                <Country>Армения</Country>
+              </div>
             </div>
-            <div className="col-xs-10">
-              <City>Ереван</City>
-              <Country>Армения</Country>
+            <div className="row">
+              <div className="col-xs-6">
+                <FromCity>Из Москвы</FromCity>
+                <FromCity>Из Санкт-Петербурга</FromCity>
+                <FromCity>Из Сочи</FromCity>
+                <FromCity>Из Краснодара</FromCity>
+                <FromCity>Из Ростова-на-Дону</FromCity>
+              </div>
+              <div className="col-xs-6">
+                <Price>
+                  <BlueLink>от 6 758 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 9 932 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 11 951 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 11 741 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 11 956 &#x584;</BlueLink>
+                </Price>
+              </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-6">
-              <FromCity>Из Москвы</FromCity>
-              <FromCity>Из Санкт-Петербурга</FromCity>
-              <FromCity>Из Сочи</FromCity>
-              <FromCity>Из Краснодара</FromCity>
-              <FromCity>Из Ростова-на-Дону</FromCity>
-            </div>
-            <div className="col-xs-6">
-              <Price>
-                <BlueLink>от 6 758 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 9 932 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 11 951 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 11 741 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 11 956 &#x584;</BlueLink>
-              </Price>
-            </div>
-          </div>
+          </DivMaxW296>
         </div>
         <div className="col-md-3">
           <div className="row">

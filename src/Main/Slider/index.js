@@ -7,7 +7,9 @@ import imgAgency3 from "./agencyLogo-3.png";
 import imgAgency4 from "./agencyLogo-4.png";
 import imgAgency5 from "./agencyLogo-5.png";
 
-const Slider = styled.section``;
+const Slider = styled.section`
+  padding-bottom: 28px;
+`;
 const SliderH2 = styled.h2`
   color: #5c5c5c;
   font-size: 32px;

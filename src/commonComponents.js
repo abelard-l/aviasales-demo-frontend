@@ -10,6 +10,15 @@ export const BlueLink = styled.a`
   }
 `;
 
+export const GrayLink = styled.a`
+  color: #5b5b5c;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const H2Center = styled.h2`
   color: #4a4a4a;
   font-size: 24px;
@@ -22,6 +31,11 @@ export const H2Center = styled.h2`
 
 export const FontBold = styled.span`
   font-weight: bold;
+`;
+
+export const DivMaxW296 = styled.div`
+  margin: 0 auto;
+  max-width: 296px;
 `;
 
 export const CommonFlag = styled.img``;
