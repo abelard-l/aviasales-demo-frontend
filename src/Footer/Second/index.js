@@ -50,6 +50,7 @@ const Download = styled.div`
 `;
 
 const DownloadImg = styled.img`
+  cursor: pointer;
   margin-bottom: 34px;
   margin-left: 10px;
 `;

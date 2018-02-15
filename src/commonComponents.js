@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BlueLink = styled.a`
   color: #00ace2;
+  cursor: pointer;
   text-decoration: none;
 
   &:hover {
@@ -16,6 +17,7 @@ export const BlueLink = styled.a`
 
 export const GrayLink = styled.a`
   color: #5b5b5c;
+  cursor: pointer;
   text-decoration: none;
 
   &:hover {
@@ -47,7 +49,7 @@ export const DivMaxW296 = styled.div`
 export const CommonFlag = styled.img``;
 export const CommonCity = styled.div`
   color: #5b5b5c;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 32px;
 `;
@@ -56,6 +58,7 @@ export const CommonCountry = styled.div`
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
+  text-transform: uppercase;
 `;
 
 export const PCenter = styled.p`

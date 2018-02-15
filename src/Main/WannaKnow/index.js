@@ -16,7 +16,13 @@ const WannaKnow = styled.section`
 const WannaDiscount = styled.p``;
 
 const SocialMedias = styled.div``;
-const SocialMedia = styled.img``;
+const SocialMedia = styled.img`
+  margin-right: 6px;
+`;
+
+const Subscribe = styled.div`
+  text-align: right;
+`;
 
 const Input = styled.input`
   border: 1px solid #a0b0b9;
@@ -32,6 +38,7 @@ const Input = styled.input`
 const Button = styled.button`
   color: white;
   background-color: #ff8e41;
+  border: none;
   font-size: 16px;
   line-height: 20px;
   max-width: 139px;
@@ -59,8 +66,10 @@ export default () => (
         </SocialMedias>
       </div>
       <div className="col-md-4">
-        <Input type="text" defaultValue="Ваш email" />
-        <Button>Подписаться</Button>
+        <Subscribe>
+          <Input type="text" placeholder="Ваш email" />
+          <Button>Подписаться</Button>
+        </Subscribe>
       </div>
     </div>
   </WannaKnow>

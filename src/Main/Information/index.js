@@ -7,7 +7,9 @@ import { BlueLink } from "../../commonComponents";
 
 const Information = styled.section``;
 
-const Img = styled.img``;
+const Img = styled.img`
+  padding-right: 4px;
+`;
 
 const P = styled.p`
   font-size: 14px;
@@ -18,6 +20,7 @@ const H3 = styled.h3``;
 
 const InfoLink = styled.span`
   display: inline-block;
+  padding-left: 3px;
 `;
 
 export default () => (
@@ -38,7 +41,7 @@ export default () => (
         как пользоваться поиском и экономить на перелетах от 1000 до 20 000 руб
         в год.
         <InfoLink>
-          <BlueLink>&nbsp;Подробнее</BlueLink>
+          <BlueLink>Подробнее</BlueLink>
         </InfoLink>
       </P>
       <H3>
@@ -59,7 +62,7 @@ export default () => (
         электронный билет, приобретенный онлайн, стоит дешевле своего бумажного
         аналога.
         <InfoLink>
-          <BlueLink>&nbsp;Подробнее</BlueLink>
+          <BlueLink>Подробнее</BlueLink>
         </InfoLink>
       </P>
       <H3>
@@ -68,11 +71,10 @@ export default () => (
       <P>
         Есть масса путеводителей по странам, но ни одного о том, как провести
         время в самолете. Для того, чтобы сделать ваш перелет максимально
-        комфортным, мы написали 20 советов о подготовке к путешествию. Ведь
-        настоящее путешествие начинается со слов «Добро пожаловать на борт
-        нашего самолета»!
+        комфортным, мы написали 20 советов. Ведь настоящее путешествие
+        начинается со слов «Добро пожаловать на борт нашего самолета»!
         <InfoLink>
-          <BlueLink>&nbsp;Подробнее</BlueLink>
+          <BlueLink>Подробнее</BlueLink>
         </InfoLink>
       </P>
     </div>

@@ -20,12 +20,27 @@ const Cards = styled.section`
 `;
 
 const Card = styled.img`
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   width: 100%;
 `;
 
-const WrapFlag = styled.div``;
-const LeftSide = styled.div``;
-const RightSide = styled.div;
+const WrapCard = styled.div`
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-bottom: 31px;
+  padding: 24px 10px;
+`;
+const WrapFlag = styled.div`
+  flex-basis: 30px;
+`;
+const LeftSide = styled.div`
+  flex-basis: 55%;
+`;
+const RightSide = styled.div`
+  flex-basis: 45%;
+`;
 
 const Flag = CommonFlag;
 
@@ -34,7 +49,7 @@ const Country = CommonCountry;
 
 const Price = styled.div`
   color: #00bae8;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 32px;
   text-align: right;
 `;
@@ -49,125 +64,125 @@ const Date = styled.div`
 export default () => (
   <Cards>
     <div className="row">
-      <div className="col-sm-5 col-xs-offset-1">
+      <div className="col-sm-5 col-sm-offset-1">
         <Card src={card1} />
-        <div className="row">
-          <div className="col-xs-2">
+        <WrapCard>
+          <WrapFlag>
             <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
+          </WrapFlag>
+          <LeftSide>
             <City>Краснодар</City>
             <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
                 Найти от 1212 <up>&#x584;</up>
               </BlueLink>
             </Price>
             <Date>18 марта</Date>
-          </div>
-        </div>
+          </RightSide>
+        </WrapCard>
       </div>
       <div className="col-sm-5">
         <Card src={card2} />
-        <div className="row">
-          <div className="col-xs-2">
+        <WrapCard>
+          <WrapFlag>
             <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
-            <City>Краснодар</City>
+          </WrapFlag>
+          <LeftSide>
+            <City>Сочи (Адлер)</City>
             <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
+                Найти от 1 334 <up>&#x584;</up>
               </BlueLink>
             </Price>
-            <Date>18 марта</Date>
-          </div>
-        </div>
+            <Date>27 марта</Date>
+          </RightSide>
+        </WrapCard>
       </div>
-      <div className="col-sm-5 col-xs-offset-1">
+      <div className="col-sm-5 col-sm-offset-1">
         <Card src={card3} />
-        <div className="row">
-          <div className="col-xs-2">
+        <WrapCard>
+          <WrapFlag>
             <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
-            <City>Краснодар</City>
+          </WrapFlag>
+          <LeftSide>
+            <City>Санкт-Петербург</City>
             <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
+                Найти от 1 508 <up>&#x584;</up>
               </BlueLink>
             </Price>
-            <Date>18 марта</Date>
-          </div>
-        </div>
+            <Date>19 февраля</Date>
+          </RightSide>
+        </WrapCard>
       </div>
       <div className="col-sm-5">
         <Card src={card4} />
-        <div className="row">
-          <div className="col-xs-2">
+        <WrapCard>
+          <WrapFlag>
             <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
-            <City>Краснодар</City>
+          </WrapFlag>
+          <LeftSide>
+            <City>Минеральные Воды</City>
             <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
+                Найти от 2 074 <up>&#x584;</up>
               </BlueLink>
             </Price>
-            <Date>18 марта</Date>
-          </div>
-        </div>
+            <Date>13 марта</Date>
+          </RightSide>
+        </WrapCard>
       </div>
-      <div className="col-sm-5 col-xs-offset-1">
+      <div className="col-sm-5 col-sm-offset-1">
         <Card src={card5} />
-        <div className="row">
-          <div className="col-xs-2">
+        <WrapCard>
+          <WrapFlag>
             <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
-            <City>Краснодар</City>
+          </WrapFlag>
+          <LeftSide>
+            <City>Симферополь (Крым)</City>
             <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
+                Найти от 2 407 <up>&#x584;</up>
               </BlueLink>
             </Price>
-            <Date>18 марта</Date>
-          </div>
-        </div>
+            <Date>13 марта</Date>
+          </RightSide>
+        </WrapCard>
       </div>
       <div className="col-sm-5">
         <Card src={card6} />
-        <div className="row">
-          <div className="col-xs-2">
-            <Flag src={rusFlag} />
-          </div>
-          <div className="col-xs-5">
-            <City>Краснодар</City>
-            <Country>Россия</Country>
-          </div>
-          <div className="col-xs-5">
+        <WrapCard>
+          <WrapFlag>
+            <Flag src={spaFlag} />
+          </WrapFlag>
+          <LeftSide>
+            <City>Барселона</City>
+            <Country>ИСПАНИЯ</Country>
+          </LeftSide>
+          <RightSide>
             <Price>
               <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
+                Найти от 4 247 <up>&#x584;</up>
               </BlueLink>
             </Price>
-            <Date>18 марта</Date>
-          </div>
-        </div>
+            <Date>24 марта</Date>
+          </RightSide>
+        </WrapCard>
       </div>
     </div>
   </Cards>

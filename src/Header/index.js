@@ -59,6 +59,7 @@ const Airport = styled.p`
 const DestFromBtn = styled.button`
   background: url(${arrows}) no-repeat center center;
   border: none;
+  cursor: pointer;
   height: 18px;
   width: 16px;
 `;
@@ -83,6 +84,7 @@ const DateTo = styled.div`
 const DateBtn = styled.button`
   background: url(${calendar}) no-repeat center center;
   border: none;
+  cursor: pointer;
   height: 20px;
   width: 17px;
 `;
@@ -96,6 +98,7 @@ const FlightType = styled.div`
 const FlightTypeBtn = styled.button`
   background: url(${arrowDown}) no-repeat center center;
   border: none;
+  cursor: pointer;
   height: 5px;
   width: 10px;
 `;
@@ -154,6 +157,7 @@ const FindTicketsBtn = styled.button`
   background: #ff9241;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   font-size: 28px;
   font-style: normal;
   font-weight: 500;

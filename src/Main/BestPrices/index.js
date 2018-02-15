@@ -6,8 +6,7 @@ import {
   CommonFlag,
   CommonCity,
   CommonCountry,
-  PCenter,
-  DivMaxW296
+  PCenter
 } from "../../commonComponents";
 import rusFlag from "../../res/images/flag-russia.png";
 import armFlag from "../../res/images/flag-armenia.png";
@@ -23,16 +22,33 @@ const Group = styled.img`
 `;
 
 const CitiesAndPrices = styled.div`
-  display: block;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 80px;
+`;
+
+const Card = styled.div`
+  flex-basis: 31%;
+`;
+
+const Title = styled.div`
+  display: flex;
+`;
+const WrapFlag = styled.div`
+  flex-basis: 30px;
+  padding-right: 4px;
+`;
+const TitleInfo = styled.div`
+  flex-basis: auto;
 `;
 
 const Flag = CommonFlag;
 const City = CommonCity;
 const Country = CommonCountry;
 const FromCity = styled.div``;
-const Price = styled.div``;
+const Price = styled.div`
+  text-align: right;
+`;
 
 const SubText = styled.p`
   color: #a0b0b9;
@@ -47,65 +63,65 @@ export default () => (
   <BestPrices>
     <Group src={imgGroup} />
     <H2Center>Лучшие цены на авиабилеты за последний месяц</H2Center>
-    <CitiesAndPrices>
-      <div className="row">
-        <div className="col-md-3 col-md-offset-1">
-          <div className="row">
-            <div className="col-xs-2">
-              <Flag src={rusFlag} />
-            </div>
-            <div className="col-xs-10">
-              <City>Симферополь (Крым)</City>
-              <Country>Крым</Country>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-6">
-              <FromCity>Из Москвы</FromCity>
-              <FromCity>Из Санкт-Петербурга</FromCity>
-              <FromCity>Из Новосибирска</FromCity>
-              <FromCity>Из Екатеринбурга</FromCity>
-              <FromCity>Из Челябинска</FromCity>
-            </div>
-            <div className="col-xs-6">
-              <Price>
-                <BlueLink>от 4 813 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 7 857 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 15 127 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 9 275 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 9 148 &#x584;</BlueLink>
-              </Price>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <DivMaxW296>
-            <div className="row">
-              <div className="col-xs-2">
+    <div className="row">
+      <div className="col-sm-offset-1 col-sm-10">
+        <CitiesAndPrices>
+          <Card>
+            <Title>
+              <WrapFlag>
                 <Flag src={rusFlag} />
+              </WrapFlag>
+              <TitleInfo>
+                <City>Симферополь (Крым)</City>
+                <Country>Крым</Country>
+              </TitleInfo>
+            </Title>
+            <div className="row">
+              <div className="col-xs-7">
+                <FromCity>Из Москвы</FromCity>
+                <FromCity>Из Санкт-Петербурга</FromCity>
+                <FromCity>Из Новосибирска</FromCity>
+                <FromCity>Из Екатеринбурга</FromCity>
+                <FromCity>Из Челябинска</FromCity>
               </div>
-              <div className="col-xs-10">
+              <div className="col-xs-5">
+                <Price>
+                  <BlueLink>от 4 813 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 7 857 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 15 127 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 9 275 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 9 148 &#x584;</BlueLink>
+                </Price>
+              </div>
+            </div>
+          </Card>
+          <Card>
+            <Title>
+              <WrapFlag>
+                <Flag src={armFlag} />
+              </WrapFlag>
+              <TitleInfo>
                 <City>Ереван</City>
                 <Country>Армения</Country>
-              </div>
-            </div>
+              </TitleInfo>
+            </Title>
             <div className="row">
-              <div className="col-xs-6">
+              <div className="col-xs-7">
                 <FromCity>Из Москвы</FromCity>
                 <FromCity>Из Санкт-Петербурга</FromCity>
                 <FromCity>Из Сочи</FromCity>
                 <FromCity>Из Краснодара</FromCity>
                 <FromCity>Из Ростова-на-Дону</FromCity>
               </div>
-              <div className="col-xs-6">
+              <div className="col-xs-5">
                 <Price>
                   <BlueLink>от 6 758 &#x584;</BlueLink>
                 </Price>
@@ -123,47 +139,47 @@ export default () => (
                 </Price>
               </div>
             </div>
-          </DivMaxW296>
-        </div>
-        <div className="col-md-3">
-          <div className="row">
-            <div className="col-xs-2">
-              <Flag src={rusFlag} />
+          </Card>
+          <Card>
+            <Title>
+              <WrapFlag>
+                <Flag src={molFlag} />
+              </WrapFlag>
+              <TitleInfo>
+                <City>Кишинёв</City>
+                <Country>Молдавия</Country>
+              </TitleInfo>
+            </Title>
+            <div className="row">
+              <div className="col-xs-7">
+                <FromCity>Из Москвы</FromCity>
+                <FromCity>Из Санкт-Петербурга</FromCity>
+                <FromCity>Из Краснодара</FromCity>
+                <FromCity>Из Сургута</FromCity>
+                <FromCity>Из Нового Уренгоя</FromCity>
+              </div>
+              <div className="col-xs-5">
+                <Price>
+                  <BlueLink>от 8 319 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 10 800 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 12 098 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 16 277 &#x584;</BlueLink>
+                </Price>
+                <Price>
+                  <BlueLink>от 15 987 &#x584;</BlueLink>
+                </Price>
+              </div>
             </div>
-            <div className="col-xs-10">
-              <City>Кишинёв</City>
-              <Country>Молдавия</Country>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-6">
-              <FromCity>Из Москвы</FromCity>
-              <FromCity>Из Санкт-Петербурга</FromCity>
-              <FromCity>Из Краснодара</FromCity>
-              <FromCity>Из Сургута</FromCity>
-              <FromCity>Из Нового Уренгоя</FromCity>
-            </div>
-            <div className="col-xs-6">
-              <Price>
-                <BlueLink>от 8 319 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 10 800 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 12 098 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 16 277 &#x584;</BlueLink>
-              </Price>
-              <Price>
-                <BlueLink>от 15 987 &#x584;</BlueLink>
-              </Price>
-            </div>
-          </div>
-        </div>
+          </Card>
+        </CitiesAndPrices>
       </div>
-    </CitiesAndPrices>
+    </div>
     <PCenter>
       Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
       мира.<br /> Поиск и сравнение цен на авиабилеты среди 100 агентств и 728

@@ -17,19 +17,37 @@ const Title = styled.h2`
   padding-top: 24px;
 `;
 
+const Cards = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Card = styled.div`
   background: white;
+  flex-basis: 32%;
 `;
 
 const Top = styled.div`
   color: #ffffff;
   background: #cd2027;
   font-size: 16px;
+  justify-content: flex-start;
   line-height: 20px;
   padding: 22px 18px;
+  position: relative;
 `;
 
-const ImgTop = styled.img``;
+const TopRightSide = styled.div`
+  align-items: center;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 50px;
+`;
+
+const ImgTopRight = styled.img``;
 
 const Img = styled.img`
   padding: 22px 12px;
@@ -56,7 +74,7 @@ const P = styled.p`
   font-size: 12px;
   height: 80px;
   line-height: 16px;
-  padding-left: 16px;
+  padding: 0 12px;
 `;
 
 const Button = styled.button`
@@ -65,6 +83,7 @@ const Button = styled.button`
   border: 2px solid #cd1f27;
   border-radius: 3px;
   box-sizing: border-box;
+  cursor: pointer;
   font-size: 16px;
   line-height: 20px;
   margin: 0px 16px 20px 16px;
@@ -83,6 +102,7 @@ const PBottomLeft = styled.p`
 `;
 
 const A = styled.a`
+  cursor: pointer;
   text-decoration: underline;
 
   &:hover {
@@ -100,28 +120,38 @@ export default () => (
       <Title>Спецпредложения на авиабилеты</Title>
     </div>
     <div className="row">
-      <div className="col-md-3 col-md-offset-1">
-        <Card>
-          <Top>Билеты от 499 рублей!</Top>
-          <div className="row">
-            <div className="col-xs-6">
-              <Img src={pobeda} />
-            </div>
-            <div className="col-xs-6">
-              <Price>от 499 &#x584;</Price>
-              <Days>Осталось 45 дней</Days>
-            </div>
-          </div>
-          <P>
-            Билеты от 499 рублей! Специальное предложение от авиакомпании Победа
-          </P>
-          <Button>Узнать подробности</Button>
-        </Card>
-      </div>
-      <div className="col-md-4">
-        <DivMaxW296>
+      <div className="col-sm-offset-1 col-sm-10">
+        <Cards>
           <Card>
-            <Top>В Нью-Йорк от 20680 рублей!</Top>
+            <Top>
+              Билеты от 499 рублей!
+              <TopRightSide>
+                <ImgTopRight src={circle} />
+              </TopRightSide>
+            </Top>
+            <div className="row">
+              <div className="col-xs-6">
+                <Img src={pobeda} />
+              </div>
+              <div className="col-xs-6">
+                <Price>от 499 &#x584;</Price>
+                <Days>Осталось 45 дней</Days>
+              </div>
+            </div>
+            <P>
+              Билеты от 499 рублей! Специальное предложение от авиакомпании
+              Победа
+            </P>
+            <Button>Узнать подробности</Button>
+          </Card>
+
+          <Card>
+            <Top>
+              В Нью-Йорк от 20680 рублей!
+              <TopRightSide>
+                <ImgTopRight src={circle} />
+              </TopRightSide>
+            </Top>
             <div className="row">
               <div className="col-xs-6">
                 <Img src={lufthansa} />
@@ -137,26 +167,30 @@ export default () => (
             </P>
             <Button>Узнать подробности</Button>
           </Card>
-        </DivMaxW296>
-      </div>
-      <div className="col-md-3">
-        <Card>
-          <Top>В Лос-Анджелес от 22360 р...</Top>
-          <div className="row">
-            <div className="col-xs-6">
-              <Img src={lufthansa} />
+
+          <Card>
+            <Top>
+              В Лос-Анджелес от 22360 р...
+              <TopRightSide>
+                <ImgTopRight src={circle} />
+              </TopRightSide>
+            </Top>
+            <div className="row">
+              <div className="col-xs-6">
+                <Img src={lufthansa} />
+              </div>
+              <div className="col-xs-6">
+                <Price>от 20 360 &#x584;</Price>
+                <Days>Осталось 19 дней</Days>
+              </div>
             </div>
-            <div className="col-xs-6">
-              <Price>от 20 360 &#x584;</Price>
-              <Days>Осталось 19 дней</Days>
-            </div>
-          </div>
-          <P>
-            Из Москвы в США от 22360 рублей! Специальное предложение от
-            авиакомпании Lufthansa
-          </P>
-          <Button>Узнать подробности</Button>
-        </Card>
+            <P>
+              Из Москвы в США от 22360 рублей! Специальное предложение от
+              авиакомпании Lufthansa
+            </P>
+            <Button>Узнать подробности</Button>
+          </Card>
+        </Cards>
       </div>
     </div>
     <BottomParagraphs>
