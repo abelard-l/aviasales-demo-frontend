@@ -47,12 +47,23 @@ const SocLink = styled.a`
 
 const Download = styled.div`
   text-align: right;
+
+  @media (max-width: 991px) {
+    margin-top: 20px;
+    text-align: left;
+  }
 `;
 
 const DownloadImg = styled.img`
   cursor: pointer;
   margin-bottom: 34px;
   margin-left: 10px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
 `;
 
 const CopyLeft = styled.div`
@@ -62,12 +73,16 @@ const CopyLeft = styled.div`
 const CopyRight = styled.div`
   color: #5b5b5c;
   text-align: right;
+
+  @media (max-width: 991px) {
+    text-align: left;
+  }
 `;
 
 export default () => (
   <Second>
     <div className="row">
-      <div className="col-md-7">
+      <div className="col-lg-7 col-md-12">
         <Menu>
           <MenuItem>
             <GrayLink src="#">О компании</GrayLink>
@@ -105,7 +120,7 @@ export default () => (
         </SocLinks>
         <CopyLeft>Поиск и бронирование отелей</CopyLeft>
       </div>
-      <div className="col-md-5">
+      <div className="col-lg-5 col-md-12">
         <Download>
           <DownloadImg src={apple} />
           <DownloadImg src={google} />

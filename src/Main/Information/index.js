@@ -25,7 +25,7 @@ const InfoLink = styled.span`
 
 export default () => (
   <Information>
-    <div className="col-md-offset-1">
+    <div className="col-lg-offset-1 col-md-offset-0">
       <H3>
         <Img src={info1} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
       </H3>

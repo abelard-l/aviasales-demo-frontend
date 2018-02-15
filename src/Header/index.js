@@ -17,6 +17,10 @@ const Header = styled.header`
     #196ebd 73.68%
   );
   padding-bottom: 250px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 122px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -40,12 +44,20 @@ const H2 = styled.h2`
 
 const TicketParams = styled.form`
   display: flex;
+  flex-wrap: nowrap;
+
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const DestFrom = styled.div`
   flex-basis: 22%;
-  margin: 1px;
   position: relative;
+
+  @media (max-width: 991px) {
+    flex-basis: 50%;
+  }
 `;
 
 const Airport = styled.p`
@@ -66,19 +78,30 @@ const DestFromBtn = styled.button`
 
 const DestTo = styled.div`
   flex-basis: 22%;
-  margin: 1px;
+
+  @media (max-width: 991px) {
+    flex-basis: 50%;
+  }
 `;
 
 const DateFrom = styled.div`
   flex-basis: 18%;
-  margin: 1px;
+
   position: relative;
+
+  @media (max-width: 991px) {
+    flex-basis: 25%;
+  }
 `;
 
 const DateTo = styled.div`
   flex-basis: 18%;
-  margin: 1px;
+
   position: relative;
+
+  @media (max-width: 991px) {
+    flex-basis: 25%;
+  }
 `;
 
 const DateBtn = styled.button`
@@ -91,8 +114,11 @@ const DateBtn = styled.button`
 
 const FlightType = styled.div`
   flex-basis: 22%;
-  margin: 1px;
   position: relative;
+
+  @media (max-width: 991px) {
+    flex-basis: 50%;
+  }
 `;
 
 const FlightTypeBtn = styled.button`
@@ -110,11 +136,16 @@ const Passenger = styled.div`
   box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
+  margin: 1px;
   padding: 16px;
-  width: 100%;
+  width: (100% - 2px);
 
   & span {
     color: #a0b0b9;
+  }
+
+  @media (max-width: 991px) {
+    border-top-right-radius: 0px;
   }
 `;
 
@@ -124,14 +155,35 @@ const Input = styled.input`
   box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
+  margin: 1px;
   padding: 16px;
-  width: 100%;
+  width: calc(100% - 2px);
 
   ${props =>
-    props.leftradius &&
+    props.destfrom &&
     css`
       border-bottom-left-radius: 4px;
       border-top-left-radius: 4px;
+
+      @media (max-width: 991px) {
+        border-bottom-left-radius: 0px;
+      }
+    `};
+
+  ${props =>
+    props.destto &&
+    css`
+      @media (max-width: 991px) {
+        border-top-right-radius: 4px;
+      }
+    `};
+
+  ${props =>
+    props.datefrom &&
+    css`
+      @media (max-width: 991px) {
+        border-bottom-left-radius: 4px;
+      }
     `};
 `;
 
@@ -190,17 +242,17 @@ export default () => (
         <div className="col-xs-offset-1 col-xs-10">
           <TicketParams>
             <DestFrom>
-              <Input type="text" defaultValue="Москва" leftradius />
+              <Input type="text" defaultValue="Москва" destfrom />
               <RightInputField>
                 <Airport>MOW</Airport>
                 <DestFromBtn />
               </RightInputField>
             </DestFrom>
             <DestTo>
-              <Input type="text" placeholder="Город прибытия" />
+              <Input type="text" placeholder="Город прибытия" destto />
             </DestTo>
             <DateFrom>
-              <Input type="text" placeholder="Туда" />
+              <Input type="text" placeholder="Туда" datefrom />
               <RightInputField>
                 <DateBtn />
               </RightInputField>

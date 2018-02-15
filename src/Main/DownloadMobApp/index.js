@@ -21,6 +21,10 @@ const H2 = styled.h2`
   font-weight: 500;
   line-height: 40px;
   margin-bottom: 19px;
+
+  @media (max-width: 991px) {
+    padding-right: 72px;
+  }
 `;
 
 const IphoneImg = styled.img`
@@ -56,6 +60,10 @@ const Phone = styled.span`
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     padding-right: 21px;
   }
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
 `;
 
 const PhoneImg = styled.img`
@@ -65,10 +73,10 @@ const PhoneImg = styled.img`
 export default () => (
   <DownloadMobApp>
     <div className="row">
-      <div className="col-md-3 col-md-offset-1">
+      <div className="col-lg-3 col-md-4 col-lg-offset-1 col-md-offset-0">
         <IphoneImg src={bgIphone} />
       </div>
-      <div className="col-md-7">
+      <div className="col-lg-7 col-md-8">
         <H2>Скачай мобильное приложение Aviasales.ru</H2>
         <Stars>
           <Star src={star} />

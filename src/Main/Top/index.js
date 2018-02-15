@@ -24,6 +24,19 @@ const Edit = styled.img`
   margin-left: 10px;
 `;
 
+const Items = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Item = styled.div`
+  flex-basis: 8.33%;
+
+  @media (max-width: 991px) {
+    flex-basis: 16.66%;
+  }
+`;
+
 const TopImg = styled.img`
   display: block;
   margin: 0 auto;
@@ -46,41 +59,57 @@ export default () => (
       <Edit src={imgEdit} />
     </H2Center>
     <div className="row">
-      <div className="col-sm-offset-3 col-xs-1">
-        <TopImg src={imgTop1} />
-        <TopText>
-          <BlueLink href="#">Куда угодно</BlueLink>
-        </TopText>
-      </div>
-      <div className="col-xs-1">
-        <TopImg src={imgTop2} />
-        <TopText>
-          <BlueLink href="#">Солнце и море</BlueLink>
-        </TopText>
-      </div>
-      <div className="col-xs-1">
-        <TopImg src={imgTop3} />
-        <TopText>
-          <BlueLink href="#">Шопинг, город</BlueLink>
-        </TopText>
-      </div>
-      <div className="col-xs-1">
-        <TopImg src={imgTop4} />
-        <TopText>
-          <BlueLink href="#">Культура и история</BlueLink>
-        </TopText>
-      </div>
-      <div className="col-xs-1">
-        <TopImg src={imgTop5} />
-        <TopText>
-          <BlueLink href="#">Ночная жизнь</BlueLink>
-        </TopText>
-      </div>
-      <div className="col-xs-1">
-        <TopImg src={imgTop6} />
-        <TopText>
-          <BlueLink href="#">Отдых с детьми</BlueLink>
-        </TopText>
+      <div className="col-xs-offset-1 col-xs-10">
+        <Items>
+          <Item>
+            <TopImg src={imgTop1} />
+            <TopText>
+              <BlueLink href="#">
+                Куда<br />угодно
+              </BlueLink>
+            </TopText>
+          </Item>
+          <Item>
+            <TopImg src={imgTop2} />
+            <TopText>
+              <BlueLink href="#">
+                Солнце<br />и море
+              </BlueLink>
+            </TopText>
+          </Item>
+          <Item>
+            <TopImg src={imgTop3} />
+            <TopText>
+              <BlueLink href="#">
+                Шопинг,<br />город
+              </BlueLink>
+            </TopText>
+          </Item>
+          <Item>
+            <TopImg src={imgTop4} />
+            <TopText>
+              <BlueLink href="#">
+                Культура<br />и история
+              </BlueLink>
+            </TopText>
+          </Item>
+          <Item>
+            <TopImg src={imgTop5} />
+            <TopText>
+              <BlueLink href="#">
+                Ночная<br />жизнь
+              </BlueLink>
+            </TopText>
+          </Item>
+          <Item>
+            <TopImg src={imgTop6} />
+            <TopText>
+              <BlueLink href="#">
+                Отдых<br />с детьми
+              </BlueLink>
+            </TopText>
+          </Item>
+        </Items>
       </div>
     </div>
   </Top>

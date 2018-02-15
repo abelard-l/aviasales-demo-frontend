@@ -7,6 +7,10 @@ const Top = styled.section`
   line-height: 25px;
   margin-bottom: 200px;
   padding-top: 12px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 81px;
+  }
 `;
 
 const Logotype = styled.div`

@@ -25,10 +25,19 @@ const CitiesAndPrices = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
+
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Card = styled.div`
   flex-basis: 31%;
+
+  @media (max-width: 991px) {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
 `;
 
 const Title = styled.div`

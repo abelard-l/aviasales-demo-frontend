@@ -20,20 +20,34 @@ const Title = styled.h2`
 const Cards = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 991px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Card = styled.div`
   background: white;
   flex-basis: 32%;
+
+  @media (max-width: 575px) {
+    flex-basis: 100%;
+  }
 `;
 
 const Top = styled.div`
   color: #ffffff;
   background: #cd2027;
+  box-sizing: border-box;
   font-size: 16px;
   justify-content: flex-start;
   line-height: 20px;
-  padding: 22px 18px;
+  max-height: 64px;
+  padding: 22px 45px 22px 16px;
   position: relative;
 `;
 
@@ -44,13 +58,17 @@ const TopRightSide = styled.div`
   height: 100%;
   right: 0;
   top: 0;
-  width: 50px;
+  width: 45px;
 `;
 
 const ImgTopRight = styled.img``;
 
 const Img = styled.img`
   padding: 22px 12px;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
 `;
 
 const Price = styled.div`
@@ -120,7 +138,7 @@ export default () => (
       <Title>Спецпредложения на авиабилеты</Title>
     </div>
     <div className="row">
-      <div className="col-sm-offset-1 col-sm-10">
+      <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
         <Cards>
           <Card>
             <Top>
@@ -130,10 +148,10 @@ export default () => (
               </TopRightSide>
             </Top>
             <div className="row">
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-5 col-xs-6">
                 <Img src={pobeda} />
               </div>
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-7 col-xs-6">
                 <Price>от 499 &#x584;</Price>
                 <Days>Осталось 45 дней</Days>
               </div>
@@ -153,10 +171,10 @@ export default () => (
               </TopRightSide>
             </Top>
             <div className="row">
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-5 col-xs-6">
                 <Img src={lufthansa} />
               </div>
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-7 col-xs-6">
                 <Price>от 20 680 &#x584;</Price>
                 <Days>Осталось 19 дней</Days>
               </div>
@@ -170,16 +188,16 @@ export default () => (
 
           <Card>
             <Top>
-              В Лос-Анджелес от 22360 р...
+              В Лос-Анджелес от 22360 рублей
               <TopRightSide>
                 <ImgTopRight src={circle} />
               </TopRightSide>
             </Top>
             <div className="row">
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-5 col-xs-6">
                 <Img src={lufthansa} />
               </div>
-              <div className="col-xs-6">
+              <div className="col-lg-6 col-md-7 col-xs-6">
                 <Price>от 20 360 &#x584;</Price>
                 <Days>Осталось 19 дней</Days>
               </div>

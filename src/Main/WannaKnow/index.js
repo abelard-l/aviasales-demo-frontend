@@ -13,15 +13,29 @@ const WannaKnow = styled.section`
   padding-top: 39px;
 `;
 
-const WannaDiscount = styled.p``;
+const WannaDiscount = styled.p`
+  @media (max-width: 991px) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+`;
 
-const SocialMedias = styled.div``;
+const SocialMedias = styled.div`
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+`;
 const SocialMedia = styled.img`
   margin-right: 6px;
 `;
 
 const Subscribe = styled.div`
   text-align: right;
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
 `;
 
 const Input = styled.input`
@@ -49,7 +63,7 @@ const Button = styled.button`
 export default () => (
   <WannaKnow>
     <div className="row">
-      <div className="col-md-4 col-xs-offset-1">
+      <div className="col-lg-4 col-md-10 col-xs-offset-1">
         <WannaDiscount>
           <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
           <br />
@@ -57,7 +71,7 @@ export default () => (
           электронной почте.
         </WannaDiscount>
       </div>
-      <div className="col-md-2">
+      <div className="col-lg-2 col-md-10 col-md-offset-1">
         <SocialMedias>
           <SocialMedia src={imgSocial1} />
           <SocialMedia src={imgSocial2} />
@@ -65,7 +79,7 @@ export default () => (
           <SocialMedia src={imgSocial4} />
         </SocialMedias>
       </div>
-      <div className="col-md-4">
+      <div className="col-lg-4 col-md-10 col-md-offset-1">
         <Subscribe>
           <Input type="text" placeholder="Ваш email" />
           <Button>Подписаться</Button>

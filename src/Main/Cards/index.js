@@ -64,7 +64,7 @@ const Date = styled.div`
 export default () => (
   <Cards>
     <div className="row">
-      <div className="col-sm-5 col-sm-offset-1">
+      <div className="col-lg-5 col-xs-10 col-xs-offset-1">
         <Card src={card1} />
         <WrapCard>
           <WrapFlag>
@@ -76,15 +76,13 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 1212 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 1212 &#x584;</BlueLink>
             </Price>
             <Date>18 марта</Date>
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-sm-5">
+      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
         <Card src={card2} />
         <WrapCard>
           <WrapFlag>
@@ -96,15 +94,13 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 1 334 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 1 334 &#x584;</BlueLink>
             </Price>
             <Date>27 марта</Date>
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-sm-5 col-sm-offset-1">
+      <div className="col-lg-5 col-xs-10 col-sm-offset-1">
         <Card src={card3} />
         <WrapCard>
           <WrapFlag>
@@ -116,15 +112,13 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 1 508 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 1 508 &#x584;</BlueLink>
             </Price>
             <Date>19 февраля</Date>
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-sm-5">
+      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
         <Card src={card4} />
         <WrapCard>
           <WrapFlag>
@@ -136,15 +130,13 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 2 074 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 2 074 &#x584;</BlueLink>
             </Price>
             <Date>13 марта</Date>
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-sm-5 col-sm-offset-1">
+      <div className="col-lg-5 col-xs-10 col-sm-offset-1">
         <Card src={card5} />
         <WrapCard>
           <WrapFlag>
@@ -156,15 +148,13 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 2 407 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 2 407 &#x584;</BlueLink>
             </Price>
             <Date>13 марта</Date>
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-sm-5">
+      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
         <Card src={card6} />
         <WrapCard>
           <WrapFlag>
@@ -176,9 +166,7 @@ export default () => (
           </LeftSide>
           <RightSide>
             <Price>
-              <BlueLink>
-                Найти от 4 247 <up>&#x584;</up>
-              </BlueLink>
+              <BlueLink>Найти от 4 247 &#x584;</BlueLink>
             </Price>
             <Date>24 марта</Date>
           </RightSide>
