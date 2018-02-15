@@ -23,12 +23,28 @@ const Card = styled.img`
   width: 100%;
 `;
 
+const WrapFlag = styled.div``;
+const LeftSide = styled.div``;
+const RightSide = styled.div;
+
 const Flag = CommonFlag;
 
 const City = CommonCity;
 const Country = CommonCountry;
-const Price = styled.div``;
-const Date = styled.div``;
+
+const Price = styled.div`
+  color: #00bae8;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+`;
+const Date = styled.div`
+  color: #aabec6;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+`;
 
 export default () => (
   <Cards>
@@ -45,7 +61,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>
@@ -63,7 +81,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>
@@ -81,7 +101,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>
@@ -99,7 +121,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>
@@ -117,7 +141,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>
@@ -135,7 +161,9 @@ export default () => (
           </div>
           <div className="col-xs-5">
             <Price>
-              <BlueLink>Найти от 1212 &#x584;</BlueLink>
+              <BlueLink>
+                Найти от 1212 <up>&#x584;</up>
+              </BlueLink>
             </Price>
             <Date>18 марта</Date>
           </div>

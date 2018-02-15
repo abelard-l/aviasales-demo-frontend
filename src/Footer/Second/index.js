@@ -19,11 +19,39 @@ const Second = styled.section`
 const Menu = styled.div`
   font-size: 12px;
   line-height: 16px;
+  margin-bottom: 17px;
 `;
 
 const MenuItem = styled.span`
   display: inline-block;
   margin-right: 5px;
+`;
+
+const SocLinks = styled.div`
+  margin-bottom: 32px;
+`;
+
+const SocImg = styled.img`
+  margin-right: 6px;
+`;
+
+const SocLink = styled.a`
+  color: #4a4a4a;
+  margin-right: 12px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Download = styled.div`
+  text-align: right;
+`;
+
+const DownloadImg = styled.img`
+  margin-bottom: 34px;
+  margin-left: 10px;
 `;
 
 const CopyLeft = styled.div`
@@ -62,9 +90,26 @@ export default () => (
             <GrayLink src="#">White Label авиабилеты</GrayLink>>
           </MenuItem>
         </Menu>
+        <SocLinks>
+          <SocImg src={soc1} />
+          <SocLink href="#">Вконтакте</SocLink>
+          <SocImg src={soc2} />
+          <SocLink href="#">Фейсбук</SocLink>
+          <SocImg src={soc3} />
+          <SocLink href="#">Инстаграм</SocLink>
+          <SocImg src={soc4} />
+          <SocLink href="#">Твиттер</SocLink>
+          <SocImg src={soc5} />
+          <SocLink href="#">Вайбер</SocLink>
+        </SocLinks>
         <CopyLeft>Поиск и бронирование отелей</CopyLeft>
       </div>
       <div className="col-md-5">
+        <Download>
+          <DownloadImg src={apple} />
+          <DownloadImg src={google} />
+          <DownloadImg src={winphone} />
+        </Download>
         <CopyRight>© 2007–2018, Aviasales — дешевые авиабилеты</CopyRight>
       </div>
     </div>
