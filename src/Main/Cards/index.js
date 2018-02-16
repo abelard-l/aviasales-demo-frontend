@@ -64,7 +64,7 @@ const Date = styled.div`
 export default () => (
   <Cards>
     <div className="row">
-      <div className="col-lg-5 col-xs-10 col-xs-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0">
         <Card src={card1} />
         <WrapCard>
           <WrapFlag>
@@ -82,7 +82,7 @@ export default () => (
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-lg-offset-0 col-sm-offset-1 col-xs-offset-0">
         <Card src={card2} />
         <WrapCard>
           <WrapFlag>
@@ -100,7 +100,7 @@ export default () => (
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-lg-5 col-xs-10 col-sm-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0">
         <Card src={card3} />
         <WrapCard>
           <WrapFlag>
@@ -118,7 +118,7 @@ export default () => (
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-lg-offset-0 col-sm-offset-1 col-xs-offset-0">
         <Card src={card4} />
         <WrapCard>
           <WrapFlag>
@@ -136,7 +136,7 @@ export default () => (
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-lg-5 col-xs-10 col-sm-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-sm-offset-1 col-xs-offset-0">
         <Card src={card5} />
         <WrapCard>
           <WrapFlag>
@@ -154,7 +154,7 @@ export default () => (
           </RightSide>
         </WrapCard>
       </div>
-      <div className="col-lg-5 col-xs-10 col-lg-offset-0 col-xs-offset-1">
+      <div className="col-lg-5 col-sm-10 col-xs-12 col-lg-offset-0 col-sm-offset-1 col-xs-offset-0">
         <Card src={card6} />
         <WrapCard>
           <WrapFlag>

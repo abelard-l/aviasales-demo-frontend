@@ -11,6 +11,10 @@ const WannaKnow = styled.section`
   background: url(${imgTopBorder}) no-repeat top center;
   padding-bottom: 24px;
   padding-top: 39px;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
 `;
 
 const WannaDiscount = styled.p`
@@ -63,7 +67,7 @@ const Button = styled.button`
 export default () => (
   <WannaKnow>
     <div className="row">
-      <div className="col-lg-4 col-md-10 col-xs-offset-1">
+      <div className="col-lg-4 col-md-10 col-sm-offset-1 col-xs-offset-0">
         <WannaDiscount>
           <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
           <br />
@@ -71,7 +75,7 @@ export default () => (
           электронной почте.
         </WannaDiscount>
       </div>
-      <div className="col-lg-2 col-md-10 col-md-offset-1">
+      <div className="col-lg-2 col-md-10 col-sm-offset-1 col-md-offset-0">
         <SocialMedias>
           <SocialMedia src={imgSocial1} />
           <SocialMedia src={imgSocial2} />
@@ -79,7 +83,7 @@ export default () => (
           <SocialMedia src={imgSocial4} />
         </SocialMedias>
       </div>
-      <div className="col-lg-4 col-md-10 col-md-offset-1">
+      <div className="col-lg-4 col-md-10 col-sm-offset-1 col-md-offset-0">
         <Subscribe>
           <Input type="text" placeholder="Ваш email" />
           <Button>Подписаться</Button>

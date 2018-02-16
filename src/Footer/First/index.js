@@ -33,7 +33,7 @@ const BolderGrayLink = styled.a`
 export default () => (
   <First>
     <div className="row">
-      <div className="col-md-2">
+      <div className="col-sm-2 col-xs-6">
         <H3>страны</H3>
         <MenuItem>
           <GrayLink href="#">Россия</GrayLink>
@@ -57,7 +57,7 @@ export default () => (
           <BolderGrayLink href="#">Все страны →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-md-2">
+      <div className="col-sm-2 col-xs-6">
         <H3>ГОРОДА</H3>
         <MenuItem>
           <GrayLink href="#">Москва</GrayLink>
@@ -81,7 +81,7 @@ export default () => (
           <BolderGrayLink href="#">Все города →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-md-2">
+      <div className="col-sm-2 col-xs-6">
         <H3>АВИАКОМПАНИИ</H3>
         <MenuItem>
           <GrayLink href="#">Air Berlin</GrayLink>
@@ -105,7 +105,7 @@ export default () => (
           <BolderGrayLink href="#">Все авиакомпании →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-md-2">
+      <div className="col-md-2 col-xs-6">
         <H3>АЭРОПОРТЫ</H3>
         <MenuItem>
           <GrayLink href="#">Шереметьево</GrayLink>
@@ -129,7 +129,7 @@ export default () => (
           <BolderGrayLink href="#">Все аэропорты →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-md-2">
+      <div className="col-md-2 col-xs-6">
         <H3>НАПРАВЛЕНИЯ</H3>
         <MenuItem>
           <GrayLink href="#">MOW – SIP</GrayLink>
@@ -150,7 +150,7 @@ export default () => (
           <GrayLink href="#">MOW – BKK</GrayLink>
         </MenuItem>
       </div>
-      <div className="col-md-2">
+      <div className="col-md-2 col-xs-6">
         <H3>СЕРВИСЫ</H3>
         <MenuItem>
           <GrayLink href="#">Горящие авиабилеты</GrayLink>

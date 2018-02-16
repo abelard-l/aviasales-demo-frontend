@@ -21,6 +21,10 @@ const Header = styled.header`
   @media (max-width: 991px) {
     padding-bottom: 122px;
   }
+
+  @media (max-width: 575px) {
+    padding-bottom: 88px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -58,6 +62,10 @@ const DestFrom = styled.div`
   @media (max-width: 991px) {
     flex-basis: 50%;
   }
+
+  @media (max-width: 575px) {
+    flex-basis: 100%;
+  }
 `;
 
 const Airport = styled.p`
@@ -82,6 +90,10 @@ const DestTo = styled.div`
   @media (max-width: 991px) {
     flex-basis: 50%;
   }
+
+  @media (max-width: 575px) {
+    flex-basis: 100%;
+  }
 `;
 
 const DateFrom = styled.div`
@@ -92,6 +104,10 @@ const DateFrom = styled.div`
   @media (max-width: 991px) {
     flex-basis: 25%;
   }
+
+  @media (max-width: 575px) {
+    flex-basis: 50%;
+  }
 `;
 
 const DateTo = styled.div`
@@ -101,6 +117,10 @@ const DateTo = styled.div`
 
   @media (max-width: 991px) {
     flex-basis: 25%;
+  }
+
+  @media (max-width: 575px) {
+    flex-basis: 50%;
   }
 `;
 
@@ -118,6 +138,10 @@ const FlightType = styled.div`
 
   @media (max-width: 991px) {
     flex-basis: 50%;
+  }
+
+  @media (max-width: 575px) {
+    flex-basis: 100%;
   }
 `;
 

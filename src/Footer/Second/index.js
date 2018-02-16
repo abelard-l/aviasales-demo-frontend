@@ -25,6 +25,11 @@ const Menu = styled.div`
 const MenuItem = styled.span`
   display: inline-block;
   margin-right: 5px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
 `;
 
 const SocLinks = styled.div`
@@ -42,6 +47,12 @@ const SocLink = styled.a`
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 575px) {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-right: 24px;
   }
 `;
 
@@ -103,7 +114,7 @@ export default () => (
             <GrayLink src="#">Правила</GrayLink>
           </MenuItem>
           <MenuItem>
-            <GrayLink src="#">White Label авиабилеты</GrayLink>>
+            <GrayLink src="#">White Label авиабилеты</GrayLink>
           </MenuItem>
         </Menu>
         <SocLinks>

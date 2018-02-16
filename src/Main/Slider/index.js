@@ -9,6 +9,10 @@ import imgAgency5 from "./agencyLogo-5.png";
 
 const Slider = styled.section`
   padding-bottom: 28px;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
 `;
 const SliderH2 = styled.h2`
   color: #5c5c5c;

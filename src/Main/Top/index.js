@@ -27,6 +27,10 @@ const Edit = styled.img`
 const Items = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Item = styled.div`
@@ -34,6 +38,11 @@ const Item = styled.div`
 
   @media (max-width: 991px) {
     flex-basis: 16.66%;
+  }
+
+  @media (max-width: 575px) {
+    flex-basis: 33.33%;
+    margin-bottom: 30px;
   }
 `;
 

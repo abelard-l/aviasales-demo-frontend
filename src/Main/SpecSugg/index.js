@@ -35,7 +35,8 @@ const Card = styled.div`
   flex-basis: 32%;
 
   @media (max-width: 575px) {
-    flex-basis: 100%;
+    flex-basis: 98%;
+    margin-bottom: 12px;
   }
 `;
 
@@ -117,6 +118,10 @@ const BottomParagraphs = styled.div`
 
 const PBottomLeft = styled.p`
   text-align: left;
+
+  @media (max-width: 575px) {
+    text-align: center;
+  }
 `;
 
 const A = styled.a`
@@ -130,6 +135,10 @@ const A = styled.a`
 
 const PBottomRight = styled.p`
   text-align: right;
+
+  @media (max-width: 575px) {
+    text-align: center;
+  }
 `;
 
 export default () => (

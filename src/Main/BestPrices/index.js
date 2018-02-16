@@ -29,6 +29,10 @@ const CitiesAndPrices = styled.div`
   @media (max-width: 991px) {
     flex-wrap: wrap;
   }
+
+  @media (max-width: 575px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const Card = styled.div`
@@ -37,6 +41,10 @@ const Card = styled.div`
   @media (max-width: 991px) {
     flex-basis: 100%;
     margin-bottom: 50px;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 40px;
   }
 `;
 
