@@ -77,6 +77,26 @@ const DestFrom = styled.div`
   }
 `;
 
+const DestFromInput = styled.input`
+  background: white;
+  border: none;
+  border-radius: 4px 4px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 1px;
+  padding: 16px;
+  width: calc(100% - 2px);
+
+  @media (min-width: 768px) {
+    border-radius: 4px 0px 0px 0px;
+  }
+
+  @media (min-width: 1200px) {
+    border-radius: 4px 0px 0px 4px;
+  }
+`;
+
 const Airport = styled.p`
   color: #a0b0b9;
   font-size: 16px;
@@ -105,6 +125,22 @@ const DestTo = styled.div`
   }
 `;
 
+const DestToInput = styled.input`
+  background: white;
+  border: none;
+  border-radius: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 1px;
+  padding: 16px;
+  width: calc(100% - 2px);
+
+  @media (min-width: 768px) {
+    border-radius: 0px 4px 0px 0px;
+  }
+`;
+
 const DateFrom = styled.div`
   flex-basis: 50%;
   position: relative;
@@ -115,6 +151,26 @@ const DateFrom = styled.div`
 
   @media (min-width: 1200px) {
     flex-basis: 18%;
+  }
+`;
+
+const DateFromInput = styled.input`
+  background: white;
+  border: none;
+  border-radius: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 1px;
+  padding: 16px;
+  width: calc(100% - 2px);
+
+  @media (min-width: 768px) {
+    border-radius: 0px 0px 0px 4px;
+  }
+
+  @media (min-width: 1200px) {
+    border-radius: 0px 0px 0px 0px;
   }
 `;
 
@@ -184,7 +240,7 @@ const GrayerText = styled.span`
   color: #a0b0b9;
 `;
 
-const Input = styled.input`
+const DateToInput = styled.input`
   background: white;
   border: none;
   box-sizing: border-box;
@@ -193,52 +249,6 @@ const Input = styled.input`
   margin: 1px;
   padding: 16px;
   width: calc(100% - 2px);
-
-  ${props =>
-    props.topRounded &&
-    css`
-      border-radius: 4px 4px 0px 0px;
-    `};
-
-  ${props =>
-    props.topLeftRoundedTablets &&
-    css`
-      @media (min-width: 768px) {
-        border-radius: 4px 0px 0px 0px;
-      }
-    `};
-
-  ${props =>
-    props.topRightRoundedTablets &&
-    css`
-      @media (min-width: 768px) {
-        border-radius: 0px 4px 0px 0px;
-      }
-    `};
-
-  ${props =>
-    props.bottomLeftRoundedTablets &&
-    css`
-      @media (min-width: 768px) {
-        border-radius: 0px 0px 0px 4px;
-      }
-    `};
-
-  ${props =>
-    props.LeftRoundedDesktop &&
-    css`
-      @media (min-width: 1200px) {
-        border-radius: 4px 0px 0px 4px;
-      }
-    `};
-
-  ${props =>
-    props.noRoundedDesktop &&
-    css`
-      @media (min-width: 1200px) {
-        border-radius: 0px 0px 0px 0px;
-      }
-    `};
 `;
 
 const RightInputField = styled.div`
@@ -304,39 +314,23 @@ export default () => (
         <div className="col-xs-offset-1 col-xs-10">
           <TicketParams>
             <DestFrom>
-              <Input
-                type="text"
-                defaultValue="Москва"
-                topRounded
-                topLeftRoundedTablets
-                LeftRoundedDesktop
-              />
+              <DestFromInput type="text" defaultValue="Москва" />
               <RightInputField>
                 <Airport>MOW</Airport>
                 <DestFromBtn />
               </RightInputField>
             </DestFrom>
             <DestTo>
-              <Input
-                type="text"
-                placeholder="Город прибытия"
-                topRightRoundedTablets
-                noRoundedDesktop
-              />
+              <DestToInput type="text" placeholder="Город прибытия" />
             </DestTo>
             <DateFrom>
-              <Input
-                type="text"
-                placeholder="Туда"
-                bottomLeftRoundedTablets
-                noRoundedDesktop
-              />
+              <DateFromInput type="text" placeholder="Туда" />
               <RightInputField>
                 <DateBtn />
               </RightInputField>
             </DateFrom>
             <DateTo>
-              <Input type="text" placeholder="Обратно" />
+              <DateToInput type="text" placeholder="Обратно" />
               <RightInputField>
                 <DateBtn />
               </RightInputField>
