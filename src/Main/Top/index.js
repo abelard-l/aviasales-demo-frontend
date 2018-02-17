@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import imgCompass from "./compass.svg";
 import imgEdit from "./edit.svg";
-import { BlueLink, H2Center } from "../../commonComponents";
+import { BlueLink, HeaderCenter } from "../../commonComponents";
 import imgTop1 from "./top-1.svg";
 import imgTop2 from "./top-2.svg";
 import imgTop3 from "./top-3.svg";
@@ -24,7 +24,7 @@ const Edit = styled.img`
   margin-left: 10px;
 `;
 
-const Items = styled.div`
+const Activities = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,7 +34,7 @@ const Items = styled.div`
   }
 `;
 
-const Item = styled.div`
+const ActivityWrap = styled.div`
   flex-basis: 33.33%;
   margin-bottom: 30px;
 
@@ -47,12 +47,12 @@ const Item = styled.div`
   }
 `;
 
-const TopImg = styled.img`
+const Activity = styled.img`
   display: block;
   margin: 0 auto;
 `;
 
-const TopText = styled.div`
+const Slogan = styled.div`
   font-size: 12px;
   line-height: 20px;
   margin-top: 12px;
@@ -64,63 +64,63 @@ export default () => (
   <Top>
     <div className="container">
       <Compass src={imgCompass} />
-      <H2Center>
+      <HeaderCenter>
         Популярные направления перелетов<br />из города&nbsp;
         <BlueLink href="#">Москва</BlueLink>
         <Edit src={imgEdit} />
-      </H2Center>
+      </HeaderCenter>
       <div className="row">
         <div className="col-xs-offset-1 col-xs-10">
-          <Items>
-            <Item>
-              <TopImg src={imgTop1} />
-              <TopText>
+          <Activities>
+            <ActivityWrap>
+              <Activity src={imgTop1} />
+              <Slogan>
                 <BlueLink href="#">
                   Куда<br />угодно
                 </BlueLink>
-              </TopText>
-            </Item>
-            <Item>
-              <TopImg src={imgTop2} />
-              <TopText>
+              </Slogan>
+            </ActivityWrap>
+            <ActivityWrap>
+              <Activity src={imgTop2} />
+              <Slogan>
                 <BlueLink href="#">
                   Солнце<br />и море
                 </BlueLink>
-              </TopText>
-            </Item>
-            <Item>
-              <TopImg src={imgTop3} />
-              <TopText>
+              </Slogan>
+            </ActivityWrap>
+            <ActivityWrap>
+              <Activity src={imgTop3} />
+              <Slogan>
                 <BlueLink href="#">
                   Шопинг,<br />город
                 </BlueLink>
-              </TopText>
-            </Item>
-            <Item>
-              <TopImg src={imgTop4} />
-              <TopText>
+              </Slogan>
+            </ActivityWrap>
+            <ActivityWrap>
+              <Activity src={imgTop4} />
+              <Slogan>
                 <BlueLink href="#">
                   Культура<br />и история
                 </BlueLink>
-              </TopText>
-            </Item>
-            <Item>
-              <TopImg src={imgTop5} />
-              <TopText>
+              </Slogan>
+            </ActivityWrap>
+            <ActivityWrap>
+              <Activity src={imgTop5} />
+              <Slogan>
                 <BlueLink href="#">
                   Ночная<br />жизнь
                 </BlueLink>
-              </TopText>
-            </Item>
-            <Item>
-              <TopImg src={imgTop6} />
-              <TopText>
+              </Slogan>
+            </ActivityWrap>
+            <ActivityWrap>
+              <Activity src={imgTop6} />
+              <Slogan>
                 <BlueLink href="#">
                   Отдых<br />с детьми
                 </BlueLink>
-              </TopText>
-            </Item>
-          </Items>
+              </Slogan>
+            </ActivityWrap>
+          </Activities>
         </div>
       </div>
     </div>

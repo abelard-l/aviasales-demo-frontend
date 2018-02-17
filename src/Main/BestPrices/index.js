@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { BlueLink, H2Center, PCenter } from "../../commonComponents";
-import rusFlag from "../../res/images/flag-russia.png";
-import armFlag from "../../res/images/flag-armenia.png";
-import molFlag from "../../res/images/flag-moldavia.png";
-import imgGroup from "./group.png";
+import { BlueLink, HeaderCenter } from "../../commonComponents";
+import rusflag from "../../res/images/flag-russia.png";
+import armflag from "../../res/images/flag-armenia.png";
+import molflag from "../../res/images/flag-moldavia.png";
+import group from "./group.png";
 
 const BestPrices = styled.section``;
 
@@ -45,10 +45,12 @@ const Card = styled.div`
 const Title = styled.div`
   display: flex;
 `;
+
 const WrapFlag = styled.div`
   flex-basis: 30px;
   padding-right: 4px;
 `;
+
 const TitleInfo = styled.div`
   flex-basis: auto;
 `;
@@ -98,18 +100,24 @@ const SubText = styled.p`
   text-align: center;
 `;
 
+export const TextCenter = styled.p`
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+`;
+
 export default () => (
   <BestPrices>
     <div className="container">
-      <Group src={imgGroup} />
-      <H2Center>Лучшие цены на авиабилеты за последний месяц</H2Center>
+      <Group src={group} />
+      <HeaderCenter>Лучшие цены на авиабилеты за последний месяц</HeaderCenter>
       <div className="row">
         <div className="col-md-offset-1 col-md-10">
           <Cards>
             <Card>
               <Title>
                 <WrapFlag>
-                  <Flag src={rusFlag} />
+                  <Flag src={rusflag} />
                 </WrapFlag>
                 <TitleInfo>
                   <City>Симферополь (Крым)</City>
@@ -146,7 +154,7 @@ export default () => (
             <Card>
               <Title>
                 <WrapFlag>
-                  <Flag src={armFlag} />
+                  <Flag src={armflag} />
                 </WrapFlag>
                 <TitleInfo>
                   <City>Ереван</City>
@@ -183,7 +191,7 @@ export default () => (
             <Card>
               <Title>
                 <WrapFlag>
-                  <Flag src={molFlag} />
+                  <Flag src={molflag} />
                 </WrapFlag>
                 <TitleInfo>
                   <City>Кишинёв</City>
@@ -220,11 +228,11 @@ export default () => (
           </Cards>
         </div>
       </div>
-      <PCenter>
+      <TextCenter>
         Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
         мира.<br /> Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
         авиакомпаний.
-      </PCenter>
+      </TextCenter>
       <SubText>
         Цены, найденные пользователями за последние 48 часов, не являются
         офертой.

@@ -15,7 +15,7 @@ const DownloadMobApp = styled.section`
   position: relative;
 `;
 
-const H2 = styled.h2`
+const Title = styled.h2`
   color: #ffffff;
   font-weight: 500;
   line-height: 40px;
@@ -151,7 +151,7 @@ export default () => (
           </IphoneWrap>
         </div>
         <div className="col-lg-7 col-md-8 col-xs-12">
-          <H2>Скачай мобильное приложение Aviasales.ru</H2>
+          <Title>Скачай мобильное приложение Aviasales.ru</Title>
           <Stars>
             <Star src={star} />
             <Star src={star} />

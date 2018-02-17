@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 
 const Top = styled.section`
   font-size: 20px;
@@ -17,28 +17,28 @@ const Top = styled.section`
   }
 `;
 
-const Logotype = styled.div`
+const LogoWrap = styled.div`
   color: white;
 `;
-const LogoImg = styled.img`
+const Logo = styled.img`
   vertical-align: middle;
   margin-right: 12px;
 `;
-const Text = styled.span`
+const SiteName = styled.span`
   vertical-align: middle;
 `;
 
 export default () => (
   <Top>
     <div className="container">
-      <Logotype>
+      <LogoWrap>
         <div className="row middle-xs">
           <div className="col-xs-offset-1">
-            <LogoImg src={logo} />
-            <Text>aviasales</Text>
+            <Logo src={logo} />
+            <SiteName>aviasales</SiteName>
           </div>
         </div>
-      </Logotype>
+      </LogoWrap>
     </div>
   </Top>
 );

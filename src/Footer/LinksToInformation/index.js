@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { GrayLink } from "../../commonComponents";
-const First = styled.section`
+
+const LinksToInformation = styled.section`
   border-bottom: 1px solid #e0e6e8;
   padding-bottom: 29px;
 `;
 
-const H3 = styled.h3`
+const Title = styled.h3`
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -14,7 +15,7 @@ const H3 = styled.h3`
   text-transform: uppercase;
 `;
 
-const MenuItem = styled.div`
+const LinkToInformation = styled.div`
   font-size: 12px;
   line-height: 16px;
   margin-top: 12px;
@@ -31,149 +32,149 @@ const BolderGrayLink = styled.a`
 `;
 
 export default () => (
-  <First>
+  <LinksToInformation>
     <div className="row">
       <div className="col-md-2 col-xs-6">
-        <H3>страны</H3>
-        <MenuItem>
+        <Title>страны</Title>
+        <LinkToInformation>
           <GrayLink href="#">Россия</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Таиланд</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Черногория</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Кипр</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Болгария</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Грузия</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <BolderGrayLink href="#">Все страны →</BolderGrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
       <div className="col-md-2 col-xs-6">
-        <H3>ГОРОДА</H3>
-        <MenuItem>
+        <Title>ГОРОДА</Title>
+        <LinkToInformation>
           <GrayLink href="#">Москва</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Санкт-Петербург</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Симферополь</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Адлер</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Екатеринбург</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Лондон</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <BolderGrayLink href="#">Все города →</BolderGrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
       <div className="col-md-2 col-xs-6">
-        <H3>АВИАКОМПАНИИ</H3>
-        <MenuItem>
+        <Title>АВИАКОМПАНИИ</Title>
+        <LinkToInformation>
           <GrayLink href="#">Air Berlin</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Air France</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Alitalia</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Air Baltic</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Emirates</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">KLM</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <BolderGrayLink href="#">Все авиакомпании →</BolderGrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
       <div className="col-md-2 col-xs-6">
-        <H3>АЭРОПОРТЫ</H3>
-        <MenuItem>
+        <Title>АЭРОПОРТЫ</Title>
+        <LinkToInformation>
           <GrayLink href="#">Шереметьево</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Курумоч</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Домодедово</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Толмачево</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Владивосток</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Гамбург</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <BolderGrayLink href="#">Все аэропорты →</BolderGrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
       <div className="col-md-2 col-xs-6">
-        <H3>НАПРАВЛЕНИЯ</H3>
-        <MenuItem>
+        <Title>НАПРАВЛЕНИЯ</Title>
+        <LinkToInformation>
           <GrayLink href="#">MOW – SIP</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">MOW – AER</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">MOW – TIV</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">MOW – MRV</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">LED – MOW</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">MOW – BKK</GrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
       <div className="col-md-2 col-xs-6">
-        <H3>СЕРВИСЫ</H3>
-        <MenuItem>
+        <Title>СЕРВИСЫ</Title>
+        <LinkToInformation>
           <GrayLink href="#">Горящие авиабилеты</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Календарь низких цен</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Карта низких цен</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Спецпредложения</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Таблица цен</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Блог</GrayLink>
-        </MenuItem>
-        <MenuItem>
+        </LinkToInformation>
+        <LinkToInformation>
           <GrayLink href="#">Помощь</GrayLink>
-        </MenuItem>
+        </LinkToInformation>
       </div>
     </div>
-  </First>
+  </LinksToInformation>
 );

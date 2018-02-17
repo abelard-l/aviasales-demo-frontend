@@ -7,16 +7,16 @@ import { BlueLink } from "../../commonComponents";
 
 const Information = styled.section``;
 
-const Img = styled.img`
+const InfoTextreTitle = styled.img`
   padding-right: 4px;
 `;
 
-const P = styled.p`
+const InfoText = styled.p`
   font-size: 14px;
   line-height: 20px;
 `;
 
-const H3 = styled.h3``;
+const Title = styled.h3``;
 
 const InfoLink = styled.span`
   display: inline-block;
@@ -28,10 +28,10 @@ export default () => (
     <div className="container">
       <div className="row">
         <div className="col-lg-offset-1 col-lg-10 col-xs">
-          <H3>
-            <Img src={info1} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
-          </H3>
-          <P>
+          <Title>
+            <InfoTextreTitle src={info1} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
+          </Title>
+          <InfoText>
             Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
             самолет по сотням авиакомпаний и находим за считанные минуты самые
             дешевые авиабилеты. Чтобы купить авиабилет дешево, воспользуйтесь
@@ -45,11 +45,11 @@ export default () => (
             <InfoLink>
               <BlueLink>Подробнее</BlueLink>
             </InfoLink>
-          </P>
-          <H3>
-            <Img src={info2} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
-          </H3>
-          <P>
+          </InfoText>
+          <Title>
+            <InfoTextreTitle src={info2} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
+          </Title>
+          <InfoText>
             Электронный авиабилет — это, по сути, обычный билет на самолет, но
             только в менее привычном для путешественника виде. Вся информация об
             авиаперелете (данные пассажира, маршрут следования) хранится в
@@ -66,11 +66,11 @@ export default () => (
             <InfoLink>
               <BlueLink>Подробнее</BlueLink>
             </InfoLink>
-          </P>
-          <H3>
-            <Img src={info3} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
-          </H3>
-          <P>
+          </InfoText>
+          <Title>
+            <InfoTextreTitle src={info3} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
+          </Title>
+          <InfoText>
             Есть масса путеводителей по странам, но ни одного о том, как
             провести время в самолете. Для того, чтобы сделать ваш перелет
             максимально комфортным, мы написали 20 советов. Ведь настоящее
@@ -79,7 +79,7 @@ export default () => (
             <InfoLink>
               <BlueLink>Подробнее</BlueLink>
             </InfoLink>
-          </P>
+          </InfoText>
         </div>
       </div>
     </div>

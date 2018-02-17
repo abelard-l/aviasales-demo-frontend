@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Top from "./Top";
-import arrows from "./arrows.png";
-import arrowDown from "./arrow-down.svg";
-import calendar from "./calendar.png";
+import arrows from "./arrow.svg";
+import arrowdown from "./arrow-down.svg";
+import calendar from "./calendar.svg";
 import aero from "./aero.svg";
 
 const Header = styled.header`
@@ -152,8 +152,8 @@ const FlightType = styled.div`
   }
 `;
 
-const FlightTypeBtn = styled.button`
-  background: url(${arrowDown}) no-repeat center center;
+const FlightTypeChoose = styled.button`
+  background: url(${arrowdown}) no-repeat center center;
   border: none;
   cursor: pointer;
   height: 5px;
@@ -252,7 +252,7 @@ const RightInputField = styled.div`
   top: 0;
 `;
 
-const WrapFindTicketsBtn = styled.div`
+const WrapFindTickets = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 16px;
@@ -262,7 +262,7 @@ const WrapFindTicketsBtn = styled.div`
   }
 `;
 
-const FindTicketsBtn = styled.button`
+const FindTickets = styled.button`
   color: #ffffff;
   background: #ff9241;
   border: none;
@@ -346,20 +346,20 @@ export default () => (
                 1 пассажир, <GrayerText>эконом</GrayerText>
               </Passenger>
               <RightInputField>
-                <FlightTypeBtn />
+                <FlightTypeChoose />
               </RightInputField>
             </FlightType>
           </TicketParams>
         </div>
       </div>
-      <WrapFindTicketsBtn>
-        <FindTicketsBtn>
+      <WrapFindTickets>
+        <FindTickets>
           Найти билеты
           <FindTicketsRight>
             <Aero src={aero} />
           </FindTicketsRight>
-        </FindTicketsBtn>
-      </WrapFindTicketsBtn>
+        </FindTickets>
+      </WrapFindTickets>
     </div>
   </Header>
 );

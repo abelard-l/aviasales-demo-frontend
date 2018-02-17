@@ -16,14 +16,14 @@ const Slider = styled.section`
   }
 `;
 
-const SliderH2 = styled.h2`
+const Title = styled.h2`
   color: #5c5c5c;
   font-size: 32px;
   line-height: 40px;
   text-align: center;
 `;
 
-const SliderImages = styled.div`
+const Agencies = styled.div`
   text-align: center;
 `;
 const Agency = styled.img`
@@ -32,15 +32,13 @@ const Agency = styled.img`
 
 export default () => (
   <Slider>
-    <SliderH2>
-      Дешевые авиабилеты от крупнейших авиакомпаний и агентств
-    </SliderH2>
-    <SliderImages>
+    <Title>Дешевые авиабилеты от крупнейших авиакомпаний и агентств</Title>
+    <Agencies>
       <Agency src={imgAgency1} />
       <Agency src={imgAgency2} />
       <Agency src={imgAgency3} />
       <Agency src={imgAgency4} />
       <Agency src={imgAgency5} />
-    </SliderImages>
+    </Agencies>
   </Slider>
 );

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { GrayLink } from "../../commonComponents";
-import soc1 from "./soc-1.png";
-import soc2 from "./soc-2.png";
-import soc3 from "./soc-3.png";
-import soc4 from "./soc-4.png";
-import soc5 from "./soc-5.png";
+import vk from "./vk.svg";
+import facebook from "./facebook.svg";
+import instagram from "./instagram.svg";
+import twitter from "./twitter.svg";
+import viber from "./viber.svg";
 import apple from "./applestore.png";
 import google from "./googleplay.png";
 import winphone from "./windowsphone.png";
 
-const Second = styled.section`
+const SocialAndStores = styled.section`
   font-size: 12px;
   line-height: 16px;
   padding-top: 40px;
@@ -22,7 +22,7 @@ const Menu = styled.div`
   margin-bottom: 17px;
 `;
 
-const MenuItem = styled.span`
+const ToPage = styled.span`
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -107,42 +107,42 @@ const CopyRight = styled.div`
 `;
 
 export default () => (
-  <Second>
+  <SocialAndStores>
     <div className="row">
       <div className="col-lg-7 col-xs-12">
         <Menu>
-          <MenuItem>
+          <ToPage>
             <GrayLink src="#">О компании</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">Партнёрская программа</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">Реклама</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">Вакансии</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">Помощь</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">Правила</GrayLink>
-          </MenuItem>
-          <MenuItem>
+          </ToPage>
+          <ToPage>
             <GrayLink src="#">White Label авиабилеты</GrayLink>
-          </MenuItem>
+          </ToPage>
         </Menu>
         <SocLinks>
-          <SocImg src={soc1} />
+          <SocImg src={vk} />
           <SocLink href="#">Вконтакте</SocLink>
-          <SocImg src={soc2} />
+          <SocImg src={facebook} />
           <SocLink href="#">Фейсбук</SocLink>
-          <SocImg src={soc3} />
+          <SocImg src={instagram} />
           <SocLink href="#">Инстаграм</SocLink>
-          <SocImg src={soc4} />
+          <SocImg src={twitter} />
           <SocLink href="#">Твиттер</SocLink>
-          <SocImg src={soc5} />
+          <SocImg src={viber} />
           <SocLink href="#">Вайбер</SocLink>
         </SocLinks>
         <CopyLeft>Поиск и бронирование отелей</CopyLeft>
@@ -156,5 +156,5 @@ export default () => (
         <CopyRight>© 2007–2018, Aviasales — дешевые авиабилеты</CopyRight>
       </div>
     </div>
-  </Second>
+  </SocialAndStores>
 );

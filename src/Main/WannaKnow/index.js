@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { FontBold } from "../../commonComponents";
+import {} from "../../commonComponents";
 import imgSocial1 from "./social-1.png";
 import imgSocial2 from "./social-2.png";
 import imgSocial3 from "./social-3.png";
@@ -51,13 +51,17 @@ const SocialMedia = styled.img`
   margin-right: 6px;
 `;
 
-const Subscribe = styled.div`
+const SubscribeWrap = styled.div`
   text-align: center;
 
   @media (min-width: 1200px) {
     flex-basis: 35%;
     text-align: right;
   }
+`;
+
+const TextBold = styled.span`
+  font-weight: bold;
 `;
 
 const Input = styled.input`
@@ -71,7 +75,7 @@ const Input = styled.input`
   max-width: 191x;
   padding: 7px;
 `;
-const Button = styled.button`
+const Subscribe = styled.button`
   color: white;
   background-color: #ff8e41;
   border: none;
@@ -89,7 +93,7 @@ export default () => (
         <div className="col-lg-offset-1 col-lg-10 col-xs-offset-3 col-xs-6">
           <WannaKnow>
             <WannaDiscount>
-              <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
+              <TextBold>Хотите знать всё о скидках на авиабилеты?</TextBold>
               <br />
               Вы можете подписаться на нашу рассылку через соцсети или по
               электронной почте.
@@ -100,10 +104,10 @@ export default () => (
               <SocialMedia src={imgSocial3} />
               <SocialMedia src={imgSocial4} />
             </SocialMedias>
-            <Subscribe>
+            <SubscribeWrap>
               <Input type="text" placeholder="Ваш email" />
-              <Button>Подписаться</Button>
-            </Subscribe>
+              <Subscribe>Подписаться</Subscribe>
+            </SubscribeWrap>
           </WannaKnow>
         </div>
       </div>

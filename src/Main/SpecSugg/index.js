@@ -61,7 +61,7 @@ const TopRightSide = styled.div`
   z-index: 200;
 `;
 
-const ImgTopRight = styled.img``;
+const TopRightContent = styled.img``;
 
 const AviacompanyAndPrices = styled.div`
   align-items: center;
@@ -72,9 +72,7 @@ const AviacompanyAndPrices = styled.div`
   padding-left: 10px;
 `;
 
-const Aviacompany = styled.div``;
-
-const Img = styled.img`
+const Aviacompany = styled.img`
   box-sizing: border-box;
   height: 25px;
 
@@ -110,7 +108,7 @@ const Days = styled.div`
   text-align: right;
 `;
 
-const P = styled.p`
+const Information = styled.p`
   color: #242424;
   font-size: 12px;
   height: 80px;
@@ -118,7 +116,7 @@ const P = styled.p`
   padding: 0 12px;
 `;
 
-const Button = styled.button`
+const DiscoverDetails = styled.button`
   color: #d93533;
   background: rgba(0, 0, 0, 0.0001);
   border: 2px solid #cd1f27;
@@ -133,12 +131,12 @@ const Button = styled.button`
   width: calc(100% - 32px);
 `;
 
-const BottomParagraphs = styled.div`
+const AdditionalInfo = styled.div`
   color: white;
   padding: 25px 0px 23px 0px;
 `;
 
-const PBottomLeft = styled.p`
+const LookAllSuggWrap = styled.p`
   text-align: center;
 
   @media (min-width: 768px) {
@@ -146,7 +144,7 @@ const PBottomLeft = styled.p`
   }
 `;
 
-const A = styled.a`
+const LookAllSugg = styled.a`
   cursor: pointer;
   text-decoration: underline;
 
@@ -155,7 +153,7 @@ const A = styled.a`
   }
 `;
 
-const PBottomRight = styled.p`
+const MediumPrice = styled.p`
   text-align: center;
 
   @media (min-width: 768px) {
@@ -177,75 +175,75 @@ export default () => (
             <Card>
               <Top>Билеты от 499 рублей!</Top>
               <AviacompanyAndPrices>
-                <Img src={pobeda} />
+                <Aviacompany src={pobeda} />
                 <PricesAndDays>
                   <Price>от 499 &#x584;</Price>
                   <Days>Осталось 45 дней</Days>
                 </PricesAndDays>
               </AviacompanyAndPrices>
-              <P>
+              <Information>
                 Билеты от 499 рублей! Специальное предложение от авиакомпании
                 Победа
-              </P>
-              <Button>Узнать подробности</Button>
+              </Information>
+              <DiscoverDetails>Узнать подробности</DiscoverDetails>
             </Card>
 
             <Card>
               <Top>
                 В Нью-Йорк от 20680 рублей!
                 <TopRightSide>
-                  <ImgTopRight src={circle} />
+                  <TopRightContent src={circle} />
                 </TopRightSide>
               </Top>
               <AviacompanyAndPrices>
-                <Img src={lufthansa} />
+                <Aviacompany src={lufthansa} />
                 <PricesAndDays>
                   <Price>от 20 680 &#x584;</Price>
                   <Days>Осталось 19 дней</Days>
                 </PricesAndDays>
               </AviacompanyAndPrices>
-              <P>
+              <Information>
                 Из Москвы в США от 20680 рублей! Специальное предложение от
                 авиакомпании Lufthansa
-              </P>
-              <Button>Узнать подробности</Button>
+              </Information>
+              <DiscoverDetails>Узнать подробности</DiscoverDetails>
             </Card>
 
             <Card>
               <Top>
                 В Лос-Анджелес от 22 360 рублей!
                 <TopRightSide>
-                  <ImgTopRight src={circle} />
+                  <TopRightContent src={circle} />
                 </TopRightSide>
               </Top>
               <AviacompanyAndPrices>
-                <Img src={lufthansa} />
+                <Aviacompany src={lufthansa} />
                 <PricesAndDays>
                   <Price>от 20 360 &#x584;</Price>
                   <Days>Осталось 19 дней</Days>
                 </PricesAndDays>
               </AviacompanyAndPrices>
-              <P>
+              <Information>
                 Из Москвы в США от 22360 рублей! Специальное предложение от
                 авиакомпании Lufthansa
-              </P>
-              <Button>Узнать подробности</Button>
+              </Information>
+              <DiscoverDetails>Узнать подробности</DiscoverDetails>
             </Card>
           </Cards>
         </div>
       </div>
-      <BottomParagraphs>
+      <AdditionalInfo>
         <div className="row">
           <div className="col-lg-offset-1 col-lg-5 col-md-6 col-xs-12">
-            <PBottomLeft>
-              <A>Смотреть все спецпредложения</A>
-            </PBottomLeft>
+            <LookAllSuggWrap>
+              <LookAllSugg>Смотреть все спецпредложения</LookAllSugg>
+            </LookAllSuggWrap>
           </div>
           <div className="col-lg-5 col-md-6 col-xs-12">
-            <PBottomRight>* средняя цена по направлению</PBottomRight>
+            <MediumPrice>* средняя цена по направлению</MediumPrice>
           </div>
         </div>
-      </BottomParagraphs>
+      </AdditionalInfo>
     </div>
   </SpecSugg>
 );
