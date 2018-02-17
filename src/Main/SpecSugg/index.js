@@ -61,22 +61,46 @@ const TopRightSide = styled.div`
 
 const ImgTopRight = styled.img``;
 
+const AviacompanyAndPrices = styled.div`
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+
+  padding-left: 10px;
+`;
+
+const Aviacompany = styled.div``;
+
 const Img = styled.img`
-  padding: 22px 12px;
-  width: 100%;
+  box-sizing: border-box;
+  height: 25px;
+
   @media (min-width: 1200px) {
+    height: 30px;
+    padding-left: 5px;
   }
 `;
 
+const PricesAndDays = styled.div`
+  box-sizing: border-box;
+`;
+
 const Price = styled.div`
+  box-sizing: border-box;
   color: #5c5c5c;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 16px;
   padding: 18px 13px 0px 13px;
   text-align: right;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 const Days = styled.div`
+  box-sizing: border-box;
   color: #d93633;
   font-size: 12px;
   line-height: 15px;
@@ -139,96 +163,92 @@ const PBottomRight = styled.p`
 
 export default () => (
   <SpecSugg>
-    <div className="row">
-      <div className="col-lg-offset-1 col-lg-10 col-xs">
-        <Title>Спецпредложения на авиабилеты</Title>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
-        <Cards>
-          <Card>
-            <Top>
-              Билеты от 499 рублей!
-              <TopRightSide>
-                <ImgTopRight src={circle} />
-              </TopRightSide>
-            </Top>
-            <div className="row">
-              <div className="col-lg-6 col-md-5 col-xs-6">
-                <Img src={pobeda} />
-              </div>
-              <div className="col-lg-6 col-md-7 col-xs-6">
-                <Price>от 499 &#x584;</Price>
-                <Days>Осталось 45 дней</Days>
-              </div>
-            </div>
-            <P>
-              Билеты от 499 рублей! Специальное предложение от авиакомпании
-              Победа
-            </P>
-            <Button>Узнать подробности</Button>
-          </Card>
-
-          <Card>
-            <Top>
-              В Нью-Йорк от 20680 рублей!
-              <TopRightSide>
-                <ImgTopRight src={circle} />
-              </TopRightSide>
-            </Top>
-            <div className="row">
-              <div className="col-lg-6 col-md-5 col-xs-6">
-                <Img src={lufthansa} />
-              </div>
-              <div className="col-lg-6 col-md-7 col-xs-6">
-                <Price>от 20 680 &#x584;</Price>
-                <Days>Осталось 19 дней</Days>
-              </div>
-            </div>
-            <P>
-              Из Москвы в США от 20680 рублей! Специальное предложение от
-              авиакомпании Lufthansa
-            </P>
-            <Button>Узнать подробности</Button>
-          </Card>
-
-          <Card>
-            <Top>
-              В Лос-Анджелес от 22360 рублей
-              <TopRightSide>
-                <ImgTopRight src={circle} />
-              </TopRightSide>
-            </Top>
-            <div className="row">
-              <div className="col-lg-6 col-md-5 col-xs-6">
-                <Img src={lufthansa} />
-              </div>
-              <div className="col-lg-6 col-md-7 col-xs-6">
-                <Price>от 20 360 &#x584;</Price>
-                <Days>Осталось 19 дней</Days>
-              </div>
-            </div>
-            <P>
-              Из Москвы в США от 22360 рублей! Специальное предложение от
-              авиакомпании Lufthansa
-            </P>
-            <Button>Узнать подробности</Button>
-          </Card>
-        </Cards>
-      </div>
-    </div>
-    <BottomParagraphs>
+    <div className="container">
       <div className="row">
-        <div className="col-lg-offset-1 col-lg-5 col-md-6 col-xs-12">
-          <PBottomLeft>
-            <A>Смотреть все спецпредложения</A>
-          </PBottomLeft>
-        </div>
-        <div className="col-lg-5 col-md-6 col-xs-12">
-          <PBottomRight>* средняя цена по направлению</PBottomRight>
+        <div className="col-lg-offset-1 col-lg-10 col-xs">
+          <Title>Спецпредложения на авиабилеты</Title>
         </div>
       </div>
-    </BottomParagraphs>
+      <div className="row">
+        <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
+          <Cards>
+            <Card>
+              <Top>
+                Билеты от 499 рублей!
+                <TopRightSide>
+                  <ImgTopRight src={circle} />
+                </TopRightSide>
+              </Top>
+              <AviacompanyAndPrices>
+                <Img src={pobeda} />
+                <PricesAndDays>
+                  <Price>от 499 &#x584;</Price>
+                  <Days>Осталось 45 дней</Days>
+                </PricesAndDays>
+              </AviacompanyAndPrices>
+              <P>
+                Билеты от 499 рублей! Специальное предложение от авиакомпании
+                Победа
+              </P>
+              <Button>Узнать подробности</Button>
+            </Card>
+
+            <Card>
+              <Top>
+                В Нью-Йорк от 20680 рублей!
+                <TopRightSide>
+                  <ImgTopRight src={circle} />
+                </TopRightSide>
+              </Top>
+              <AviacompanyAndPrices>
+                <Img src={lufthansa} />
+                <PricesAndDays>
+                  <Price>от 20 680 &#x584;</Price>
+                  <Days>Осталось 19 дней</Days>
+                </PricesAndDays>
+              </AviacompanyAndPrices>
+              <P>
+                Из Москвы в США от 20680 рублей! Специальное предложение от
+                авиакомпании Lufthansa
+              </P>
+              <Button>Узнать подробности</Button>
+            </Card>
+
+            <Card>
+              <Top>
+                В Лос-Анджелес от 22360 рублей
+                <TopRightSide>
+                  <ImgTopRight src={circle} />
+                </TopRightSide>
+              </Top>
+              <AviacompanyAndPrices>
+                <Img src={lufthansa} />
+                <PricesAndDays>
+                  <Price>от 20 360 &#x584;</Price>
+                  <Days>Осталось 19 дней</Days>
+                </PricesAndDays>
+              </AviacompanyAndPrices>
+              <P>
+                Из Москвы в США от 22360 рублей! Специальное предложение от
+                авиакомпании Lufthansa
+              </P>
+              <Button>Узнать подробности</Button>
+            </Card>
+          </Cards>
+        </div>
+      </div>
+      <BottomParagraphs>
+        <div className="row">
+          <div className="col-lg-offset-1 col-lg-5 col-md-6 col-xs-12">
+            <PBottomLeft>
+              <A>Смотреть все спецпредложения</A>
+            </PBottomLeft>
+          </div>
+          <div className="col-lg-5 col-md-6 col-xs-12">
+            <PBottomRight>* средняя цена по направлению</PBottomRight>
+          </div>
+        </div>
+      </BottomParagraphs>
+    </div>
   </SpecSugg>
 );

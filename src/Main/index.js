@@ -15,15 +15,13 @@ const Main = styled.main`
 
 export default () => (
   <Main>
-    <div className="container">
-      <Top />
-      <Cards />
-      <BestPrices />
-      <Slider />
-      <WannaKnow />
-      <SpecSugg />
-      <Information />
-      <DownloadMobApp />
-    </div>
+    <Top />
+    <Cards />
+    <BestPrices />
+    <Slider />
+    <WannaKnow />
+    <SpecSugg />
+    <Information />
+    <DownloadMobApp />
   </Main>
 );

@@ -62,64 +62,66 @@ const TopText = styled.div`
 
 export default () => (
   <Top>
-    <Compass src={imgCompass} />
-    <H2Center>
-      Популярные направления перелетов<br />из города&nbsp;
-      <BlueLink href="#">Москва</BlueLink>
-      <Edit src={imgEdit} />
-    </H2Center>
-    <div className="row">
-      <div className="col-xs-offset-1 col-xs-10">
-        <Items>
-          <Item>
-            <TopImg src={imgTop1} />
-            <TopText>
-              <BlueLink href="#">
-                Куда<br />угодно
-              </BlueLink>
-            </TopText>
-          </Item>
-          <Item>
-            <TopImg src={imgTop2} />
-            <TopText>
-              <BlueLink href="#">
-                Солнце<br />и море
-              </BlueLink>
-            </TopText>
-          </Item>
-          <Item>
-            <TopImg src={imgTop3} />
-            <TopText>
-              <BlueLink href="#">
-                Шопинг,<br />город
-              </BlueLink>
-            </TopText>
-          </Item>
-          <Item>
-            <TopImg src={imgTop4} />
-            <TopText>
-              <BlueLink href="#">
-                Культура<br />и история
-              </BlueLink>
-            </TopText>
-          </Item>
-          <Item>
-            <TopImg src={imgTop5} />
-            <TopText>
-              <BlueLink href="#">
-                Ночная<br />жизнь
-              </BlueLink>
-            </TopText>
-          </Item>
-          <Item>
-            <TopImg src={imgTop6} />
-            <TopText>
-              <BlueLink href="#">
-                Отдых<br />с детьми
-              </BlueLink>
-            </TopText>
-          </Item>
-        </Items>
+    <div className="container">
+      <Compass src={imgCompass} />
+      <H2Center>
+        Популярные направления перелетов<br />из города&nbsp;
+        <BlueLink href="#">Москва</BlueLink>
+        <Edit src={imgEdit} />
+      </H2Center>
+      <div className="row">
+        <div className="col-xs-offset-1 col-xs-10">
+          <Items>
+            <Item>
+              <TopImg src={imgTop1} />
+              <TopText>
+                <BlueLink href="#">
+                  Куда<br />угодно
+                </BlueLink>
+              </TopText>
+            </Item>
+            <Item>
+              <TopImg src={imgTop2} />
+              <TopText>
+                <BlueLink href="#">
+                  Солнце<br />и море
+                </BlueLink>
+              </TopText>
+            </Item>
+            <Item>
+              <TopImg src={imgTop3} />
+              <TopText>
+                <BlueLink href="#">
+                  Шопинг,<br />город
+                </BlueLink>
+              </TopText>
+            </Item>
+            <Item>
+              <TopImg src={imgTop4} />
+              <TopText>
+                <BlueLink href="#">
+                  Культура<br />и история
+                </BlueLink>
+              </TopText>
+            </Item>
+            <Item>
+              <TopImg src={imgTop5} />
+              <TopText>
+                <BlueLink href="#">
+                  Ночная<br />жизнь
+                </BlueLink>
+              </TopText>
+            </Item>
+            <Item>
+              <TopImg src={imgTop6} />
+              <TopText>
+                <BlueLink href="#">
+                  Отдых<br />с детьми
+                </BlueLink>
+              </TopText>
+            </Item>
+          </Items>
+        </div>
       </div>
     </div>
   </Top>

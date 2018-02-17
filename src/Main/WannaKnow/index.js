@@ -8,7 +8,7 @@ import imgSocial4 from "./social-4.png";
 import imgTopBorder from "./border-top.png";
 
 const WannaKnowWrap = styled.section`
-  background: url(${imgTopBorder}) no-repeat top center;
+  background: url(${imgTopBorder}) repeat-x top center;
   display: none;
   padding-bottom: 24px;
   padding-top: 39px;
@@ -84,26 +84,28 @@ const Button = styled.button`
 
 export default () => (
   <WannaKnowWrap>
-    <div className="row">
-      <div className="col-lg-offset-1 col-lg-10 col-xs-offset-3 col-xs-6">
-        <WannaKnow>
-          <WannaDiscount>
-            <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
-            <br />
-            Вы можете подписаться на нашу рассылку через соцсети или по
-            электронной почте.
-          </WannaDiscount>
-          <SocialMedias>
-            <SocialMedia src={imgSocial1} />
-            <SocialMedia src={imgSocial2} />
-            <SocialMedia src={imgSocial3} />
-            <SocialMedia src={imgSocial4} />
-          </SocialMedias>
-          <Subscribe>
-            <Input type="text" placeholder="Ваш email" />
-            <Button>Подписаться</Button>
-          </Subscribe>
-        </WannaKnow>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-offset-1 col-lg-10 col-xs-offset-3 col-xs-6">
+          <WannaKnow>
+            <WannaDiscount>
+              <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
+              <br />
+              Вы можете подписаться на нашу рассылку через соцсети или по
+              электронной почте.
+            </WannaDiscount>
+            <SocialMedias>
+              <SocialMedia src={imgSocial1} />
+              <SocialMedia src={imgSocial2} />
+              <SocialMedia src={imgSocial3} />
+              <SocialMedia src={imgSocial4} />
+            </SocialMedias>
+            <Subscribe>
+              <Input type="text" placeholder="Ваш email" />
+              <Button>Подписаться</Button>
+            </Subscribe>
+          </WannaKnow>
+        </div>
       </div>
     </div>
   </WannaKnowWrap>

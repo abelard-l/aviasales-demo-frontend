@@ -13,14 +13,6 @@ const DownloadMobApp = styled.section`
   margin-top: 50px;
   padding: 0px 10px;
   position: relative;
-
-  @media (min-width: 768px) {
-    padding: 10px 0px;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 0px;
-  }
 `;
 
 const H2 = styled.h2`
@@ -41,6 +33,15 @@ const H2 = styled.h2`
   @media (min-width: 1200px) {
     margin-bottom: 19px;
     margin-top: 36px;
+  }
+`;
+
+const IphoneWrap = styled.div`
+  height: 100%;
+  position: static;
+
+  @media (min-width: 768px) {
+    position: relative;
   }
 `;
 
@@ -142,32 +143,35 @@ const PhoneImg = styled.img`
 
 export default () => (
   <DownloadMobApp>
-    <div className="row">
-      <div className="col-lg-offset-1 col-lg-3 col-md-4 col-xs-offset-0 col-xs-0">
-        <IphoneImg src={bgIphone} />
-      </div>
-      <div className="col-lg-7 col-md-8 col-xs-12">
-        <H2>Скачай мобильное приложение Aviasales.ru</H2>
-
-        <Stars>
-          <Star src={star} />
-          <Star src={star} />
-          <Star src={star} />
-          <Star src={star} />
-          <Star src={halfStar} />
-          <StarsText>Более 103 000 оценок</StarsText>
-          <Phones>
-            <PhoneApple>
-              <PhoneImg src={apple} /> iPhone или iPad
-            </PhoneApple>
-            <PhoneAndroid>
-              <PhoneImg src={android} /> Android
-            </PhoneAndroid>
-            <PhoneWf>
-              <PhoneImg src={wf} /> Windows Phone
-            </PhoneWf>
-          </Phones>
-        </Stars>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-offset-1 col-lg-3 col-md-4 col-xs-offset-0 col-xs-0">
+          <IphoneWrap>
+            <IphoneImg src={bgIphone} />
+          </IphoneWrap>
+        </div>
+        <div className="col-lg-7 col-md-8 col-xs-12">
+          <H2>Скачай мобильное приложение Aviasales.ru</H2>
+          <Stars>
+            <Star src={star} />
+            <Star src={star} />
+            <Star src={star} />
+            <Star src={star} />
+            <Star src={halfStar} />
+            <StarsText>Более 103 000 оценок</StarsText>
+            <Phones>
+              <PhoneApple>
+                <PhoneImg src={apple} /> iPhone или iPad
+              </PhoneApple>
+              <PhoneAndroid>
+                <PhoneImg src={android} /> Android
+              </PhoneAndroid>
+              <PhoneWf>
+                <PhoneImg src={wf} /> Windows Phone
+              </PhoneWf>
+            </Phones>
+          </Stars>
+        </div>
       </div>
     </div>
   </DownloadMobApp>
