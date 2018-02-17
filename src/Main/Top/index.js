@@ -26,23 +26,24 @@ const Edit = styled.img`
 
 const Items = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  @media (max-width: 575px) {
-    flex-wrap: wrap;
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
   }
 `;
 
 const Item = styled.div`
-  flex-basis: 8.33%;
+  flex-basis: 33.33%;
+  margin-bottom: 30px;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 16.66%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 33.33%;
-    margin-bottom: 30px;
+  @media (min-width: 1200px) {
+    flex-basis: 8.33%;
   }
 `;
 

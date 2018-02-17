@@ -5,15 +5,15 @@ import logo from "./logo.png";
 const Top = styled.section`
   font-size: 20px;
   line-height: 25px;
-  margin-bottom: 200px;
+  margin-bottom: 47px;
   padding-top: 12px;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     margin-bottom: 81px;
   }
 
-  @media (max-width: 575px) {
-    margin-bottom: 47px;
+  @media (min-width: 1200px) {
+    margin-bottom: 200px;
   }
 `;
 

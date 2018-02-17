@@ -33,7 +33,7 @@ const BolderGrayLink = styled.a`
 export default () => (
   <First>
     <div className="row">
-      <div className="col-sm-2 col-xs-6">
+      <div className="col-md-2 col-xs-6">
         <H3>страны</H3>
         <MenuItem>
           <GrayLink href="#">Россия</GrayLink>
@@ -57,7 +57,7 @@ export default () => (
           <BolderGrayLink href="#">Все страны →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-sm-2 col-xs-6">
+      <div className="col-md-2 col-xs-6">
         <H3>ГОРОДА</H3>
         <MenuItem>
           <GrayLink href="#">Москва</GrayLink>
@@ -81,7 +81,7 @@ export default () => (
           <BolderGrayLink href="#">Все города →</BolderGrayLink>
         </MenuItem>
       </div>
-      <div className="col-sm-2 col-xs-6">
+      <div className="col-md-2 col-xs-6">
         <H3>АВИАКОМПАНИИ</H3>
         <MenuItem>
           <GrayLink href="#">Air Berlin</GrayLink>

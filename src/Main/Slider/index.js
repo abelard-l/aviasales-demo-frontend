@@ -8,12 +8,14 @@ import imgAgency4 from "./agencyLogo-4.png";
 import imgAgency5 from "./agencyLogo-5.png";
 
 const Slider = styled.section`
+  display: none;
   padding-bottom: 28px;
 
-  @media (max-width: 575px) {
-    display: none;
+  @media (min-width: 768px) {
+    display: block;
   }
 `;
+
 const SliderH2 = styled.h2`
   color: #5c5c5c;
   font-size: 32px;

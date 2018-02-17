@@ -23,28 +23,29 @@ const Group = styled.img`
 
 const CitiesAndPrices = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
-  @media (max-width: 991px) {
-    flex-wrap: wrap;
+  @media (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
 
-  @media (max-width: 575px) {
-    margin-bottom: 40px;
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
   }
 `;
 
 const Card = styled.div`
-  flex-basis: 31%;
+  flex-basis: 100%;
+  margin-bottom: 40px;
 
-  @media (max-width: 991px) {
-    flex-basis: 100%;
+  @media (min-width: 768px) {
     margin-bottom: 50px;
   }
 
-  @media (max-width: 575px) {
-    margin-bottom: 40px;
+  @media (min-width: 1200px) {
+    flex-basis: 31%;
   }
 `;
 
@@ -81,7 +82,7 @@ export default () => (
     <Group src={imgGroup} />
     <H2Center>Лучшие цены на авиабилеты за последний месяц</H2Center>
     <div className="row">
-      <div className="col-sm-offset-1 col-sm-10">
+      <div className="col-md-offset-1 col-md-10">
         <CitiesAndPrices>
           <Card>
             <Title>

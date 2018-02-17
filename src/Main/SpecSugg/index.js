@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { DivMaxW296 } from "../../commonComponents";
 import lufthansa from "./lufthansa.png";
 import pobeda from "./pobeda.png";
 import circle from "./tr-circle.png";
@@ -14,29 +13,27 @@ const Title = styled.h2`
   font-size: 30px;
   font-weight: 500;
   line-height: 42px;
+  padding-left: 10px;
   padding-top: 24px;
 `;
 
 const Cards = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  @media (max-width: 991px) {
-    justify-content: space-around;
-  }
-
-  @media (max-width: 575px) {
-    flex-wrap: wrap;
+  @media (min-width: 1200px) {
+    justify-content: space-between;
   }
 `;
 
 const Card = styled.div`
   background: white;
-  flex-basis: 32%;
+  flex-basis: 96%;
+  margin-bottom: 12px;
 
-  @media (max-width: 575px) {
-    flex-basis: 98%;
-    margin-bottom: 12px;
+  @media (min-width: 768px) {
+    flex-basis: 32%;
   }
 `;
 
@@ -66,9 +63,8 @@ const ImgTopRight = styled.img``;
 
 const Img = styled.img`
   padding: 22px 12px;
-
-  @media (max-width: 991px) {
-    width: 100%;
+  width: 100%;
+  @media (min-width: 1200px) {
   }
 `;
 
@@ -117,10 +113,10 @@ const BottomParagraphs = styled.div`
 `;
 
 const PBottomLeft = styled.p`
-  text-align: left;
+  text-align: center;
 
-  @media (max-width: 575px) {
-    text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
   }
 `;
 
@@ -134,17 +130,19 @@ const A = styled.a`
 `;
 
 const PBottomRight = styled.p`
-  text-align: right;
+  text-align: center;
 
-  @media (max-width: 575px) {
-    text-align: center;
+  @media (min-width: 768px) {
+    text-align: right;
   }
 `;
 
 export default () => (
   <SpecSugg>
-    <div className="col-md-offset-1">
-      <Title>Спецпредложения на авиабилеты</Title>
+    <div className="row">
+      <div className="col-lg-offset-1 col-lg-10 col-xs">
+        <Title>Спецпредложения на авиабилеты</Title>
+      </div>
     </div>
     <div className="row">
       <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
@@ -222,12 +220,12 @@ export default () => (
     </div>
     <BottomParagraphs>
       <div className="row">
-        <div className="col-md-5 col-md-offset-1">
+        <div className="col-lg-offset-1 col-lg-5 col-md-6 col-xs-12">
           <PBottomLeft>
             <A>Смотреть все спецпредложения</A>
           </PBottomLeft>
         </div>
-        <div className="col-md-5">
+        <div className="col-lg-5 col-md-6 col-xs-12">
           <PBottomRight>* средняя цена по направлению</PBottomRight>
         </div>
       </div>

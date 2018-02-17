@@ -24,11 +24,11 @@ const Menu = styled.div`
 
 const MenuItem = styled.span`
   display: inline-block;
-  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 
-  @media (max-width: 575px) {
-    margin-bottom: 10px;
-    margin-right: 10px;
+  @media (min-width: 768px) {
+    margin-right: 5px;
   }
 `;
 
@@ -42,58 +42,74 @@ const SocImg = styled.img`
 
 const SocLink = styled.a`
   color: #4a4a4a;
-  margin-right: 12px;
+  display: inline-block;
+
+  margin-bottom: 15px;
+  margin-right: 24px;
+
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 
-  @media (max-width: 575px) {
-    display: inline-block;
-    margin-bottom: 15px;
-    margin-right: 24px;
+  @media (min-width: 768px) {
+    margin-right: 12px;
   }
 `;
 
 const Download = styled.div`
-  text-align: right;
+  margin-top: 20px;
+  text-align: left;
 
-  @media (max-width: 991px) {
-    margin-top: 20px;
-    text-align: left;
+  @media (min-width: 1200px) {
+    text-align: right;
   }
 `;
 
 const DownloadImg = styled.img`
   cursor: pointer;
-  margin-bottom: 34px;
-  margin-left: 10px;
+  display: block;
+  margin: 20px auto;
 
-  @media (max-width: 991px) {
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 10px;
+  @media (min-width: 768px) {
+    display: inline-block;
+    margin: 0px 10px 24px 0px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 34px;
+    margin-left: 10px;
+    margin-right: 0px;
   }
 `;
 
 const CopyLeft = styled.div`
   color: #5b5b5c;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const CopyRight = styled.div`
   color: #5b5b5c;
-  text-align: right;
+  text-align: center;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     text-align: left;
+  }
+
+  @media (min-width: 1200px) {
+    text-align: right;
   }
 `;
 
 export default () => (
   <Second>
     <div className="row">
-      <div className="col-lg-7 col-md-12">
+      <div className="col-lg-7 col-xs-12">
         <Menu>
           <MenuItem>
             <GrayLink src="#">О компании</GrayLink>
@@ -131,7 +147,7 @@ export default () => (
         </SocLinks>
         <CopyLeft>Поиск и бронирование отелей</CopyLeft>
       </div>
-      <div className="col-lg-5 col-md-12">
+      <div className="col-lg-5 col-xs-12">
         <Download>
           <DownloadImg src={apple} />
           <DownloadImg src={google} />

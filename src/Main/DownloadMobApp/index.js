@@ -11,47 +11,58 @@ const DownloadMobApp = styled.section`
   border: 1px solid #ffffff;
   background: linear-gradient(101.04deg, #00b0de -46.33%, #196ebd 53.67%);
   margin-top: 50px;
-  padding: 40px 0px;
+  padding: 0px 10px;
   position: relative;
 
-  @media (max-width: 575px) {
-    padding: 0px 10px;
+  @media (min-width: 768px) {
+    padding: 10px 0px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0px;
   }
 `;
 
 const H2 = styled.h2`
   color: #ffffff;
-  font-size: 32px;
   font-weight: 500;
   line-height: 40px;
-  margin-bottom: 19px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-right: 0px;
+  text-align: center;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
+    font-size: 32px;
     padding-right: 72px;
+    text-align: left;
   }
 
-  @media (max-width: 575px) {
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-right: 0px;
-    text-align: center;
+  @media (min-width: 1200px) {
+    margin-bottom: 19px;
+    margin-top: 36px;
   }
 `;
 
 const IphoneImg = styled.img`
   bottom: 0px;
   position: absolute;
+  max-width: 162px;
+  left: -20px;
 
-  @media (max-width: 575px) {
-    max-width: 162px;
-    left: -20px;
+  @media (min-width: 768px) {
+    max-width: 100%;
+    left: 0px;
   }
 `;
 
 const Stars = styled.div`
-  @media (max-width: 575px) {
-    margin-bottom: 56px;
-    text-align: center;
+  margin-bottom: 76px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    text-align: left;
   }
 `;
 
@@ -70,53 +81,72 @@ const Phones = styled.div`
   color: white;
   margin-bottom: 25px;
   margin-top: 43px;
-  @media (max-width: 575px) {
+
+  @media (min-width: 768px) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 64px;
   }
 `;
 
-const Phone = styled.span`
-  display: inline-block;
-  margin-right: 21px;
+const PhoneApple = styled.span`
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  text-align: left;
 
-  &:nth-child(1),
-  &:nth-child(2) {
+  @media (min-width: 768px) {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin: 0px 21px 0px 0px;
     padding-right: 21px;
-
-    @media (max-width: 575px) {
-      border-right: 0px;
-      padding-right: 0px;
-    }
   }
+`;
 
-  @media (max-width: 991px) {
-    font-size: 14px;
+const PhoneAndroid = styled.span`
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin: 0px 21px 0px 0px;
+    padding-right: 21px;
   }
+`;
 
-  @media (max-width: 575px) {
-    display: block;
-    margin-bottom: 20px;
-    margin-left: 180px;
-    text-align: left;
-  }
+const PhoneWf = styled.span`
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  text-align: left;
 
-  @media (max-width: 480px) {
-    margin-left: 130px;
-    margin-right: 0px;
+  @media (min-width: 768px) {
+    display: inline-block;
+    margin: 0;
+    padding-right: 21px;
   }
 `;
 
 const PhoneImg = styled.img`
-  margin-right: 8px;
+  margin-right: 5px;
+  vertical-align: middle;
 `;
 
 export default () => (
   <DownloadMobApp>
     <div className="row">
-      <div className="col-lg-3 col-sm-5 col-xs-0 col-lg-offset-1 col-xs-offset-0">
+      <div className="col-lg-offset-1 col-lg-3 col-md-4 col-xs-offset-0 col-xs-0">
         <IphoneImg src={bgIphone} />
       </div>
-      <div className="col-lg-7 col-sm-7 col-xs-12">
+      <div className="col-lg-7 col-md-8 col-xs-12">
         <H2>Скачай мобильное приложение Aviasales.ru</H2>
 
         <Stars>
@@ -127,15 +157,15 @@ export default () => (
           <Star src={halfStar} />
           <StarsText>Более 103 000 оценок</StarsText>
           <Phones>
-            <Phone>
+            <PhoneApple>
               <PhoneImg src={apple} /> iPhone или iPad
-            </Phone>
-            <Phone>
+            </PhoneApple>
+            <PhoneAndroid>
               <PhoneImg src={android} /> Android
-            </Phone>
-            <Phone>
+            </PhoneAndroid>
+            <PhoneWf>
               <PhoneImg src={wf} /> Windows Phone
-            </Phone>
+            </PhoneWf>
           </Phones>
         </Stars>
       </div>

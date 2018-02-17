@@ -7,27 +7,44 @@ import imgSocial3 from "./social-3.png";
 import imgSocial4 from "./social-4.png";
 import imgTopBorder from "./border-top.png";
 
-const WannaKnow = styled.section`
+const WannaKnowWrap = styled.section`
   background: url(${imgTopBorder}) no-repeat top center;
+  display: none;
   padding-bottom: 24px;
   padding-top: 39px;
 
-  @media (max-width: 575px) {
-    display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const WannaKnow = styled.div`
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 `;
 
 const WannaDiscount = styled.p`
-  @media (max-width: 991px) {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    flex-basis: 37%;
+    margin: 0px;
+    text-align: left;
   }
 `;
 
 const SocialMedias = styled.div`
-  @media (max-width: 991px) {
-    margin-bottom: 30px;
-    text-align: center;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    flex-basis: 25%;
+    margin-bottom: 0px;
+    text-align: right;
   }
 `;
 const SocialMedia = styled.img`
@@ -35,10 +52,11 @@ const SocialMedia = styled.img`
 `;
 
 const Subscribe = styled.div`
-  text-align: right;
+  text-align: center;
 
-  @media (max-width: 991px) {
-    text-align: center;
+  @media (min-width: 1200px) {
+    flex-basis: 35%;
+    text-align: right;
   }
 `;
 
@@ -65,30 +83,28 @@ const Button = styled.button`
 `;
 
 export default () => (
-  <WannaKnow>
+  <WannaKnowWrap>
     <div className="row">
-      <div className="col-lg-4 col-md-10 col-sm-offset-1 col-xs-offset-0">
-        <WannaDiscount>
-          <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
-          <br />
-          Вы можете подписаться на нашу рассылку через соцсети или по
-          электронной почте.
-        </WannaDiscount>
-      </div>
-      <div className="col-lg-2 col-md-10 col-sm-offset-1 col-md-offset-0">
-        <SocialMedias>
-          <SocialMedia src={imgSocial1} />
-          <SocialMedia src={imgSocial2} />
-          <SocialMedia src={imgSocial3} />
-          <SocialMedia src={imgSocial4} />
-        </SocialMedias>
-      </div>
-      <div className="col-lg-4 col-md-10 col-sm-offset-1 col-md-offset-0">
-        <Subscribe>
-          <Input type="text" placeholder="Ваш email" />
-          <Button>Подписаться</Button>
-        </Subscribe>
+      <div className="col-lg-offset-1 col-lg-10 col-xs-offset-3 col-xs-6">
+        <WannaKnow>
+          <WannaDiscount>
+            <FontBold>Хотите знать всё о скидках на авиабилеты?</FontBold>
+            <br />
+            Вы можете подписаться на нашу рассылку через соцсети или по
+            электронной почте.
+          </WannaDiscount>
+          <SocialMedias>
+            <SocialMedia src={imgSocial1} />
+            <SocialMedia src={imgSocial2} />
+            <SocialMedia src={imgSocial3} />
+            <SocialMedia src={imgSocial4} />
+          </SocialMedias>
+          <Subscribe>
+            <Input type="text" placeholder="Ваш email" />
+            <Button>Подписаться</Button>
+          </Subscribe>
+        </WannaKnow>
       </div>
     </div>
-  </WannaKnow>
+  </WannaKnowWrap>
 );

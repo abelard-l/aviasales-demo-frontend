@@ -16,18 +16,18 @@ const Header = styled.header`
     #02abdb -14.46%,
     #196ebd 73.68%
   );
-  padding-bottom: 250px;
+  padding-bottom: 88px;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     padding-bottom: 122px;
   }
 
-  @media (max-width: 575px) {
-    padding-bottom: 88px;
+  @media (min-width: 1200px) {
+    padding-bottom: 250px;
   }
 `;
 
-const H1 = styled.h1`
+const Title = styled.h1`
   color: white;
   font-size: 40px;
   font-weight: bold;
@@ -36,7 +36,7 @@ const H1 = styled.h1`
   text-align: center;
 `;
 
-const H2 = styled.h2`
+const SubTitle = styled.h2`
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -48,23 +48,23 @@ const H2 = styled.h2`
 
 const TicketParams = styled.form`
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
-  @media (max-width: 991px) {
-    flex-wrap: wrap;
+  @media (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
 `;
 
 const DestFrom = styled.div`
-  flex-basis: 22%;
+  flex-basis: 100%;
   position: relative;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 50%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 100%;
+  @media (min-width: 1200px) {
+    flex-basis: 22%;
   }
 `;
 
@@ -85,42 +85,40 @@ const DestFromBtn = styled.button`
 `;
 
 const DestTo = styled.div`
-  flex-basis: 22%;
+  flex-basis: 100%;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 50%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 100%;
+  @media (min-width: 1200px) {
+    flex-basis: 22%;
   }
 `;
 
 const DateFrom = styled.div`
-  flex-basis: 18%;
-
+  flex-basis: 50%;
   position: relative;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 25%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 50%;
+  @media (min-width: 1200px) {
+    flex-basis: 18%;
   }
 `;
 
 const DateTo = styled.div`
-  flex-basis: 18%;
-
+  flex-basis: 50%;
   position: relative;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 25%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 50%;
+  @media (min-width: 1200px) {
+    flex-basis: 18%;
   }
 `;
 
@@ -133,15 +131,15 @@ const DateBtn = styled.button`
 `;
 
 const FlightType = styled.div`
-  flex-basis: 22%;
+  flex-basis: 100%;
   position: relative;
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     flex-basis: 50%;
   }
 
-  @media (max-width: 575px) {
-    flex-basis: 100%;
+  @media (min-width: 1200px) {
+    flex-basis: 22%;
   }
 `;
 
@@ -155,7 +153,7 @@ const FlightTypeBtn = styled.button`
 
 const Passenger = styled.div`
   background: white;
-  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
@@ -164,13 +162,17 @@ const Passenger = styled.div`
   padding: 16px;
   width: (100% - 2px);
 
-  & span {
-    color: #a0b0b9;
+  @media (min-width: 768px) {
+    border-bottom-left-radius: 0px;
   }
 
-  @media (max-width: 991px) {
-    border-top-right-radius: 0px;
+  @media (min-width: 1200px) {
+    border-radius: 0px 4px 4px 0px;
   }
+`;
+
+const GrayerText = styled.span`
+  color: #a0b0b9;
 `;
 
 const Input = styled.input`
@@ -184,29 +186,48 @@ const Input = styled.input`
   width: calc(100% - 2px);
 
   ${props =>
-    props.destfrom &&
+    props.topRounded &&
     css`
-      border-bottom-left-radius: 4px;
-      border-top-left-radius: 4px;
+      border-radius: 4px 4px 0px 0px;
+    `};
 
-      @media (max-width: 991px) {
-        border-bottom-left-radius: 0px;
+  ${props =>
+    props.topLeftRoundedTablets &&
+    css`
+      @media (min-width: 768px) {
+        border-radius: 4px 0px 0px 0px;
       }
     `};
 
   ${props =>
-    props.destto &&
+    props.topRightRoundedTablets &&
     css`
-      @media (max-width: 991px) {
-        border-top-right-radius: 4px;
+      @media (min-width: 768px) {
+        border-radius: 0px 4px 0px 0px;
       }
     `};
 
   ${props =>
-    props.datefrom &&
+    props.bottomLeftRoundedTablets &&
     css`
-      @media (max-width: 991px) {
-        border-bottom-left-radius: 4px;
+      @media (min-width: 768px) {
+        border-radius: 0px 0px 0px 4px;
+      }
+    `};
+
+  ${props =>
+    props.LeftRoundedDesktop &&
+    css`
+      @media (min-width: 1200px) {
+        border-radius: 4px 0px 0px 4px;
+      }
+    `};
+
+  ${props =>
+    props.noRoundedDesktop &&
+    css`
+      @media (min-width: 1200px) {
+        border-radius: 0px 0px 0px 0px;
       }
     `};
 `;
@@ -259,24 +280,40 @@ const Aero = styled.img`
 export default () => (
   <Header>
     <Top />
-    <H1>Поиск дешевых авиабилетов</H1>
-    <H2>Лучший способ купить авиабилеты дешево</H2>
+    <Title>Поиск дешевых авиабилетов</Title>
+    <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
     <div className="container">
       <div className="row">
         <div className="col-xs-offset-1 col-xs-10">
           <TicketParams>
             <DestFrom>
-              <Input type="text" defaultValue="Москва" destfrom />
+              <Input
+                type="text"
+                defaultValue="Москва"
+                topRounded
+                topLeftRoundedTablets
+                LeftRoundedDesktop
+              />
               <RightInputField>
                 <Airport>MOW</Airport>
                 <DestFromBtn />
               </RightInputField>
             </DestFrom>
             <DestTo>
-              <Input type="text" placeholder="Город прибытия" destto />
+              <Input
+                type="text"
+                placeholder="Город прибытия"
+                topRightRoundedTablets
+                noRoundedDesktop
+              />
             </DestTo>
             <DateFrom>
-              <Input type="text" placeholder="Туда" datefrom />
+              <Input
+                type="text"
+                placeholder="Туда"
+                bottomLeftRoundedTablets
+                noRoundedDesktop
+              />
               <RightInputField>
                 <DateBtn />
               </RightInputField>
@@ -289,7 +326,7 @@ export default () => (
             </DateTo>
             <FlightType>
               <Passenger>
-                1 пассажир, <span>эконом</span>
+                1 пассажир, <GrayerText>эконом</GrayerText>
               </Passenger>
               <RightInputField>
                 <FlightTypeBtn />
