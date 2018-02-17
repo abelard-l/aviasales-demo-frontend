@@ -7,7 +7,7 @@ import { BlueLink } from "../../commonComponents";
 
 const Information = styled.section``;
 
-const InfoTextreTitle = styled.img`
+const InfoTextTitle = styled.img`
   padding-right: 4px;
 `;
 
@@ -29,7 +29,7 @@ export default () => (
       <div className="row">
         <div className="col-lg-offset-1 col-lg-10 col-xs">
           <Title>
-            <InfoTextreTitle src={plane} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
+            <InfoTextTitle src={plane} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
           </Title>
           <InfoText>
             Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
@@ -47,7 +47,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextreTitle src={at} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
+            <InfoTextTitle src={at} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
           </Title>
           <InfoText>
             Электронный авиабилет — это, по сути, обычный билет на самолет, но
@@ -68,7 +68,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextreTitle src={list} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
+            <InfoTextTitle src={list} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
           </Title>
           <InfoText>
             Есть масса путеводителей по странам, но ни одного о том, как

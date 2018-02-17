@@ -136,7 +136,7 @@ const PhoneWf = styled.span`
   }
 `;
 
-const PhoneImg = styled.img`
+const Emblem = styled.img`
   margin-right: 5px;
   vertical-align: middle;
 `;
@@ -161,13 +161,13 @@ export default () => (
             <StarsText>Более 103 000 оценок</StarsText>
             <Phones>
               <PhoneApple>
-                <PhoneImg src={apple} /> iPhone или iPad
+                <Emblem src={apple} /> iPhone или iPad
               </PhoneApple>
               <PhoneAndroid>
-                <PhoneImg src={android} /> Android
+                <Emblem src={android} /> Android
               </PhoneAndroid>
               <PhoneWf>
-                <PhoneImg src={wf} /> Windows Phone
+                <Emblem src={wf} /> Windows Phone
               </PhoneWf>
             </Phones>
           </Stars>

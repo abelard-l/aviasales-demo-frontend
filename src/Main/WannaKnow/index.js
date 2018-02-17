@@ -59,7 +59,7 @@ const SubscribeWrap = styled.div`
   }
 `;
 
-const TextBold = styled.span`
+const Caption = styled.span`
   font-weight: bold;
 `;
 
@@ -92,7 +92,7 @@ export default () => (
         <div className="col-lg-offset-1 col-lg-10 col-xs-offset-3 col-xs-6">
           <WannaKnow>
             <WannaDiscount>
-              <TextBold>Хотите знать всё о скидках на авиабилеты?</TextBold>
+              <Caption>Хотите знать всё о скидках на авиабилеты?</Caption>
               <br />
               Вы можете подписаться на нашу рассылку через соцсети или по
               электронной почте.

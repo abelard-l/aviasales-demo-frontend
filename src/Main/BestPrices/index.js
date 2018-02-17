@@ -8,7 +8,7 @@ import calendar from "./calendar.svg";
 
 const BestPrices = styled.section``;
 
-const Group = styled.img`
+const Logotype = styled.img`
   display: block;
   height: 64px;
   margin: 32px auto 20px auto;
@@ -109,7 +109,7 @@ export const TextCenter = styled.p`
 export default () => (
   <BestPrices>
     <div className="container">
-      <Group src={calendar} />
+      <Logotype src={calendar} />
       <HeaderCenter>Лучшие цены на авиабилеты за последний месяц</HeaderCenter>
       <div className="row">
         <div className="col-md-offset-1 col-md-10">
