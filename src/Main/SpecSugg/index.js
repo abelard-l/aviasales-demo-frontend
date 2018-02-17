@@ -41,10 +41,9 @@ const Top = styled.div`
   color: #ffffff;
   background: #cd2027;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 15px;
   justify-content: flex-start;
   line-height: 20px;
-  max-height: 64px;
   overflow: hidden;
   padding: 22px 45px 22px 16px;
   position: relative;
@@ -173,7 +172,7 @@ export default () => (
         <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
           <Cards>
             <Card>
-              <Top>Билеты от 499 рублей!</Top>
+              <Top>Билеты от 499 &#x584; !</Top>
               <AviacompanyAndPrices>
                 <Aviacompany src={pobeda} />
                 <PricesAndDays>
@@ -190,7 +189,7 @@ export default () => (
 
             <Card>
               <Top>
-                В Нью-Йорк от 20680 рублей!
+                В Тиват от 20680 &#x584; !
                 <TopRightSide>
                   <TopRightContent src={circle} />
                 </TopRightSide>
@@ -211,7 +210,7 @@ export default () => (
 
             <Card>
               <Top>
-                В Лос-Анджелес от 22 360 рублей!
+                В Рим от 22360 &#x584; !
                 <TopRightSide>
                   <TopRightContent src={circle} />
                 </TopRightSide>

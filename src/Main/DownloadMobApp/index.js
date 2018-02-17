@@ -92,7 +92,7 @@ const Phones = styled.div`
   }
 `;
 
-const PhoneApple = styled.span`
+const Apple = styled.span`
   display: block;
   font-size: 14px;
   margin-bottom: 20px;
@@ -107,7 +107,7 @@ const PhoneApple = styled.span`
   }
 `;
 
-const PhoneAndroid = styled.span`
+const Android = styled.span`
   display: block;
   font-size: 14px;
   margin-bottom: 20px;
@@ -122,7 +122,7 @@ const PhoneAndroid = styled.span`
   }
 `;
 
-const PhoneWf = styled.span`
+const Winf = styled.span`
   display: block;
   font-size: 14px;
   margin-bottom: 20px;
@@ -160,15 +160,15 @@ export default () => (
             <Star src={halfStar} />
             <StarsText>Более 103 000 оценок</StarsText>
             <Phones>
-              <PhoneApple>
+              <Apple>
                 <Emblem src={apple} /> iPhone или iPad
-              </PhoneApple>
-              <PhoneAndroid>
+              </Apple>
+              <Android>
                 <Emblem src={android} /> Android
-              </PhoneAndroid>
-              <PhoneWf>
+              </Android>
+              <Winf>
                 <Emblem src={wf} /> Windows Phone
-              </PhoneWf>
+              </Winf>
             </Phones>
           </Stars>
         </div>
