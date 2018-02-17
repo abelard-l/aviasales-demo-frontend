@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
-import imgAgency1 from "./agencyLogo-1.png";
-import imgAgency2 from "./agencyLogo-2.png";
-import imgAgency3 from "./agencyLogo-3.png";
-import imgAgency4 from "./agencyLogo-4.png";
-import imgAgency5 from "./agencyLogo-5.png";
+import aeroflot from "./aeroflot.png";
+import airlines from "./airlines.png";
+import onetwortip from "./onetwortip.png";
+import koreanair from "./korean-air.png";
+import elal from "./elal.png";
 
 const Slider = styled.section`
   display: none;
@@ -26,7 +25,9 @@ const Title = styled.h2`
 const Agencies = styled.div`
   text-align: center;
 `;
+
 const Agency = styled.img`
+  margin-bottom: 15px;
   margin-left: 25px;
 `;
 
@@ -34,11 +35,11 @@ export default () => (
   <Slider>
     <Title>Дешевые авиабилеты от крупнейших авиакомпаний и агентств</Title>
     <Agencies>
-      <Agency src={imgAgency1} />
-      <Agency src={imgAgency2} />
-      <Agency src={imgAgency3} />
-      <Agency src={imgAgency4} />
-      <Agency src={imgAgency5} />
+      <Agency src={aeroflot} />
+      <Agency src={airlines} />
+      <Agency src={onetwortip} />
+      <Agency src={koreanair} />
+      <Agency src={elal} />
     </Agencies>
   </Slider>
 );

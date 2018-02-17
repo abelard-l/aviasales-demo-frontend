@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import imgCompass from "./compass.svg";
-import imgEdit from "./edit.svg";
+import compass from "./compass.svg";
+import pen from "./edit.svg";
 import { BlueLink, HeaderCenter } from "../../commonComponents";
-import imgTop1 from "./top-1.svg";
-import imgTop2 from "./top-2.svg";
-import imgTop3 from "./top-3.svg";
-import imgTop4 from "./top-4.svg";
-import imgTop5 from "./top-5.svg";
-import imgTop6 from "./top-6.svg";
+import anywhere from "./anywhere.svg";
+import sunandsea from "./sunandsea.svg";
+import shopping from "./shopping.svg";
+import culture from "./culture.svg";
+import nightlife from "./night-life.svg";
+import children from "./children.svg";
 
 const Top = styled.section`
   margin-bottom: 55px;
@@ -63,17 +63,17 @@ const Slogan = styled.div`
 export default () => (
   <Top>
     <div className="container">
-      <Compass src={imgCompass} />
+      <Compass src={compass} />
       <HeaderCenter>
         Популярные направления перелетов<br />из города&nbsp;
         <BlueLink href="#">Москва</BlueLink>
-        <Edit src={imgEdit} />
+        <Edit src={pen} />
       </HeaderCenter>
       <div className="row">
         <div className="col-xs-offset-1 col-xs-10">
           <Activities>
             <ActivityWrap>
-              <Activity src={imgTop1} />
+              <Activity src={anywhere} />
               <Slogan>
                 <BlueLink href="#">
                   Куда<br />угодно
@@ -81,7 +81,7 @@ export default () => (
               </Slogan>
             </ActivityWrap>
             <ActivityWrap>
-              <Activity src={imgTop2} />
+              <Activity src={sunandsea} />
               <Slogan>
                 <BlueLink href="#">
                   Солнце<br />и море
@@ -89,7 +89,7 @@ export default () => (
               </Slogan>
             </ActivityWrap>
             <ActivityWrap>
-              <Activity src={imgTop3} />
+              <Activity src={shopping} />
               <Slogan>
                 <BlueLink href="#">
                   Шопинг,<br />город
@@ -97,7 +97,7 @@ export default () => (
               </Slogan>
             </ActivityWrap>
             <ActivityWrap>
-              <Activity src={imgTop4} />
+              <Activity src={culture} />
               <Slogan>
                 <BlueLink href="#">
                   Культура<br />и история
@@ -105,7 +105,7 @@ export default () => (
               </Slogan>
             </ActivityWrap>
             <ActivityWrap>
-              <Activity src={imgTop5} />
+              <Activity src={nightlife} />
               <Slogan>
                 <BlueLink href="#">
                   Ночная<br />жизнь
@@ -113,7 +113,7 @@ export default () => (
               </Slogan>
             </ActivityWrap>
             <ActivityWrap>
-              <Activity src={imgTop6} />
+              <Activity src={children} />
               <Slogan>
                 <BlueLink href="#">
                   Отдых<br />с детьми

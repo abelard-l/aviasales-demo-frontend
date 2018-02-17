@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { BlueLink } from "../../commonComponents";
-import card1 from "./card-1.png";
-import card2 from "./card-2.png";
-import card3 from "./card-3.png";
-import card4 from "./card-4.png";
-import card5 from "./card-5.png";
-import card6 from "./card-6.png";
+import krasnodar from "./krasnodar.jpg";
+import sochi from "./sochi.jpg";
+import peterburg from "./peterburg.jpg";
+import minvodi from "./minvodi.jpg";
+import simferopol from "./simferopol.jpg";
+import barcelona from "./barcelona.jpg";
 import rusflag from "../../res/images/flag-russia.png";
 import spaflag from "../../res/images/flag-spain.png";
 
@@ -89,7 +89,7 @@ export default () => (
     <div className="container">
       <div className="row">
         <div className="col-xl-5 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card1} />
+          <Card src={krasnodar} />
           <WrapCard>
             <WrapFlag>
               <Flag src={rusflag} />
@@ -107,7 +107,7 @@ export default () => (
           </WrapCard>
         </div>
         <div className="col-xl-5 col-xl-offset-0 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card2} />
+          <Card src={sochi} />
           <WrapCard>
             <WrapFlag>
               <Flag src={rusflag} />
@@ -125,7 +125,7 @@ export default () => (
           </WrapCard>
         </div>
         <div className="col-xl-5 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card3} />
+          <Card src={peterburg} />
           <WrapCard>
             <WrapFlag>
               <Flag src={rusflag} />
@@ -143,7 +143,7 @@ export default () => (
           </WrapCard>
         </div>
         <div className="col-xl-5 col-xl-offset-0 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card4} />
+          <Card src={minvodi} />
           <WrapCard>
             <WrapFlag>
               <Flag src={rusflag} />
@@ -161,7 +161,7 @@ export default () => (
           </WrapCard>
         </div>
         <div className="col-xl-5 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card5} />
+          <Card src={simferopol} />
           <WrapCard>
             <WrapFlag>
               <Flag src={rusflag} />
@@ -179,7 +179,7 @@ export default () => (
           </WrapCard>
         </div>
         <div className="col-xl-5 col-xl-offset-0 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-          <Card src={card6} />
+          <Card src={barcelona} />
           <WrapCard>
             <WrapFlag>
               <Flag src={spaflag} />

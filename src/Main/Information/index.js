@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import info1 from "./info1.png";
-import info2 from "./info2.png";
-import info3 from "./info3.png";
+import plane from "./plane.png";
+import at from "./at.png";
+import list from "./list.png";
 import { BlueLink } from "../../commonComponents";
 
 const Information = styled.section``;
@@ -29,7 +29,7 @@ export default () => (
       <div className="row">
         <div className="col-lg-offset-1 col-lg-10 col-xs">
           <Title>
-            <InfoTextreTitle src={info1} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
+            <InfoTextreTitle src={plane} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
           </Title>
           <InfoText>
             Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
@@ -47,7 +47,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextreTitle src={info2} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
+            <InfoTextreTitle src={at} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
           </Title>
           <InfoText>
             Электронный авиабилет — это, по сути, обычный билет на самолет, но
@@ -68,7 +68,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextreTitle src={info3} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
+            <InfoTextreTitle src={list} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
           </Title>
           <InfoText>
             Есть масса путеводителей по странам, но ни одного о том, как

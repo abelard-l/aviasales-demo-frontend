@@ -4,7 +4,7 @@ import { BlueLink, HeaderCenter } from "../../commonComponents";
 import rusflag from "../../res/images/flag-russia.png";
 import armflag from "../../res/images/flag-armenia.png";
 import molflag from "../../res/images/flag-moldavia.png";
-import group from "./group.png";
+import calendar from "./calendar.svg";
 
 const BestPrices = styled.section``;
 
@@ -109,7 +109,7 @@ export const TextCenter = styled.p`
 export default () => (
   <BestPrices>
     <div className="container">
-      <Group src={group} />
+      <Group src={calendar} />
       <HeaderCenter>Лучшие цены на авиабилеты за последний месяц</HeaderCenter>
       <div className="row">
         <div className="col-md-offset-1 col-md-10">

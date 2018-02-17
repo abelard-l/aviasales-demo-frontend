@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import {} from "../../commonComponents";
-import imgSocial1 from "./social-1.png";
-import imgSocial2 from "./social-2.png";
-import imgSocial3 from "./social-3.png";
-import imgSocial4 from "./social-4.png";
+import twitter from "./twitter.png";
+import facebook from "./facebook.png";
+import vk from "./vk.png";
+import rss from "./rss.png";
 import imgTopBorder from "./border-top.png";
 
 const WannaKnowWrap = styled.section`
@@ -99,10 +98,10 @@ export default () => (
               электронной почте.
             </WannaDiscount>
             <SocialMedias>
-              <SocialMedia src={imgSocial1} />
-              <SocialMedia src={imgSocial2} />
-              <SocialMedia src={imgSocial3} />
-              <SocialMedia src={imgSocial4} />
+              <SocialMedia src={twitter} />
+              <SocialMedia src={facebook} />
+              <SocialMedia src={vk} />
+              <SocialMedia src={rss} />
             </SocialMedias>
             <SubscribeWrap>
               <Input type="text" placeholder="Ваш email" />
