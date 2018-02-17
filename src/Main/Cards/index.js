@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import {
-  BlueLink,
-  CommonFlag,
-  CommonCity,
-  CommonCountry
-} from "../../commonComponents";
+import { BlueLink } from "../../commonComponents";
 import card1 from "./card-1.png";
 import card2 from "./card-2.png";
 import card3 from "./card-3.png";
@@ -32,26 +27,54 @@ const WrapCard = styled.div`
   margin-bottom: 31px;
   padding: 24px 10px;
 `;
+
 const WrapFlag = styled.div`
+  display: none;
   flex-basis: 30px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
+
+const Flag = styled.img``;
+
 const LeftSide = styled.div`
   flex-basis: 55%;
 `;
+
 const RightSide = styled.div`
   flex-basis: 45%;
 `;
 
-const Flag = CommonFlag;
+const City = styled.div`
+  color: #5b5b5c;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 32px;
 
-const City = CommonCity;
-const Country = CommonCountry;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+const Country = styled.div`
+  color: #a0b0b9;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+`;
 
 const Price = styled.div`
   color: #00bae8;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 32px;
   text-align: right;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
 const Date = styled.div`
   color: #aabec6;

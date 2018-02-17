@@ -45,6 +45,7 @@ const Top = styled.div`
   justify-content: flex-start;
   line-height: 20px;
   max-height: 64px;
+  overflow: hidden;
   padding: 22px 45px 22px 16px;
   position: relative;
 `;
@@ -57,6 +58,7 @@ const TopRightSide = styled.div`
   right: 0;
   top: 0;
   width: 45px;
+  z-index: 200;
 `;
 
 const ImgTopRight = styled.img``;
@@ -173,12 +175,7 @@ export default () => (
         <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
           <Cards>
             <Card>
-              <Top>
-                Билеты от 499 рублей!
-                <TopRightSide>
-                  <ImgTopRight src={circle} />
-                </TopRightSide>
-              </Top>
+              <Top>Билеты от 499 рублей!</Top>
               <AviacompanyAndPrices>
                 <Img src={pobeda} />
                 <PricesAndDays>
@@ -216,7 +213,7 @@ export default () => (
 
             <Card>
               <Top>
-                В Лос-Анджелес от 22360 рублей
+                В Лос-Анджелес от 22 360 рублей!
                 <TopRightSide>
                   <ImgTopRight src={circle} />
                 </TopRightSide>

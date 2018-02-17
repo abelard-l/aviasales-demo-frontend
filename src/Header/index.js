@@ -29,21 +29,30 @@ const Header = styled.header`
 
 const Title = styled.h1`
   color: white;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 48px;
   margin-bottom: 8px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 const SubTitle = styled.h2`
   color: white;
+  display: none;
   font-size: 24px;
   font-weight: bold;
   line-height: normal;
   margin-bottom: 40px;
   margin-top: 8px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const TicketParams = styled.form`
@@ -246,7 +255,11 @@ const RightInputField = styled.div`
 const WrapFindTicketsBtn = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 48px;
+  }
 `;
 
 const FindTicketsBtn = styled.button`
@@ -255,12 +268,16 @@ const FindTicketsBtn = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   padding: 15px 74px 16px 45px;
   position: relative;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const FindTicketsRight = styled.div`

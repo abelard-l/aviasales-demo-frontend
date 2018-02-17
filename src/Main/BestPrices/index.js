@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import {
-  BlueLink,
-  H2Center,
-  CommonFlag,
-  CommonCity,
-  CommonCountry,
-  PCenter
-} from "../../commonComponents";
+import { BlueLink, H2Center, PCenter } from "../../commonComponents";
 import rusFlag from "../../res/images/flag-russia.png";
 import armFlag from "../../res/images/flag-armenia.png";
 import molFlag from "../../res/images/flag-moldavia.png";
@@ -60,7 +53,7 @@ const TitleInfo = styled.div`
   flex-basis: auto;
 `;
 
-const Flag = CommonFlag;
+const Flag = styled.img``;
 
 const CitiesAndPrices = styled.div`
   display: flex;
@@ -71,9 +64,20 @@ const Cities = styled.div`
   flex-basis: 60%;
 `;
 
-const City = CommonCity;
+const City = styled.div`
+  color: #5b5b5c;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+`;
 
-const Country = CommonCountry;
+const Country = styled.div`
+  color: #a0b0b9;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+`;
 
 const FromCity = styled.div``;
 
