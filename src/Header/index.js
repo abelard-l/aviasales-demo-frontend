@@ -139,6 +139,10 @@ const DestToInput = styled.input`
   @media (min-width: 768px) {
     border-radius: 0px 4px 0px 0px;
   }
+
+  @media (min-width: 1200px) {
+    border-radius: 0px 0px 0px 0px;
+  }
 `;
 
 const DateFrom = styled.div`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Top from "./Top";
 import Cards from "./Cards";
 import BestPrices from "./BestPrices";
-import Slider from "./Slider";
+import PricelessTickets from "./PricelessTickets";
 import WannaKnow from "./WannaKnow";
 import SpecSugg from "./SpecSugg";
 import Information from "./Information";
@@ -18,7 +18,7 @@ export default () => (
     <Top />
     <Cards />
     <BestPrices />
-    <Slider />
+    <PricelessTickets />
     <WannaKnow />
     <SpecSugg />
     <Information />

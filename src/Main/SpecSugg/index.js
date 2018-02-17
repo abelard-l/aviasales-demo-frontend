@@ -34,6 +34,7 @@ const Card = styled.div`
 
   @media (min-width: 768px) {
     flex-basis: 32%;
+    max-width: 32%;
   }
 `;
 
@@ -47,6 +48,9 @@ const Top = styled.div`
   overflow: hidden;
   padding: 22px 45px 22px 16px;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const TopRightSide = styled.div`
@@ -172,7 +176,7 @@ export default () => (
         <div className="col-lg-offset-1 col-md-offset-0 col-lg-10 col-md-12">
           <Cards>
             <Card>
-              <Top>Билеты от 499 &#x584; !</Top>
+              <Top>Билеты от 499 рублей!</Top>
               <AviacompanyAndPrices>
                 <Aviacompany src={pobeda} />
                 <PricesAndDays>
@@ -189,7 +193,7 @@ export default () => (
 
             <Card>
               <Top>
-                В Тиват от 20680 &#x584; !
+                В Нью-Йорк от 20680 рублей!
                 <TopRightSide>
                   <TopRightContent src={circle} />
                 </TopRightSide>
@@ -210,7 +214,7 @@ export default () => (
 
             <Card>
               <Top>
-                В Рим от 22360 &#x584; !
+                В Лос-Анджелес от 22360 рублей!
                 <TopRightSide>
                   <TopRightContent src={circle} />
                 </TopRightSide>

@@ -9,6 +9,7 @@ const Information = styled.section``;
 
 const InfoTextTitle = styled.img`
   padding-right: 4px;
+  text-transform: uppercase;
 `;
 
 const InfoText = styled.p`
@@ -29,7 +30,7 @@ export default () => (
       <div className="row">
         <div className="col-lg-offset-1 col-lg-10 col-xs">
           <Title>
-            <InfoTextTitle src={plane} /> КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
+            <InfoTextTitle src={plane} /> как купить дешевые авиабилеты?
           </Title>
           <InfoText>
             Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
@@ -47,7 +48,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextTitle src={at} /> ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
+            <InfoTextTitle src={at} /> электронный авиабилет
           </Title>
           <InfoText>
             Электронный авиабилет — это, по сути, обычный билет на самолет, но
@@ -68,7 +69,7 @@ export default () => (
             </InfoLink>
           </InfoText>
           <Title>
-            <InfoTextTitle src={list} />20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
+            <InfoTextTitle src={list} />20 советов авиапутешественникам
           </Title>
           <InfoText>
             Есть масса путеводителей по странам, но ни одного о том, как
