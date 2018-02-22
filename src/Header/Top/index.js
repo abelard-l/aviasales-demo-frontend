@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 
 const Top = styled.section`
@@ -31,14 +32,16 @@ const SiteName = styled.span`
 export default () => (
   <Top>
     <div className="container">
-      <LogoWrap>
-        <div className="row middle-xs">
-          <div className="col-xs-offset-1">
-            <Logo src={logo} />
-            <SiteName>aviasales</SiteName>
+      <Link to="/">
+        <LogoWrap>
+          <div className="row middle-xs">
+            <div className="col-xs-offset-1">
+              <Logo src={logo} />
+              <SiteName>aviasales</SiteName>
+            </div>
           </div>
-        </div>
-      </LogoWrap>
+        </LogoWrap>
+      </Link>
     </div>
   </Top>
 );

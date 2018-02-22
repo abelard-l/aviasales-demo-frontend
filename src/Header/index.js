@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import Top from "./Top";
 import arrows from "./arrow.svg";
 import arrowdown from "./arrow-down.svg";
@@ -351,12 +352,14 @@ export default () => (
         </div>
       </div>
       <WrapFindTickets>
-        <FindTickets>
-          Найти билеты
-          <FindTicketsRight>
-            <Aero src={aero} />
-          </FindTicketsRight>
-        </FindTickets>
+        <Link to="/search">
+          <FindTickets>
+            Найти билеты
+            <FindTicketsRight>
+              <Aero src={aero} />
+            </FindTicketsRight>
+          </FindTickets>
+        </Link>
       </WrapFindTickets>
     </div>
   </Header>
