@@ -88,7 +88,7 @@ export const cardsData = [
       duration: "4ч 55м"
     },
     flightBack: {
-      type: "Прямой",
+      type: "CDG",
       departureTime: "10:45",
       departureCity: "Барселона",
       departureDate: "3 мар 2018, Сб",

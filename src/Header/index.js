@@ -17,14 +17,14 @@ const Header = styled.header`
     #02abdb -14.46%,
     #196ebd 73.68%
   );
-  padding-bottom: 88px;
+  padding-bottom: ${props => (props.narrow ? "10px" : "88px")};
 
   @media (min-width: 768px) {
-    padding-bottom: 122px;
+    padding-bottom: ${props => (props.narrow ? "30px" : "122px")};
   }
 
   @media (min-width: 1200px) {
-    padding-bottom: 250px;
+    padding-bottom: ${props => (props.narrow ? "30px" : "250px")};
   }
 `;
 
@@ -57,11 +57,15 @@ const SubTitle = styled.h2`
 `;
 
 const TicketParams = styled.form`
-  display: flex;
+  display: ${props => (props.narrow ? "none" : "flex")};
   flex-wrap: wrap;
 
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
   @media (min-width: 1200px) {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 `;
 
@@ -74,7 +78,7 @@ const DestFrom = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: 22%;
+    flex-basis: ${props => (props.narrow ? "18%" : "22%")};
   }
 `;
 
@@ -122,7 +126,7 @@ const DestTo = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: 22%;
+    flex-basis: ${props => (props.narrow ? "18%" : "21%")};
   }
 `;
 
@@ -155,7 +159,7 @@ const DateFrom = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: 18%;
+    flex-basis: ${props => (props.narrow ? "14%" : "18%")};
   }
 `;
 
@@ -188,7 +192,7 @@ const DateTo = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: 18%;
+    flex-basis: ${props => (props.narrow ? "14%" : "18%")};
   }
 `;
 
@@ -203,13 +207,16 @@ const DateBtn = styled.button`
 const FlightType = styled.div`
   flex-basis: 100%;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media (min-width: 768px) {
-    flex-basis: 50%;
+    flex-basis: ${props => (props.narrow ? "25%" : "50%")};
   }
 
   @media (min-width: 1200px) {
-    flex-basis: 22%;
+    flex-basis: ${props => (props.narrow ? "19%" : "21%")};
   }
 `;
 
@@ -267,13 +274,23 @@ const RightInputField = styled.div`
   top: 0;
 `;
 
-const WrapFindTickets = styled.div`
-  display: flex;
+const WrapFindTickets = styled(Link)`
+  display: ${props => (props.narrow ? "block" : "flex")};
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 48px;
+  flex-basis: 100%;
+  max-width: 100%;
 
   @media (min-width: 768px) {
-    margin-top: 48px;
+    margin-top: ${props => (props.narrow ? "0px" : "48px")};
+    flex-basis: ${props => (props.narrow ? "25%" : "100%")};
+    max-width: ${props => (props.narrow ? "25%" : "100%")};
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: ${props => (props.narrow ? "0px" : "48px")};
+    flex-basis: ${props => (props.narrow ? "17%" : "100%")};
+    max-width: ${props => (props.narrow ? "17%" : "100%")};
   }
 `;
 
@@ -283,21 +300,25 @@ const FindTickets = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: ${props => (props.narrow ? "18px" : "24px")};
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding: 15px 74px 16px 45px;
+  padding: ${props => (props.narrow ? "15px 18px" : "15px 74px 16px 45px")};
   position: relative;
+  margin-left: ${props => (props.narrow ? "12px" : "0px")};
+  width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
 
   @media (min-width: 768px) {
-    font-size: 28px;
+    font-size: ${props => (props.narrow ? "20px" : "28px")};
+    margin-left: 1px;
+    width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
   }
 `;
 
 const FindTicketsRight = styled.div`
   align-items: center;
-  display: flex;
+  display: ${props => (props.narrow ? "none" : "flex")};
   height: 100%;
   justify-content: center;
   position: absolute;
@@ -309,38 +330,46 @@ const Aero = styled.img`
   margin-right: 24px;
 `;
 
-export default () => (
-  <Header>
-    <Top />
-    <Title>Поиск дешевых авиабилетов</Title>
-    <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
+export default ({ narrow }) => (
+  <Header narrow={narrow}>
+    <Top narrow={narrow} />
+    {!narrow && (
+      <React.Fragment>
+        <Title>Поиск дешевых авиабилетов</Title>
+        <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
+      </React.Fragment>
+    )}
     <div className="container">
       <div className="row">
-        <div className="col-xs-offset-1 col-xs-10">
-          <TicketParams>
-            <DestFrom>
+        <div
+          className={
+            narrow ? "col-xs-offset-0 col-xs-12" : "col-xs-offset-1 col-xs-10"
+          }
+        >
+          <TicketParams narrow={narrow}>
+            <DestFrom narrow={narrow}>
               <DestFromInput type="text" defaultValue="Москва" />
               <RightInputField>
                 <Airport>MOW</Airport>
                 <DestFromBtn />
               </RightInputField>
             </DestFrom>
-            <DestTo>
+            <DestTo narrow={narrow}>
               <DestToInput type="text" placeholder="Город прибытия" />
             </DestTo>
-            <DateFrom>
+            <DateFrom narrow={narrow}>
               <DateFromInput type="text" placeholder="Туда" />
               <RightInputField>
                 <DateBtn />
               </RightInputField>
             </DateFrom>
-            <DateTo>
+            <DateTo narrow={narrow}>
               <DateToInput type="text" placeholder="Обратно" />
               <RightInputField>
                 <DateBtn />
               </RightInputField>
             </DateTo>
-            <FlightType>
+            <FlightType narrow={narrow}>
               <Passenger>
                 1 пассажир, <GrayerText>эконом</GrayerText>
               </Passenger>
@@ -348,19 +377,17 @@ export default () => (
                 <FlightTypeChoose />
               </RightInputField>
             </FlightType>
+            <WrapFindTickets narrow={narrow && narrow.toString()} to="/search">
+              <FindTickets narrow={narrow}>
+                Найти билеты
+                <FindTicketsRight narrow={narrow}>
+                  <Aero src={aero} />
+                </FindTicketsRight>
+              </FindTickets>
+            </WrapFindTickets>
           </TicketParams>
         </div>
       </div>
-      <WrapFindTickets>
-        <Link to="/search">
-          <FindTickets>
-            Найти билеты
-            <FindTicketsRight>
-              <Aero src={aero} />
-            </FindTicketsRight>
-          </FindTickets>
-        </Link>
-      </WrapFindTickets>
     </div>
   </Header>
 );

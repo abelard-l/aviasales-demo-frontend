@@ -1,30 +1,40 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "../Header";
 import { Helmet } from "react-helmet";
 import Hamburger from "./Hamburger";
 import ToTop from "./ToTop";
 import Cards from "./Cards";
+import Filter from "./Filter";
 
 const Search = styled.main`
   background-color: #eaeaea;
+
+  @media (min-width: 1200px) {
+    padding-top: 56px;
+  }
 `;
 
 export default () => (
-  <Search>
-    <div className="container">
-      <Helmet>
-        <title>Search</title>
-      </Helmet>
-      <ToTop />
-      <Hamburger />
-      <div className="row">
-        <div className="col-xl-3 hidden-lg hidden-md hidden-sm hidden-xs">
-          Левый блок с аккордеонами
-        </div>
-        <div className="col-xl-7">
-          <Cards />
+  <React.Fragment>
+    <Header narrow />
+    <Search>
+      <div className="container">
+        <Helmet>
+          <title>Search</title>
+        </Helmet>
+        <ToTop />
+        <Hamburger />
+        <div className="row">
+          <div className="col-xl-3 hidden-lg hidden-md hidden-sm hidden-xs">
+            Левый блок с аккордеонами
+          </div>
+          <div className="col-xl-7">
+            <Cards />
+            <Filter />
+          </div>
         </div>
       </div>
-    </div>
-  </Search>
+    </Search>
+  </React.Fragment>
 );

@@ -9,6 +9,10 @@ const HamburgerWrap = styled.section`
   @media (min-width: 768px) {
     display: block;
   }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 const Hamburger = styled.button`

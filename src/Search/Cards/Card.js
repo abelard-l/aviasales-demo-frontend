@@ -13,11 +13,12 @@ const Card = styled.div`
   border-radius: 4px;
   display: block;
   flex-wrap: nowrap;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   padding-bottom: 32px;
   background: #ffffff;
   @media (min-width: 768px) {
     display: flex;
+    margin-bottom: 20px;
   }
 `;
 
