@@ -3,7 +3,12 @@ import styled from "styled-components";
 import hamburger from "./hamburger.svg";
 
 const HamburgerWrap = styled.section`
+  display: none;
   padding: 16px 0px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const Hamburger = styled.button`

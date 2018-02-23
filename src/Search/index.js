@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import Hamburger from "./Hamburger";
+import ToTop from "./ToTop";
 import Cards from "./Cards";
 
 const Search = styled.main`
@@ -14,6 +15,7 @@ export default () => (
       <Helmet>
         <title>Search</title>
       </Helmet>
+      <ToTop />
       <Hamburger />
       <div className="row">
         <div className="col-xl-3 hidden-lg hidden-md hidden-sm hidden-xs">

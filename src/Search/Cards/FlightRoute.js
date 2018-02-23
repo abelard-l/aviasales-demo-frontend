@@ -6,6 +6,10 @@ import pin from "./icons/pin.svg";
 import planeTakingOff from "./icons/plane-taking-off.svg";
 import routeLine from "./icons/route-line.svg";
 
+import clock from "./icons/clock.svg";
+import planeTo from "./icons/plane-to.svg";
+import planeReturn from "./icons/plane-return.svg";
+
 const FlightRoute = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -17,6 +21,11 @@ const Departure = styled.div`
   max-width: 28%;
   padding-left: 16px;
   text-align: left;
+
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const Time = styled.div`
@@ -60,6 +69,11 @@ const Pin = styled.img`
 const Route = styled.div`
   flex-basis: 48%;
   max-width: 48%;
+
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const Duration = styled.div`
@@ -119,6 +133,63 @@ const Arrival = styled.div`
   max-width: 24%;
   padding-right: 16px;
   text-align: right;
+
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const Mob = styled.div`
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const DepartureAndArriving = styled.div`
+  display: block;
+  flex-basis: 40%;
+  max-width: 40%;
+  padding-left: 8px;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 14px;
+  color: #4a4a4a;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+const Timing = styled.div`
+  flex-basis: 36%;
+  max-width: 36%;
+  display: block;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 14px;
+  color: #4a4a4a;
+  padding-left: 8px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+const Direction = styled.div`
+  flex-basis: 24%;
+  max-width: 24%;
+  display: block;
+  padding-right: 6px;
+  text-align: right;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 14px;
+  color: #4a4a4a;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const Icons = styled.img`
+  margin-right: 8px;
 `;
 
 export default props => (
@@ -151,5 +222,17 @@ export default props => (
       <City>{props.flight.arrivalCity}</City>
       <TimeAndDay>{props.flight.arrivalDate}</TimeAndDay>
     </Arrival>
+    <DepartureAndArriving>
+      {props.direction === "to" ? (
+        <Icons src={planeTo} />
+      ) : (
+        <Icons src={planeReturn} />
+      )}
+      {props.flight.departureTime} - {props.flight.arrivalTime}
+    </DepartureAndArriving>
+    <Timing>
+      <Icons src={clock} /> {props.flight.duration}
+    </Timing>
+    <Direction>{props.flight.type}</Direction>
   </FlightRoute>
 );
