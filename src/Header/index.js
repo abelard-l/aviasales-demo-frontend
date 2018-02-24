@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
+import DatePicker from "./DatePicker";
+
+import { format } from "date-fns";
+import ruLocale from "date-fns/locale/ru";
+
 import Top from "./Top";
 import arrows from "./arrow.svg";
 import arrowdown from "./arrow-down.svg";
@@ -78,7 +83,7 @@ const DestFrom = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "18%" : "22%")};
+    flex-basis: ${props => (props.narrow ? "17%" : "22%")};
   }
 `;
 
@@ -126,7 +131,7 @@ const DestTo = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "18%" : "21%")};
+    flex-basis: ${props => (props.narrow ? "17%" : "21%")};
   }
 `;
 
@@ -159,7 +164,7 @@ const DateFrom = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "14%" : "18%")};
+    flex-basis: ${props => (props.narrow ? "15%" : "18%")};
   }
 `;
 
@@ -192,11 +197,11 @@ const DateTo = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "14%" : "18%")};
+    flex-basis: ${props => (props.narrow ? "15%" : "18%")};
   }
 `;
 
-const DateBtn = styled.button`
+const DateBtn = styled.span`
   background: url(${calendar}) no-repeat center center;
   border: none;
   cursor: pointer;
@@ -310,9 +315,15 @@ const FindTickets = styled.button`
   width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
 
   @media (min-width: 768px) {
-    font-size: ${props => (props.narrow ? "20px" : "28px")};
+    font-size: ${props => (props.narrow ? "18px" : "28px")};
+    padding: ${props => (props.narrow ? "15px 12px" : "15px 74px 16px 45px")};
+    margin-top: ${props => (props.narrow ? "1px" : "0px")};
     margin-left: 1px;
     width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
+  }
+
+  @media (min-width: 1200px) {
+    font-size: ${props => (props.narrow ? "18px" : "28px")};
   }
 `;
 
@@ -330,64 +341,148 @@ const Aero = styled.img`
   margin-right: 24px;
 `;
 
-export default ({ narrow }) => (
-  <Header narrow={narrow}>
-    <Top narrow={narrow} />
-    {!narrow && (
-      <React.Fragment>
-        <Title>Поиск дешевых авиабилетов</Title>
-        <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
-      </React.Fragment>
-    )}
-    <div className="container">
-      <div className="row">
-        <div
-          className={
-            narrow ? "col-xs-offset-0 col-xs-12" : "col-xs-offset-1 col-xs-10"
-          }
-        >
-          <TicketParams narrow={narrow}>
-            <DestFrom narrow={narrow}>
-              <DestFromInput type="text" defaultValue="Москва" />
-              <RightInputField>
-                <Airport>MOW</Airport>
-                <DestFromBtn />
-              </RightInputField>
-            </DestFrom>
-            <DestTo narrow={narrow}>
-              <DestToInput type="text" placeholder="Город прибытия" />
-            </DestTo>
-            <DateFrom narrow={narrow}>
-              <DateFromInput type="text" placeholder="Туда" />
-              <RightInputField>
-                <DateBtn />
-              </RightInputField>
-            </DateFrom>
-            <DateTo narrow={narrow}>
-              <DateToInput type="text" placeholder="Обратно" />
-              <RightInputField>
-                <DateBtn />
-              </RightInputField>
-            </DateTo>
-            <FlightType narrow={narrow}>
-              <Passenger>
-                1 пассажир, <GrayerText>эконом</GrayerText>
-              </Passenger>
-              <RightInputField>
-                <FlightTypeChoose />
-              </RightInputField>
-            </FlightType>
-            <WrapFindTickets narrow={narrow && narrow.toString()} to="/search">
-              <FindTickets narrow={narrow}>
-                Найти билеты
-                <FindTicketsRight narrow={narrow}>
-                  <Aero src={aero} />
-                </FindTicketsRight>
-              </FindTickets>
-            </WrapFindTickets>
-          </TicketParams>
+function formatDate(day) {
+  return format(new Date(day), "DD MMMM, dd", {
+    locale: ruLocale
+  });
+}
+
+export default class MainForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showFrom: false,
+      showTo: false,
+      current: "from",
+      fromDate: new Date(),
+      toDate: new Date()
+    };
+  }
+
+  showDatePicker = direction => {
+    direction === "from"
+      ? this.setState({
+          showFrom: true,
+          showTo: false,
+          current: "from"
+        })
+      : this.setState({
+          showFrom: false,
+          showTo: true,
+          current: "to"
+        });
+  };
+
+  clickOutside = () => {
+    this.setState({
+      showFrom: false,
+      showTo: false
+    });
+  };
+
+  dayClick = day => {
+    // console.log("Current: " + this.state.current);
+    this.state.current === "from"
+      ? this.setState({ fromDate: day })
+      : this.setState({ toDate: day });
+    this.clickOutside();
+    console.log(
+      "FromDate: " + this.state.fromDate + " ToDate:" + this.state.toDate
+    );
+  };
+
+  render(narrow) {
+    return (
+      <Header narrow={this.props.narrow}>
+        <Top narrow={this.props.narrow} />
+        {!this.props.narrow && (
+          <React.Fragment>
+            <Title>Поиск дешевых авиабилетов</Title>
+            <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
+          </React.Fragment>
+        )}
+        <div className="container">
+          <div className="row">
+            <div
+              className={
+                this.props.narrow
+                  ? "col-xs-offset-0 col-xs-12"
+                  : "col-xs-offset-1 col-xs-10"
+              }
+            >
+              <TicketParams narrow={this.props.narrow}>
+                <DestFrom narrow={this.props.narrow}>
+                  <DestFromInput type="text" defaultValue="Москва" />
+                  <RightInputField>
+                    <Airport>MOW</Airport>
+                    <DestFromBtn />
+                  </RightInputField>
+                </DestFrom>
+                <DestTo narrow={this.props.narrow}>
+                  <DestToInput type="text" placeholder="Город прибытия" />
+                </DestTo>
+                <DateFrom narrow={this.props.narrow}>
+                  <DateFromInput
+                    readOnly
+                    value={formatDate(this.state.fromDate)}
+                    type="text"
+                    placeholder="Туда"
+                    onClick={() => this.showDatePicker("from")}
+                  />
+                  <RightInputField onClick={() => this.showDatePicker("from")}>
+                    <DateBtn />
+                  </RightInputField>
+                  {this.state.showFrom && (
+                    <DatePicker
+                      onClickOutside={this.clickOutside}
+                      onDayClick={this.dayClick}
+                      selectedDays={this.state.fromDate}
+                    />
+                  )}
+                </DateFrom>
+                <DateTo narrow={this.props.narrow}>
+                  <DateToInput
+                    readOnly
+                    value={formatDate(this.state.toDate)}
+                    type="text"
+                    placeholder="Обратно"
+                    onClick={() => this.showDatePicker("to")}
+                  />
+                  <RightInputField onClick={() => this.showDatePicker("to")}>
+                    <DateBtn />
+                  </RightInputField>
+                  {this.state.showTo && (
+                    <DatePicker
+                      onClickOutside={this.clickOutside}
+                      onDayClick={this.dayClick}
+                      selectedDays={this.state.toDate}
+                    />
+                  )}
+                </DateTo>
+                <FlightType narrow={this.props.narrow}>
+                  <Passenger>
+                    1 пассажир, <GrayerText>эконом</GrayerText>
+                  </Passenger>
+                  <RightInputField>
+                    <FlightTypeChoose />
+                  </RightInputField>
+                </FlightType>
+                <WrapFindTickets
+                  narrow={this.props.narrow && this.props.narrow.toString()}
+                  to="/search"
+                >
+                  <FindTickets narrow={this.props.narrow}>
+                    Найти билеты
+                    <FindTicketsRight narrow={this.props.narrow}>
+                      <Aero src={aero} />
+                    </FindTicketsRight>
+                  </FindTickets>
+                </WrapFindTickets>
+              </TicketParams>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </Header>
-);
+      </Header>
+    );
+  }
+}
