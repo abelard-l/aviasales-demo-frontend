@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "../Header";
 import { Helmet } from "react-helmet";
+import Filters from "./Filters";
 import Hamburger from "./Hamburger";
 import ToTop from "./ToTop";
 import Cards from "./Cards";
@@ -27,7 +28,7 @@ export default () => (
         <Hamburger />
         <div className="row">
           <div className="col-xl-3 hidden-lg hidden-md hidden-sm hidden-xs">
-            Левый блок с аккордеонами
+            <Filters />
           </div>
           <div className="col-xl-7">
             <Cards />
