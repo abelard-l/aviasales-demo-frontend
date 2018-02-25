@@ -6,6 +6,9 @@ import pin from "./icons/pin.svg";
 import planeTakingOff from "./icons/plane-taking-off.svg";
 import routeLine from "./icons/route-line.svg";
 
+import { format } from "date-fns";
+import ruLocale from "date-fns/locale/ru";
+
 import clock from "./icons/clock.svg";
 import planeTo from "./icons/plane-to.svg";
 import planeReturn from "./icons/plane-return.svg";
@@ -67,8 +70,8 @@ const Pin = styled.img`
 `;
 
 const Route = styled.div`
-  flex-basis: 48%;
-  max-width: 48%;
+  flex-basis: 47%;
+  max-width: 47%;
 
   display: none;
   @media (min-width: 768px) {
@@ -129,8 +132,8 @@ const AirportTo = styled.div`
 `;
 
 const Arrival = styled.div`
-  flex-basis: 24%;
-  max-width: 24%;
+  flex-basis: 25%;
+  max-width: 25%;
   padding-right: 16px;
   text-align: right;
 
@@ -192,6 +195,12 @@ const Icons = styled.img`
   margin-right: 8px;
 `;
 
+function formatDate(day) {
+  return format(new Date(day), "D MMM YYYY, dd", {
+    locale: ruLocale
+  });
+}
+
 export default props => (
   <FlightRoute>
     <Departure>
@@ -199,12 +208,15 @@ export default props => (
         <Pin src={pin} /> {props.flight.departureTime}
       </Time>
       <City>{props.flight.departureCity}</City>
-      <TimeAndDay>{props.flight.departureDate}</TimeAndDay>
+      <TimeAndDay>{formatDate(props.flight.departureDate)}</TimeAndDay>
     </Departure>
     <Route>
       <Duration>
         <PlaneUp src={planeTakingOff} />
-        <Overall>Всего: {props.flight.duration}</Overall>
+        <Overall>
+          Всего: {props.flight.duration.hour} {"ч "}
+          {props.flight.duration.minute && props.flight.duration.minute + " м"}
+        </Overall>
         <PlaneDown src={planeTakingOff} />
       </Duration>
       <RouteLine>
@@ -220,7 +232,7 @@ export default props => (
     <Arrival>
       <Time alignRight>{props.flight.arrivalTime}</Time>
       <City>{props.flight.arrivalCity}</City>
-      <TimeAndDay>{props.flight.arrivalDate}</TimeAndDay>
+      <TimeAndDay>{formatDate(props.flight.arrivalDate)}</TimeAndDay>
     </Arrival>
     <DepartureAndArriving>
       {props.direction === "to" ? (
@@ -231,7 +243,8 @@ export default props => (
       {props.flight.departureTime} - {props.flight.arrivalTime}
     </DepartureAndArriving>
     <Timing>
-      <Icons src={clock} /> {props.flight.duration}
+      <Icons src={clock} /> {props.flight.duration.hour} {"ч "}
+      {props.flight.duration.minute && props.flight.duration.minute + " м"}
     </Timing>
     <Direction>{props.flight.type}</Direction>
   </FlightRoute>

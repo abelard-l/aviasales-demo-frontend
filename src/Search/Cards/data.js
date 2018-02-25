@@ -33,25 +33,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "00:05",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "03:05",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "5ч"
+      duration: { hour: 5 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "10:35",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:10",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 35 м"
+      duration: { hour: 4, minute: 35 }
     }
   },
   {
@@ -79,25 +79,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "00:15",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "03:10",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "4ч 55м"
+      duration: { hour: 4, minute: 55 }
     },
     flightBack: {
       type: "CDG",
       departureTime: "10:45",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:15 ",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 30 м"
+      duration: { hour: 4, minute: 30 }
     }
   },
   {
@@ -125,25 +125,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "00:15",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "03:10",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "4ч 55м"
+      duration: { hour: 4, minute: 55 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "10:45",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:15",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 30 м"
+      duration: { hour: 4, minute: 30 }
     }
   },
   {
@@ -192,25 +192,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "07:00",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "09:30",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "4ч 30м"
+      duration: { hour: 4, minute: 30 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "11:00",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:10",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 10 м"
+      duration: { hour: 4, minute: 10 }
     }
   },
   {
@@ -238,25 +238,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "00:05",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "03:05",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "5ч"
+      duration: { hour: 5 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "11:00",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:10",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 10 м"
+      duration: { hour: 4, minute: 10 }
     }
   },
   {
@@ -305,25 +305,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "07:30",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "09:50",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "4ч 20м"
+      duration: { hour: 4, minute: 20 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "11:20",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:35",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 15 м"
+      duration: { hour: 4, minute: 15 }
     }
   },
   {
@@ -351,25 +351,25 @@ export const cardsData = [
       type: "Прямой",
       departureTime: "00:05",
       departureCity: "Москва",
-      departureDate: "24 фев 2018, Сб",
+      departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: "03:05",
       arrivalCity: "Барселона",
-      arrivalDate: "24 фев 2018, Сб",
+      arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: "5ч"
+      duration: { hour: 5 }
     },
     flightBack: {
       type: "Прямой",
       departureTime: "11:20",
       departureCity: "Барселона",
-      departureDate: "3 мар 2018, Сб",
+      departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: "17:35",
       arrivalCity: "Москва",
-      arrivalDate: "3 мар 2018, Сб",
+      arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: "4ч 15 м"
+      duration: { hour: 4, minute: 15 }
     }
   }
 ];
