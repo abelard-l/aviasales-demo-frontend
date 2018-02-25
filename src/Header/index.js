@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import DatePicker from "./DatePicker";
+import SelectPassengers from "./SelectPassengers";
 
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
@@ -212,11 +213,9 @@ const DateBtn = styled.span`
 const FlightType = styled.div`
   flex-basis: 100%;
   position: relative;
-  white-space: nowrap;
+  ${"" /* white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-
-  @media (min-width: 768px) {
+  text-overflow: ellipsis; */} @media (min-width: 768px) {
     flex-basis: ${props => (props.narrow ? "25%" : "50%")};
   }
 
@@ -225,7 +224,7 @@ const FlightType = styled.div`
   }
 `;
 
-const FlightTypeChoose = styled.button`
+const FlightTypeChoose = styled.div`
   background: url(${arrowdown}) no-repeat center center;
   border: none;
   cursor: pointer;
@@ -355,7 +354,8 @@ export default class MainForm extends Component {
       showTo: false,
       current: "from",
       fromDate: new Date(),
-      toDate: new Date()
+      toDate: new Date(),
+      showSelPas: false
     };
   }
 
@@ -377,6 +377,18 @@ export default class MainForm extends Component {
     this.setState({
       showFrom: false,
       showTo: false
+    });
+  };
+
+  showSelectPassengers = () => {
+    this.setState({
+      showSelPas: true
+    });
+  };
+
+  clickOutsideSelectPassengers = () => {
+    this.setState({
+      showSelPas: false
     });
   };
 
@@ -463,9 +475,14 @@ export default class MainForm extends Component {
                   <Passenger>
                     1 пассажир, <GrayerText>эконом</GrayerText>
                   </Passenger>
-                  <RightInputField>
+                  <RightInputField onClick={() => this.showSelectPassengers()}>
                     <FlightTypeChoose />
                   </RightInputField>
+                  {this.state.showSelPas && (
+                    <SelectPassengers
+                      onClickOutside={this.clickOutsideSelectPassengers}
+                    />
+                  )}
                 </FlightType>
                 <WrapFindTickets
                   narrow={this.props.narrow && this.props.narrow.toString()}

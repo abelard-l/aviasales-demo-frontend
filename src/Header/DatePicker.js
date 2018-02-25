@@ -50,6 +50,7 @@ class DatePicker extends Component {
           weekdaysShort={DAYS_SHORT}
           firstDayOfWeek={1}
           locale="ru"
+          disabledDays={{ before: new Date() }}
           onDayClick={this.props.onDayClick}
           selectedDays={this.props.selectedDays}
         />
