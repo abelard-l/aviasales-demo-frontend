@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
+import { Rouble } from "../../commonComponents";
+import { makeDigits } from "../../commonFunctions";
 
 const Card = styled.div`
   background: white;
@@ -119,7 +121,10 @@ export default props => (
     <AviacompanyAndPrices>
       <Aviacompany src={props.specData.aviaImg} />
       <PricesAndDays>
-        <Price>от {props.specData.price} &#x584;</Price>
+        <Price>
+          от {makeDigits(props.specData.price)}
+          <Rouble />
+        </Price>
         <Days>Осталось {props.specData.days} дней</Days>
       </PricesAndDays>
     </AviacompanyAndPrices>

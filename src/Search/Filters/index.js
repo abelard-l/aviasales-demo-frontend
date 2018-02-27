@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
+import { Rouble } from "../../commonComponents";
 
 import arrow from "./icons/arrow.svg";
 import arrowDown from "./icons/arrow-down.svg";
@@ -152,19 +153,27 @@ export default () => (
       </Checkbox>
       <Checkbox checked>
         <GrayText>Без пересадок</GrayText>
-        <Price>7712 &#x584;</Price>
+        <Price>
+          7 712 <Rouble />
+        </Price>
       </Checkbox>
       <Checkbox>
         <GrayText>1 пересадка</GrayText>
-        <Price>11150 &#x584;</Price>
+        <Price>
+          11 150 <Rouble />
+        </Price>
       </Checkbox>
       <Checkbox>
         <GrayText>2 пересадки</GrayText>
-        <Price>16821 &#x584;</Price>
+        <Price>
+          16 821 <Rouble />
+        </Price>
       </Checkbox>
       <Checkbox>
         <GrayText>3 пересадки</GrayText>
-        <Price>23986 &#x584;</Price>
+        <Price>
+          23 986 <Rouble />
+        </Price>
       </Checkbox>
     </FilterBlock>
 
@@ -285,15 +294,21 @@ export default () => (
     </Checkbox>
     <Checkbox checked>
       <GrayText>Star Alliance</GrayText>
-      <Price>11150 &#x584;</Price>
+      <Price>
+        11 150 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>OneWorld</GrayText>
-      <Price>12370 &#x584;</Price>
+      <Price>
+        12 370 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>SkyTeam</GrayText>
-      <Price>16290 &#x584;</Price>
+      <Price>
+        16 290 <Rouble />
+      </Price>
     </Checkbox>
 
     <SubHeader>Авиакомпании</SubHeader>
@@ -302,47 +317,69 @@ export default () => (
     </Checkbox>
     <Checkbox checked>
       <GrayText>Aegean Airlines</GrayText>
-      <Price>20357 &#x584;</Price>
+      <Price>
+        20 357 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Air Algerie</GrayText>
-      <Price>29105 &#x584;</Price>
+      <Price>
+        29 105 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Air Europa</GrayText>
-      <Price>22202 &#x584;</Price>
+      <Price>
+        22 202 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Air France</GrayText>
-      <Price>17050 &#x584;</Price>
+      <Price>
+        17 050 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Air Moldova</GrayText>
-      <Price>22613 &#x584;</Price>
+      <Price>
+        22 613 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Alitalia</GrayText>
-      <Price>22717 &#x584;</Price>
+      <Price>
+        22 717 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Alitalia CityLiner</GrayText>
-      <Price>20271 &#x584;</Price>
+      <Price>
+        20 271 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Belle Air</GrayText>
-      <Price>18371 &#x584;</Price>
+      <Price>
+        18 371 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>British Airways</GrayText>
-      <Price>23839 &#x584;</Price>
+      <Price>
+        23 839 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Brussels Airlines</GrayText>
-      <Price>11150 &#x584;</Price>
+      <Price>
+        11 150 <Rouble />
+      </Price>
     </Checkbox>
     <Checkbox checked>
       <GrayText>Bulgaria Air</GrayText>
-      <Price>20114 &#x584;</Price>
+      <Price>
+        20 114 <Rouble />
+      </Price>
     </Checkbox>
 
     <FilterBlock>

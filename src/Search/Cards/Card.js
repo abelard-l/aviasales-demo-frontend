@@ -3,6 +3,8 @@ import styled from "styled-components";
 import FlightRoute from "./FlightRoute";
 import BaggageRules from "./BaggageRules";
 import Mark from "./Mark";
+import { Rouble } from "../../commonComponents";
+import { makeDigits } from "../../commonFunctions";
 import arrowDown from "./icons/arrow-down.svg";
 import followArrow from "./icons/follow-arrow.svg";
 
@@ -14,11 +16,12 @@ const Card = styled.div`
   display: block;
   flex-wrap: nowrap;
   margin-bottom: 8px;
-  padding-bottom: 32px;
+  padding-bottom: 2px;
   background: #ffffff;
   @media (min-width: 768px) {
     display: flex;
     margin-bottom: 20px;
+    padding-bottom: 0px;
   }
 `;
 
@@ -248,7 +251,8 @@ export default props => (
               <Things2>
                 <BaggageRules rules={props.wholeCard.thingsRule2} />
                 <DiscountText>
-                  - {props.wholeCard.thingsRule2.discount} &#x584;
+                  - {props.wholeCard.thingsRule2.discount}
+                  <Rouble />
                 </DiscountText>
               </Things2>
             </React.Fragment>
@@ -266,7 +270,8 @@ export default props => (
           </TicketsRemain>
         )}
         <BuyTicket>
-          Купить<br /> за {props.wholeCard.general.price} &#x584;
+          Купить<br /> за {makeDigits(props.wholeCard.general.price)}
+          <Rouble />
         </BuyTicket>
         <BuyWhere>На {props.wholeCard.general.company}</BuyWhere>
         {props.wholeCard.specSugg.length === 0 ? (
@@ -277,7 +282,10 @@ export default props => (
               return (
                 <SpecSugg key={i}>
                   <SuggName>{item.name}</SuggName>
-                  <SuggPrice>{item.price}</SuggPrice>
+                  <SuggPrice>
+                    {makeDigits(item.price)}
+                    <Rouble />
+                  </SuggPrice>
                 </SpecSugg>
               );
             })}
@@ -311,7 +319,10 @@ export default props => (
       <AddInfo />
       <Mob>
         <PriceAndAvia>
-          <Price>{props.wholeCard.general.price} &#x584;</Price>
+          <Price>
+            {makeDigits(props.wholeCard.general.price)}
+            <Rouble />
+          </Price>
           <AviaCompany>
             {props.wholeCard.general.airline !== "" &&
               props.wholeCard.general.airline.map((item, i) => {

@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import { BlueLink } from "../../commonComponents";
+import { BlueLink, Rouble } from "../../commonComponents";
+import { makeDigits } from "../../commonFunctions";
 
 const Card = styled.img`
   border-top-left-radius: 4px;
@@ -85,7 +86,10 @@ export default props => (
       </CityAndCountry>
       <PriceAndDate>
         <Price>
-          <BlueLink>Найти от {props.cardInfo.price} &#x584;</BlueLink>
+          <BlueLink>
+            Найти от {makeDigits(props.cardInfo.price)}
+            <Rouble />
+          </BlueLink>
         </Price>
         <Date>{props.cardInfo.date}</Date>
       </PriceAndDate>

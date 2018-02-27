@@ -213,9 +213,8 @@ const DateBtn = styled.span`
 const FlightType = styled.div`
   flex-basis: 100%;
   position: relative;
-  ${"" /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */} @media (min-width: 768px) {
+
+  @media (min-width: 768px) {
     flex-basis: ${props => (props.narrow ? "25%" : "50%")};
   }
 
@@ -254,6 +253,15 @@ const Passenger = styled.div`
 
 const GrayerText = styled.span`
   color: #a0b0b9;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: ${props => (props.narrow ? "15px" : "16px")};
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
 `;
 
 const DateToInput = styled.input`
@@ -292,9 +300,10 @@ const WrapFindTickets = styled(Link)`
   }
 
   @media (min-width: 1200px) {
+    margin-left: ${props => (props.narrow ? "auto" : "0px")};
     margin-top: ${props => (props.narrow ? "0px" : "48px")};
-    flex-basis: ${props => (props.narrow ? "17%" : "100%")};
-    max-width: ${props => (props.narrow ? "17%" : "100%")};
+    flex-basis: ${props => (props.narrow ? "16%" : "100%")};
+    max-width: ${props => (props.narrow ? "16%" : "100%")};
   }
 `;
 
@@ -473,7 +482,8 @@ export default class MainForm extends Component {
                 </DateTo>
                 <FlightType narrow={this.props.narrow}>
                   <Passenger>
-                    1 пассажир, <GrayerText>эконом</GrayerText>
+                    1 пассажир,{" "}
+                    <GrayerText narrow={this.props.narrow}>эконом</GrayerText>
                   </Passenger>
                   <RightInputField onClick={() => this.showSelectPassengers()}>
                     <FlightTypeChoose />

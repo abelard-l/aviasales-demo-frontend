@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { BlueLink } from "../../commonComponents";
+import { BlueLink, Rouble } from "../../commonComponents";
+import { makeDigits } from "../../commonFunctions";
 
 const Card = styled.div`
   flex-basis: 100%;
@@ -86,27 +87,32 @@ export default props => (
       <Prices>
         <Price>
           <BlueLink>
-            от {props.bestPriceInfo.fromCities[0].price} &#x584;
+            от {makeDigits(props.bestPriceInfo.fromCities[0].price)}
+            <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {props.bestPriceInfo.fromCities[1].price} &#x584;
+            от {makeDigits(props.bestPriceInfo.fromCities[1].price)}
+            <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {props.bestPriceInfo.fromCities[2].price} &#x584;
+            от {makeDigits(props.bestPriceInfo.fromCities[2].price)}
+            <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {props.bestPriceInfo.fromCities[3].price} &#x584;
+            от {makeDigits(props.bestPriceInfo.fromCities[3].price)}
+            <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {props.bestPriceInfo.fromCities[4].price} &#x584;
+            от {makeDigits(props.bestPriceInfo.fromCities[4].price)}
+            <Rouble />
           </BlueLink>
         </Price>
       </Prices>

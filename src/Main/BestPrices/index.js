@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { HeaderCenter } from "../../commonComponents";
 import calendar from "./calendar.svg";
