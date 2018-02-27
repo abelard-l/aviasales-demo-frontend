@@ -100,7 +100,9 @@ export default ({ narrow }) => (
         <div className="row middle-xs">
           <div
             className={
-              narrow ? "col-xs-offset-0 col-xs-12" : "col-xs-offset-1 col-xs-10"
+              narrow 
+              ? "col-xs-offset-0 col-xs-12" 
+              : "col-xs-offset-1 col-xs-10"
             }
           >
             <TopInformation>

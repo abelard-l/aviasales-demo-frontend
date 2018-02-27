@@ -16,18 +16,11 @@ const Form = withClickOutside()(styled.div`
   z-index: 5000;
 `);
 
-const StringBlock = styled.div`
+const TicketsPicker = styled.div`
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 17px;
-
-  ${props =>
-    props.borderbottom &&
-    css`
-      border-bottom: 1px solid #dbdbdb;
-      padding-bottom: 20px;
-    `};
 `;
 
 const Text = styled.div`
@@ -48,12 +41,12 @@ const GrayText = styled.span`
   color: #a0b0b9;
 `;
 
-const ControllWrap = styled.div`
+const ControlWrap = styled.div`
   flex-basis: 39%;
   max-width: 39%;
 `;
 
-const Controll = styled.div`
+const Control = styled.div`
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
   border-radius: 4px;
@@ -62,8 +55,9 @@ const Controll = styled.div`
   justify-content: center;
 `;
 
-const MinusBtn = styled.div`
+const MinusBtn = styled.button`
   background: url(${minus}) no-repeat center center;
+  border: 0;
   padding: 15px 11px;
   flex-basis: 33%;
   max-width: 33%;
@@ -80,8 +74,9 @@ const Num = styled.div`
   padding: 8px;
 `;
 
-const AddBtn = styled.div`
+const PlusBtn = styled.button`
   background: url(${add}) no-repeat center center;
+  border: 0;
   padding: 15px 11px;
   flex-basis: 33%;
   max-width: 33%;
@@ -89,9 +84,11 @@ const AddBtn = styled.div`
 
 const Checkbox = styled.div`
   background: url(${rectangle}) no-repeat 0px center;
+  border-top: 1px solid #eaeaea;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  padding-top: 5px;
 
   ${props =>
     props.checked &&
@@ -109,82 +106,81 @@ const Business = styled.span`
 `;
 
 class SelectPassengers extends Component {
-  constructor() {
-    super();
-    this.state = {
-      mature: 1,
-      childUn12: 0,
-      childUn2: 0
-    };
-  }
+  state = {
+    mature: 1,
+    сhildren: 0,
+    infants: 0
+  };
 
-  change = (where, direction) => {
+  change = (e, where, direction) => {
+    e.preventDefault();
+
     let newMature = this.state.mature;
-    let newun12 = this.state.childUn12;
-    let newun2 = this.state.childUn2;
+    let newChildren = this.state.сhildren;
+    let newInfants = this.state.infants;
 
     let changer = 0;
-    direction === "add" ? (changer = 1) : (changer = -1);
+    direction === "plus" ? (changer = 1) : (changer = -1);
 
     switch (where) {
       case "mature":
         newMature = this.state.mature + changer;
         break;
-      case "un12":
-        newun12 = this.state.childUn12 + changer;
+      case "children":
+        newChildren = this.state.сhildren + changer;
         break;
-      case "un2":
-        newun2 = this.state.childUn2 + changer;
+      case "infants":
+        newInfants = this.state.infants + changer;
         break;
       default:
     }
 
     if (newMature < 0) newMature = 0;
-    if (newun12 < 0) newun12 = 0;
-    if (newun2 < 0) newun2 = 0;
+    if (newChildren < 0) newChildren = 0;
+    if (newInfants < 0) newInfants = 0;
 
     this.setState({
       mature: newMature,
-      childUn12: newun12,
-      childUn2: newun2
+      сhildren: newChildren,
+      infants: newInfants
     });
   };
   render() {
     return (
       <Form onClickOutside={this.props.onClickOutside}>
-        <StringBlock>
+        <TicketsPicker>
           <Text>Взрослые</Text>
-          <ControllWrap>
-            <Controll>
-              <MinusBtn onClick={() => this.change("mature", "minus")} />
+          <ControlWrap>
+            <Control>
+              <MinusBtn onClick={e => this.change(e, "mature", "minus")} />
               <Num>{this.state.mature}</Num>
-              <AddBtn onClick={() => this.change("mature", "add")} />
-            </Controll>
-          </ControllWrap>
-        </StringBlock>
-        <StringBlock>
+              <PlusBtn onClick={e => this.change(e, "mature", "plus")} />
+            </Control>
+          </ControlWrap>
+        </TicketsPicker>
+        <TicketsPicker>
           <Text>Дети до 12 лет</Text>
-          <ControllWrap>
-            <Controll>
-              <MinusBtn onClick={() => this.change("un12", "minus")} />
-              <Num>{this.state.childUn12}</Num>
-              <AddBtn onClick={() => this.change("un12", "add")} />
-            </Controll>
-          </ControllWrap>
-        </StringBlock>
-        <StringBlock borderbottom>
+          <ControlWrap>
+            <Control>
+              <MinusBtn onClick={e => this.change(e, "children", "minus")} />
+              <Num>{this.state.сhildren}</Num>
+              <PlusBtn onClick={e => this.change(e, "children", "plus")} />
+            </Control>
+          </ControlWrap>
+        </TicketsPicker>
+        <TicketsPicker>
           <Text>
             Дети до 2 лет<br />
             <GrayText>Без места</GrayText>
           </Text>
-          <ControllWrap>
-            <Controll>
-              <MinusBtn onClick={() => this.change("un2", "minus")} />
-              <Num>{this.state.childUn2}</Num>
-              <AddBtn onClick={() => this.change("un2", "add")} />
-            </Controll>
-          </ControllWrap>
-        </StringBlock>
+          <ControlWrap>
+            <Control>
+              <MinusBtn onClick={e => this.change(e, "infants", "minus")} />
+              <Num>{this.state.infants}</Num>
+              <PlusBtn onClick={e => this.change(e, "infants", "plus")} />
+            </Control>
+          </ControlWrap>
+        </TicketsPicker>
         <Checkbox>
           <Business>Бизнес-класс</Business>
         </Checkbox>

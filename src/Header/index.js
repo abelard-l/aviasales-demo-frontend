@@ -364,7 +364,7 @@ export default class MainForm extends Component {
       current: "from",
       fromDate: new Date(),
       toDate: new Date(),
-      showSelPas: false
+      isShowSelectPassengers: false
     };
   }
 
@@ -391,25 +391,21 @@ export default class MainForm extends Component {
 
   showSelectPassengers = () => {
     this.setState({
-      showSelPas: true
+      isShowSelectPassengers: true
     });
   };
 
   clickOutsideSelectPassengers = () => {
     this.setState({
-      showSelPas: false
+      isShowSelectPassengers: false
     });
   };
 
   dayClick = day => {
-    // console.log("Current: " + this.state.current);
     this.state.current === "from"
       ? this.setState({ fromDate: day })
       : this.setState({ toDate: day });
     this.clickOutside();
-    console.log(
-      "FromDate: " + this.state.fromDate + " ToDate:" + this.state.toDate
-    );
   };
 
   render(narrow) {

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { BlueLink, Rouble } from "../../commonComponents";
 import { makeDigits } from "../../commonFunctions";
+import { format } from "date-fns";
+import ruLocale from "date-fns/locale/ru";
 
 const Card = styled.img`
   border-top-left-radius: 4px;
@@ -73,6 +75,12 @@ const Date = styled.div`
   text-align: right;
 `;
 
+function formatDate(day) {
+  return format(new Date(2014, 1, 1), "D MMM YYYY, dd", {
+    locale: ruLocale
+  });
+}
+
 export default props => (
   <React.Fragment>
     <Card src={props.cardInfo.cityImage} />
@@ -91,7 +99,7 @@ export default props => (
             <Rouble />
           </BlueLink>
         </Price>
-        <Date>{props.cardInfo.date}</Date>
+        <Date>{formatDate(props.cardInfo.date)}</Date>
       </PriceAndDate>
     </WrapCard>
   </React.Fragment>

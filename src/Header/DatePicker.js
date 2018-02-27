@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { withClickOutside } from "react-clickoutside";
 
@@ -40,23 +40,17 @@ const WrapDayPicker = withClickOutside()(styled.div`
   z-index: 500;
 `);
 
-class DatePicker extends Component {
-  render() {
-    return (
-      <WrapDayPicker onClickOutside={this.props.onClickOutside}>
-        <DayPicker
-          months={MONTHS}
-          weekdaysLong={DAYS_LONG}
-          weekdaysShort={DAYS_SHORT}
-          firstDayOfWeek={1}
-          locale="ru"
-          disabledDays={{ before: new Date() }}
-          onDayClick={this.props.onDayClick}
-          selectedDays={this.props.selectedDays}
-        />
-      </WrapDayPicker>
-    );
-  }
-}
-
-export default DatePicker;
+export default props => (
+  <WrapDayPicker onClickOutside={props.onClickOutside}>
+    <DayPicker
+      months={MONTHS}
+      weekdaysLong={DAYS_LONG}
+      weekdaysShort={DAYS_SHORT}
+      firstDayOfWeek={1}
+      locale="ru"
+      disabledDays={{ before: new Date() }}
+      onDayClick={props.onDayClick}
+      selectedDays={props.selectedDays}
+    />
+  </WrapDayPicker>
+);
