@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import DatePicker from "./DatePicker";
 import SelectPassengers from "./SelectPassengers";
+import { headerNarrowGrid, headerLongGrid } from "../commonComponents";
 
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
@@ -421,11 +422,7 @@ export default class MainForm extends Component {
         <div className="container">
           <div className="row">
             <div
-              className={
-                this.props.narrow
-                  ? "col-xs-offset-0 col-xs-12"
-                  : "col-xs-offset-1 col-xs-10"
-              }
+              className={this.props.narrow ? headerNarrowGrid : headerLongGrid}
             >
               <TicketParams narrow={this.props.narrow}>
                 <DestFrom narrow={this.props.narrow}>
@@ -484,7 +481,7 @@ export default class MainForm extends Component {
                   <RightInputField onClick={() => this.showSelectPassengers()}>
                     <FlightTypeChoose />
                   </RightInputField>
-                  {this.state.showSelPas && (
+                  {this.state.isShowSelectPassengers && (
                     <SelectPassengers
                       onClickOutside={this.clickOutsideSelectPassengers}
                     />

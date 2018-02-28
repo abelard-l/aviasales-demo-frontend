@@ -30,7 +30,7 @@ const BaggageAndPrice = styled.div`
   border-right: 1px solid #eaeaea;
   flex-basis: 32%;
   max-width: 32%;
-  padding: 0 23px;
+  padding: 0 0 0 0;
 
   @media (min-width: 768px) {
     display: block;
@@ -89,7 +89,7 @@ const BuyTicket = styled.button`
   padding: 6px 42px;
   font-weight: 500;
   line-height: 24px;
-  margin: 0 auto;
+  margin: 15px auto 0px auto;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
@@ -109,7 +109,7 @@ const SpecSuggestions = styled.div`
   color: #59bce5;
   margin: 24px auto 0px auto;
   max-width: 154px;
-  padding: 0px 24px;
+  padding: 0px 24px 24px 24px;
 `;
 
 const SpecSugg = styled.div`
@@ -232,9 +232,7 @@ const Price = styled.div`
 
 export default props => (
   <WrapCard>
-    {props.wholeCard.general.mark === "none" ? (
-      ""
-    ) : (
+    {props.wholeCard.general.mark !== "none" && (
       <Mark type={props.wholeCard.general.mark} />
     )}
     <Card>
@@ -262,9 +260,7 @@ export default props => (
             </Things1>
           )}
         </Baggage>
-        {props.wholeCard.general.ticketsRemain === false ? (
-          ""
-        ) : (
+        {props.wholeCard.general.ticketsRemain !== false && (
           <TicketsRemain>
             Осталось {props.wholeCard.general.ticketsRemain} билета
           </TicketsRemain>
@@ -274,9 +270,7 @@ export default props => (
           <Rouble />
         </BuyTicket>
         <BuyWhere>На {props.wholeCard.general.company}</BuyWhere>
-        {props.wholeCard.specSugg.length === 0 ? (
-          ""
-        ) : (
+        {props.wholeCard.specSugg.length !== 0 && (
           <SpecSuggestions>
             {props.wholeCard.specSugg.slice(0, 2).map((item, i) => {
               return (

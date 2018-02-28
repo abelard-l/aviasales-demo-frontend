@@ -14,7 +14,7 @@ export const cardsData = [
     city: "Краснодар",
     country: "Россия",
     price: 1212,
-    date: "2-18"
+    date: "3-18"
   },
   {
     cityImage: sochi,
@@ -22,7 +22,7 @@ export const cardsData = [
     city: "Сочи (Адлер)",
     country: "Россия",
     price: 1334,
-    date: "2-27"
+    date: "3-27"
   },
   {
     cityImage: peterburg,
@@ -30,7 +30,7 @@ export const cardsData = [
     city: "Санкт-Петербург",
     country: "Россия",
     price: 1508,
-    date: "1-19"
+    date: "2-19"
   },
   {
     cityImage: minvodi,

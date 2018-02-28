@@ -41,3 +41,7 @@ export class Rouble extends Component {
     return <RoubleStyle {...this.props}>p</RoubleStyle>;
   }
 }
+
+export const headerNarrowGrid = "col-xs-offset-0 col-xs-12";
+
+export const headerLongGrid = "col-xs-offset-1 col-xs-10";

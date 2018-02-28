@@ -76,7 +76,7 @@ const Date = styled.div`
 `;
 
 function formatDate(day) {
-  return format(new Date(2014, 1, 1), "D MMM YYYY, dd", {
+  return format(day, "D MMMM", {
     locale: ruLocale
   });
 }

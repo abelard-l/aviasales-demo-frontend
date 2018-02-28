@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { headerNarrowGrid, headerLongGrid } from "../../commonComponents";
 import logo from "./logo.svg";
 import returnBack from "./return.svg";
 
@@ -98,13 +99,7 @@ export default ({ narrow }) => (
     <div className="container">
       <LogoWrap>
         <div className="row middle-xs">
-          <div
-            className={
-              narrow 
-              ? "col-xs-offset-0 col-xs-12" 
-              : "col-xs-offset-1 col-xs-10"
-            }
-          >
+          <div className={narrow ? headerNarrowGrid : headerLongGrid}>
             <TopInformation>
               <SiteName to="/" narrow={narrow && narrow.toString()}>
                 <Logo src={logo} />aviasales

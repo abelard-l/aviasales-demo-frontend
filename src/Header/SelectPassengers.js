@@ -124,20 +124,21 @@ class SelectPassengers extends Component {
 
     switch (where) {
       case "mature":
-        newMature = this.state.mature + changer;
+        newMature =
+          this.state.mature + changer >= 0 ? this.state.mature + changer : 0;
         break;
       case "children":
-        newChildren = this.state.сhildren + changer;
+        newChildren =
+          this.state.сhildren + changer >= 0
+            ? this.state.сhildren + changer
+            : 0;
         break;
       case "infants":
-        newInfants = this.state.infants + changer;
+        newInfants =
+          this.state.infants + changer >= 0 ? this.state.infants + changer : 0;
         break;
       default:
     }
-
-    if (newMature < 0) newMature = 0;
-    if (newChildren < 0) newChildren = 0;
-    if (newInfants < 0) newInfants = 0;
 
     this.setState({
       mature: newMature,
