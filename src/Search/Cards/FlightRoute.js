@@ -8,6 +8,7 @@ import routeLine from "./icons/route-line.svg";
 
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
+import { translate } from "../../commonFunctions";
 
 import clock from "./icons/clock.svg";
 import planeTo from "./icons/plane-to.svg";
@@ -207,7 +208,7 @@ export default props => (
       <Time alignLeft>
         <Pin src={pin} /> {props.flight.departureTime}
       </Time>
-      <City>{props.flight.departureCity}</City>
+      <City>{translate(props.flight.departureCity)}</City>
       <TimeAndDay>{formatDate(props.flight.departureDate)}</TimeAndDay>
     </Departure>
     <Route>
@@ -231,7 +232,7 @@ export default props => (
     </Route>
     <Arrival>
       <Time alignRight>{props.flight.arrivalTime}</Time>
-      <City>{props.flight.arrivalCity}</City>
+      <City>{translate(props.flight.arrivalCity)}</City>
       <TimeAndDay>{formatDate(props.flight.arrivalDate)}</TimeAndDay>
     </Arrival>
     <DepartureAndArriving>
@@ -246,6 +247,6 @@ export default props => (
       <Icons src={clock} /> {props.flight.duration.hour} {"ч "}
       {props.flight.duration.minute && props.flight.duration.minute + " м"}
     </Timing>
-    <Direction>{props.flight.type}</Direction>
+    <Direction>{translate(props.flight.type)}</Direction>
   </FlightRoute>
 );

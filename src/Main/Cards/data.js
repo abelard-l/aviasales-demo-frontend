@@ -11,48 +11,48 @@ export const cardsData = [
   {
     cityImage: krasnodar,
     flag: rusflag,
-    city: "Краснодар",
-    country: "Россия",
+    city: "Krasnodar",
+    country: "Russia",
     price: 1212,
     date: "3-18"
   },
   {
     cityImage: sochi,
     flag: rusflag,
-    city: "Сочи (Адлер)",
-    country: "Россия",
+    city: "Sochi (Adler)",
+    country: "Russia",
     price: 1334,
     date: "3-27"
   },
   {
     cityImage: peterburg,
     flag: rusflag,
-    city: "Санкт-Петербург",
-    country: "Россия",
+    city: "St. Petersburg",
+    country: "Russia",
     price: 1508,
     date: "2-19"
   },
   {
     cityImage: minvodi,
     flag: rusflag,
-    city: "Минеральные Воды",
-    country: "Россия",
+    city: "Mineralnye Vody",
+    country: "Russia",
     price: 2074,
     date: "3-13"
   },
   {
     cityImage: simferopol,
     flag: rusflag,
-    city: "Симферополь (Крым)",
-    country: "Россия",
+    city: "Simferopol (Crimea)",
+    country: "Russia",
     price: 2407,
     date: "3-13"
   },
   {
     cityImage: barcelona,
     flag: spaflag,
-    city: "Барселона",
-    country: "Испания",
+    city: "Barcelona",
+    country: "Spain",
     price: 4247,
     date: "3-24"
   }

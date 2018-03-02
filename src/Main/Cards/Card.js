@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BlueLink, Rouble } from "../../commonComponents";
-import { makeDigits } from "../../commonFunctions";
+import { makeDigits, translate } from "../../commonFunctions";
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
 
@@ -89,8 +89,8 @@ export default props => (
         <Flag src={props.cardInfo.flag} />
       </WrapFlag>
       <CityAndCountry>
-        <City>{props.cardInfo.city}</City>
-        <Country>{props.cardInfo.country}</Country>
+        <City>{translate(props.cardInfo.city)}</City>
+        <Country>{translate(props.cardInfo.country)}</Country>
       </CityAndCountry>
       <PriceAndDate>
         <Price>

@@ -4,7 +4,7 @@ import FlightRoute from "./FlightRoute";
 import BaggageRules from "./BaggageRules";
 import Mark from "./Mark";
 import { Rouble } from "../../commonComponents";
-import { makeDigits } from "../../commonFunctions";
+import { makeDigits, translate } from "../../commonFunctions";
 import arrowDown from "./icons/arrow-down.svg";
 import followArrow from "./icons/follow-arrow.svg";
 
@@ -269,13 +269,13 @@ export default props => (
           Купить<br /> за {makeDigits(props.wholeCard.general.price)}
           <Rouble />
         </BuyTicket>
-        <BuyWhere>На {props.wholeCard.general.company}</BuyWhere>
+        <BuyWhere>На {translate(props.wholeCard.general.company)}</BuyWhere>
         {props.wholeCard.specSugg.length !== 0 && (
           <SpecSuggestions>
             {props.wholeCard.specSugg.slice(0, 2).map((item, i) => {
               return (
                 <SpecSugg key={i}>
-                  <SuggName>{item.name}</SuggName>
+                  <SuggName>{translate(item.name)}</SuggName>
                   <SuggPrice>
                     {makeDigits(item.price)}
                     <Rouble />

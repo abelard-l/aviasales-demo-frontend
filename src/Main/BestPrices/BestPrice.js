@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { BlueLink, Rouble } from "../../commonComponents";
-import { makeDigits } from "../../commonFunctions";
+import { makeDigits, translate } from "../../commonFunctions";
 
 const Card = styled.div`
   flex-basis: 100%;
@@ -72,17 +72,17 @@ export default props => (
         <Flag src={props.bestPriceInfo.flag} />
       </WrapFlag>
       <TitleInfo>
-        <City>{props.bestPriceInfo.city}</City>
-        <Country>{props.bestPriceInfo.country}</Country>
+        <City>{translate(props.bestPriceInfo.city)}</City>
+        <Country>{translate(props.bestPriceInfo.country)}</Country>
       </TitleInfo>
     </Title>
     <CitiesAndPrices>
       <Cities>
-        <FromCity>{props.bestPriceInfo.fromCities[0].name}</FromCity>
-        <FromCity>{props.bestPriceInfo.fromCities[1].name}</FromCity>
-        <FromCity>{props.bestPriceInfo.fromCities[2].name}</FromCity>
-        <FromCity>{props.bestPriceInfo.fromCities[3].name}</FromCity>
-        <FromCity>{props.bestPriceInfo.fromCities[4].name}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.fromCities[0].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.fromCities[1].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.fromCities[2].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.fromCities[3].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.fromCities[4].name)}</FromCity>
       </Cities>
       <Prices>
         <Price>

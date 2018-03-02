@@ -44,4 +44,5 @@ export class Rouble extends Component {
 
 export const headerNarrowGrid = "col-xs-offset-0 col-xs-12";
 
-export const headerLongGrid = "col-xs-offset-1 col-xs-10";
+export const headerLongGrid =
+  "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12";

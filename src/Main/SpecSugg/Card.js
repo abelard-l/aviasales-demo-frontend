@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Rouble } from "../../commonComponents";
-import { makeDigits } from "../../commonFunctions";
+import { makeDigits, translate } from "../../commonFunctions";
 
 const Card = styled.div`
   background: white;
@@ -113,7 +113,7 @@ const DiscoverDetails = styled.button`
 export default props => (
   <Card>
     <Top>
-      {props.specData.title}
+      {translate(props.specData.title)}
       <TopRightSide>
         <TopRightContent src={props.specData.topImg} />
       </TopRightSide>
@@ -128,7 +128,7 @@ export default props => (
         <Days>Осталось {props.specData.days} дней</Days>
       </PricesAndDays>
     </AviacompanyAndPrices>
-    <Information>{props.specData.description}</Information>
+    <Information>{translate(props.specData.description)}</Information>
     <DiscoverDetails>Узнать подробности</DiscoverDetails>
   </Card>
 );

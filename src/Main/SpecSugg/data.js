@@ -4,30 +4,30 @@ import circle from "./tr-circle.png";
 
 export const specData = [
   {
-    title: "Билеты от 499 рублей!",
+    title: "Tickets from 499 rubles!",
     topImg: null,
     aviaImg: pobeda,
     price: 499,
     days: 45,
     description:
-      "Билеты от 499 рублей! Специальное предложение от авиакомпании Победа"
+      "Tickets from 499 rubles! Special offer from the airline Pobeda"
   },
   {
-    title: "В Нью-Йорк от 20680 рублей!",
+    title: "In New York from 20680 rubles!",
     topImg: circle,
     aviaImg: lufthansa,
     price: 20680,
     days: 19,
     description:
-      "Из Москвы в США от 20680 рублей! Специальное предложение от авиакомпании Lufthansa"
+      "From Moscow to the USA from 20680 rubles! Special offer from Lufthansa"
   },
   {
-    title: "В Лос-Анджелес от 22360 рублей!",
+    title: "In Los Angeles from 22,360 rubles!",
     topImg: circle,
     aviaImg: lufthansa,
     price: 20360,
     days: 19,
     description:
-      "Из Москвы в США от 22360 рублей! Специальное предложение от авиакомпании Lufthansa"
+      "From Moscow to the USA from 22,360 rubles! Special offer from Lufthansa"
   }
 ];

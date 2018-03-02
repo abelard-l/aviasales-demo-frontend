@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
-import DatePicker from "./DatePicker";
+import DatePicker, { prices } from "./DatePicker";
 import SelectPassengers from "./SelectPassengers";
 import { headerNarrowGrid, headerLongGrid } from "../commonComponents";
 
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
+
+import "./datePicker.css";
 
 import Top from "./Top";
 import arrows from "./arrow.svg";
@@ -357,17 +359,14 @@ function formatDate(day) {
 }
 
 export default class MainForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showFrom: false,
-      showTo: false,
-      current: "from",
-      fromDate: new Date(),
-      toDate: new Date(),
-      isShowSelectPassengers: false
-    };
-  }
+  state = {
+    showFrom: false,
+    showTo: false,
+    current: "from",
+    fromDate: new Date(),
+    toDate: new Date(),
+    isShowSelectPassengers: false
+  };
 
   showDatePicker = direction => {
     direction === "from"
@@ -407,6 +406,25 @@ export default class MainForm extends Component {
       ? this.setState({ fromDate: day })
       : this.setState({ toDate: day });
     this.clickOutside();
+  };
+
+  renderDay = fullDay => {
+    const day = fullDay.getDate();
+
+    const priceBestStyle = {};
+
+    const priceStyle = {};
+
+    return (
+      <div>
+        {day}
+        {prices[day] && (
+          <div style={prices[day].isBest ? priceBestStyle : priceStyle}>
+            {prices[day].value}
+          </div>
+        )}
+      </div>
+    );
   };
 
   render(narrow) {
@@ -451,6 +469,7 @@ export default class MainForm extends Component {
                       onClickOutside={this.clickOutside}
                       onDayClick={this.dayClick}
                       selectedDays={this.state.fromDate}
+                      renderDay={this.renderDay}
                     />
                   )}
                 </DateFrom>
