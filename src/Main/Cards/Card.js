@@ -31,11 +31,11 @@ const WrapFlag = styled.div`
 const Flag = styled.img``;
 
 const CityAndCountry = styled.div`
-  flex-basis: 55%;
+  flex-basis: 60%;
 `;
 
 const PriceAndDate = styled.div`
-  flex-basis: 45%;
+  flex-basis: 40%;
 `;
 
 const City = styled.div`

@@ -253,7 +253,8 @@ export default props => (
       ) : (
         <Icons src={planeReturn} />
       )}
-      {props.flight.departureTime} - {props.flight.arrivalTime}
+      {formatTime(props.flight.departureTime)} -{" "}
+      {formatTime(props.flight.arrivalTime)}
     </DepartureAndArriving>
     <Timing>
       <Icons src={clock} /> {Math.floor(props.flight.duration / 60)} {"ч "}

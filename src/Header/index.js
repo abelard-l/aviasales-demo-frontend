@@ -247,10 +247,12 @@ const Passenger = styled.div`
 
   @media (min-width: 768px) {
     border-bottom-left-radius: 0px;
+    font-size: ${props => (props.narrow ? "15px" : "16px")};
   }
 
   @media (min-width: 1200px) {
     border-radius: 0px 4px 4px 0px;
+    font-size: 16px;
   }
 `;
 
@@ -527,7 +529,7 @@ export default class MainForm extends Component {
                   narrow={this.props.narrow}
                   onClick={() => this.showSelectPassengers()}
                 >
-                  <Passenger>
+                  <Passenger narrow={this.props.narrow}>
                     1 пассажир,
                     <GrayerText narrow={this.props.narrow}>эконом</GrayerText>
                   </Passenger>

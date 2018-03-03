@@ -1,10 +1,10 @@
 export const lang = {
   Krasnodar: "Краснодар",
   Russia: "Россия",
-  "Sochi (Adler)": "Сочи(Адлер)",
+  "Sochi (Adler)": "Сочи (Адлер)",
   "St. Petersburg": "Санкт-Петербург",
   "Mineralnye Vody": "Минеральные Воды",
-  "Simferopol (Crimea)": "Симферополь(Крым)",
+  "Simferopol (Crimea)": "Симферополь (Крым)",
   Barcelona: "Барселона",
   "From Moscow": "Из Москвы",
   "From St. Petersburg": "Из Санкт-Петербурга",
@@ -32,5 +32,6 @@ export const lang = {
   Direct: "Прямой",
   Moscow: "Москва",
   "Biletik Aero": "Билетик Аэро",
-  "No luggage": "Нет багажа"
+  "No luggage": "Нет багажа",
+  Spain: "Испания"
 };
