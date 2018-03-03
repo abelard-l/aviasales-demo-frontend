@@ -9,11 +9,17 @@ import rectangle from "./rectangle.svg";
 
 const Form = withClickOutside()(styled.div`
   background: #ffffff;
-  padding: 22px 16px 6px 16px;
+  box-sizing: border-box;
+  padding: 22px 20px 6px 20px;
   position: absolute;
-  top: 1px;
-  right: 0;
+  top: 55px;
+  left: 1px;
   z-index: 5000;
+  width: calc(100% - 2px);
+
+  @media (min-width: 1200px) {
+    padding: 22px 8px 6px 8px;
+  }
 `);
 
 const TicketsPicker = styled.div`
@@ -25,14 +31,19 @@ const TicketsPicker = styled.div`
 
 const Text = styled.div`
   box-sizing: border-box;
-  flex-basis: 61%;
-  max-width: 61%;
+  flex-basis: 65%;
+  max-width: 65%;
   line-height: 18px;
   padding-right: 10px;
   font-size: 14px;
   color: #4a4a4a;
-  min-width: 118px;
+  min-width: 111px;
   white-space: nowrap;
+
+  @media (min-width: 1200px) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 `;
 
 const GrayText = styled.span`
@@ -42,8 +53,13 @@ const GrayText = styled.span`
 `;
 
 const ControlWrap = styled.div`
-  flex-basis: 39%;
-  max-width: 39%;
+  flex-basis: 35%;
+  max-width: 35%;
+
+  @media (min-width: 1200px) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 `;
 
 const Control = styled.div`
@@ -71,6 +87,7 @@ const Num = styled.div`
   flex-basis: 34%;
   max-width: 34%;
   align-self: center;
+  text-align: center;
   padding: 8px;
 `;
 
@@ -83,12 +100,14 @@ const PlusBtn = styled.button`
 `;
 
 const Checkbox = styled.div`
-  background: url(${rectangle}) no-repeat 0px center;
+  background: url(${rectangle}) no-repeat 0px 14px;
   border-top: 1px solid #eaeaea;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 5px;
+  display: flex;
+  align-items: center;
 
   ${props =>
     props.checked &&

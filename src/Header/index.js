@@ -159,17 +159,24 @@ const DestToInput = styled.input`
   }
 `;
 
-const DateFrom = styled.div`
-  flex-basis: 50%;
+const Dates = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
   position: relative;
 
   @media (min-width: 768px) {
-    flex-basis: 25%;
+    flex-basis: 50%;
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "15%" : "18%")};
+    flex-basis: ${props => (props.narrow ? "30%" : "36%")};
   }
+`;
+
+const DateFrom = styled.div`
+  flex-basis: 50%;
+  position: relative;
 `;
 
 const DateFromInput = styled.input`
@@ -195,14 +202,6 @@ const DateFromInput = styled.input`
 const DateTo = styled.div`
   flex-basis: 50%;
   position: relative;
-
-  @media (min-width: 768px) {
-    flex-basis: 25%;
-  }
-
-  @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "15%" : "18%")};
-  }
 `;
 
 const DateBtn = styled.span`
@@ -214,6 +213,7 @@ const DateBtn = styled.span`
 `;
 
 const FlightType = styled.div`
+  cursor: pointer;
   flex-basis: 100%;
   position: relative;
 
@@ -352,6 +352,36 @@ const Aero = styled.img`
   margin-right: 24px;
 `;
 
+const PriceDayPickerBest = styled.span`
+  position: absolute;
+  top: 19px;
+  left: 2px;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 10px;
+  text-align: center;
+  color: #00c455;
+
+  @media (min-width: 1200px) {
+    left: 6px;
+  }
+`;
+
+const PriceDayPicker = styled.span`
+  position: absolute;
+  top: 19px;
+  left: 2px;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 10px;
+  text-align: center;
+  color: #a0b0b9;
+
+  @media (min-width: 1200px) {
+    left: 6px;
+  }
+`;
+
 function formatDate(day) {
   return format(new Date(day), "DD MMMM, dd", {
     locale: ruLocale
@@ -411,18 +441,15 @@ export default class MainForm extends Component {
   renderDay = fullDay => {
     const day = fullDay.getDate();
 
-    const priceBestStyle = {};
-
-    const priceStyle = {};
-
     return (
       <div>
         {day}
-        {prices[day] && (
-          <div style={prices[day].isBest ? priceBestStyle : priceStyle}>
-            {prices[day].value}
-          </div>
-        )}
+        {prices[day] &&
+          (prices[day].isBest ? (
+            <PriceDayPickerBest>{prices[day].value}</PriceDayPickerBest>
+          ) : (
+            <PriceDayPicker>{prices[day].value}</PriceDayPicker>
+          ))}
       </div>
     );
   };
@@ -453,17 +480,32 @@ export default class MainForm extends Component {
                 <DestTo narrow={this.props.narrow}>
                   <DestToInput type="text" placeholder="Город прибытия" />
                 </DestTo>
-                <DateFrom narrow={this.props.narrow}>
-                  <DateFromInput
-                    readOnly
-                    value={formatDate(this.state.fromDate)}
-                    type="text"
-                    placeholder="Туда"
-                    onClick={() => this.showDatePicker("from")}
-                  />
-                  <RightInputField onClick={() => this.showDatePicker("from")}>
-                    <DateBtn />
-                  </RightInputField>
+                <Dates narrow={this.props.narrow}>
+                  <DateFrom>
+                    <DateFromInput
+                      readOnly
+                      value={formatDate(this.state.fromDate)}
+                      type="text"
+                      placeholder="Туда"
+                      onClick={() => this.showDatePicker("from")}
+                    />
+                    <RightInputField
+                      onClick={() => this.showDatePicker("from")}
+                    >
+                      <DateBtn />
+                    </RightInputField>
+                  </DateFrom>
+                  <DateTo onClick={() => this.showDatePicker("to")}>
+                    <DateToInput
+                      readOnly
+                      value={formatDate(this.state.toDate)}
+                      type="text"
+                      placeholder="Обратно"
+                    />
+                    <RightInputField onClick={() => this.showDatePicker("to")}>
+                      <DateBtn />
+                    </RightInputField>
+                  </DateTo>
                   {this.state.showFrom && (
                     <DatePicker
                       onClickOutside={this.clickOutside}
@@ -472,32 +514,24 @@ export default class MainForm extends Component {
                       renderDay={this.renderDay}
                     />
                   )}
-                </DateFrom>
-                <DateTo narrow={this.props.narrow}>
-                  <DateToInput
-                    readOnly
-                    value={formatDate(this.state.toDate)}
-                    type="text"
-                    placeholder="Обратно"
-                    onClick={() => this.showDatePicker("to")}
-                  />
-                  <RightInputField onClick={() => this.showDatePicker("to")}>
-                    <DateBtn />
-                  </RightInputField>
                   {this.state.showTo && (
                     <DatePicker
                       onClickOutside={this.clickOutside}
                       onDayClick={this.dayClick}
                       selectedDays={this.state.toDate}
+                      renderDay={this.renderDay}
                     />
                   )}
-                </DateTo>
-                <FlightType narrow={this.props.narrow}>
+                </Dates>
+                <FlightType
+                  narrow={this.props.narrow}
+                  onClick={() => this.showSelectPassengers()}
+                >
                   <Passenger>
-                    1 пассажир,{" "}
+                    1 пассажир,
                     <GrayerText narrow={this.props.narrow}>эконом</GrayerText>
                   </Passenger>
-                  <RightInputField onClick={() => this.showSelectPassengers()}>
+                  <RightInputField>
                     <FlightTypeChoose />
                   </RightInputField>
                   {this.state.isShowSelectPassengers && (
