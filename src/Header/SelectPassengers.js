@@ -17,6 +17,11 @@ const Form = withClickOutside()(styled.div`
   z-index: 5000;
   width: calc(100% - 2px);
 
+  @media (min-width: 768px) {
+    padding: ${props =>
+      props.narrow ? "22px 8px 6px 8px" : "22px 20px 6px 20px"};
+  }
+
   @media (min-width: 1200px) {
     padding: 22px 8px 6px 8px;
   }
@@ -40,9 +45,14 @@ const Text = styled.div`
   min-width: 111px;
   white-space: nowrap;
 
+  @media (min-width: 768px) {
+    flex-basis: ${props => (props.narrow ? "55%" : "70%")};
+    max-width: ${props => (props.narrow ? "55%" : "70%")};
+  }
+
   @media (min-width: 1200px) {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 65%;
+    max-width: 65%;
   }
 `;
 
@@ -53,12 +63,17 @@ const GrayText = styled.span`
 `;
 
 const ControlWrap = styled.div`
-  flex-basis: 35%;
-  max-width: 35%;
+  flex-basis: 45%;
+  max-width: 45%;
+
+  @media (min-width: 768px) {
+    flex-basis: ${props => (props.narrow ? "45%" : "30%")};
+    max-width: ${props => (props.narrow ? "45%" : "30%")};
+  }
 
   @media (min-width: 1200px) {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 35%;
+    max-width: 35%;
   }
 `;
 
@@ -77,6 +92,14 @@ const MinusBtn = styled.button`
   padding: 15px 11px;
   flex-basis: 33%;
   max-width: 33%;
+
+  @media (min-width: 768px) {
+    padding: ${props => (props.narrow ? "15px 3px;" : "15px 11px;")};
+  }
+
+  @media (min-width: 1200px) {
+    padding: 15px 11px;
+  }
 `;
 
 const Num = styled.div`
@@ -89,6 +112,14 @@ const Num = styled.div`
   align-self: center;
   text-align: center;
   padding: 8px;
+
+  @media (min-width: 768px) {
+    padding: ${props => (props.narrow ? "2px" : "8px")};
+  }
+
+  @media (min-width: 1200px) {
+    padding: 8px;
+  }
 `;
 
 const PlusBtn = styled.button`
@@ -97,6 +128,14 @@ const PlusBtn = styled.button`
   padding: 15px 11px;
   flex-basis: 33%;
   max-width: 33%;
+
+  @media (min-width: 768px) {
+    padding: ${props => (props.narrow ? "15px 3px;" : "15px 11px;")};
+  }
+
+  @media (min-width: 1200px) {
+    padding: 15px 11px;
+  }
 `;
 
 const Checkbox = styled.div`
@@ -167,37 +206,58 @@ class SelectPassengers extends Component {
   };
   render() {
     return (
-      <Form onClickOutside={this.props.onClickOutside}>
+      <Form
+        onClickOutside={this.props.onClickOutside}
+        narrow={this.props.narrow}
+      >
         <TicketsPicker>
-          <Text>Взрослые</Text>
-          <ControlWrap>
+          <Text narrow={this.props.narrow}>Взрослые</Text>
+          <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn onClick={e => this.change(e, "mature", "minus")} />
-              <Num>{this.state.mature}</Num>
-              <PlusBtn onClick={e => this.change(e, "mature", "plus")} />
+              <MinusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "mature", "minus")}
+              />
+              <Num narrow={this.props.narrow}>{this.state.mature}</Num>
+              <PlusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "mature", "plus")}
+              />
             </Control>
           </ControlWrap>
         </TicketsPicker>
         <TicketsPicker>
-          <Text>Дети до 12 лет</Text>
-          <ControlWrap>
+          <Text narrow={this.props.narrow}>Дети до 12 лет</Text>
+          <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn onClick={e => this.change(e, "children", "minus")} />
-              <Num>{this.state.сhildren}</Num>
-              <PlusBtn onClick={e => this.change(e, "children", "plus")} />
+              <MinusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "children", "minus")}
+              />
+              <Num narrow={this.props.narrow}>{this.state.сhildren}</Num>
+              <PlusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "children", "plus")}
+              />
             </Control>
           </ControlWrap>
         </TicketsPicker>
         <TicketsPicker>
-          <Text>
+          <Text narrow={this.props.narrow}>
             Дети до 2 лет<br />
             <GrayText>Без места</GrayText>
           </Text>
-          <ControlWrap>
+          <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn onClick={e => this.change(e, "infants", "minus")} />
-              <Num>{this.state.infants}</Num>
-              <PlusBtn onClick={e => this.change(e, "infants", "plus")} />
+              <MinusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "infants", "minus")}
+              />
+              <Num narrow={this.props.narrow}>{this.state.infants}</Num>
+              <PlusBtn
+                narrow={this.props.narrow}
+                onClick={e => this.change(e, "infants", "plus")}
+              />
             </Control>
           </ControlWrap>
         </TicketsPicker>

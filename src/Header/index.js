@@ -536,6 +536,7 @@ export default class MainForm extends Component {
                   </RightInputField>
                   {this.state.isShowSelectPassengers && (
                     <SelectPassengers
+                      narrow={this.props.narrow}
                       onClickOutside={this.clickOutsideSelectPassengers}
                     />
                   )}

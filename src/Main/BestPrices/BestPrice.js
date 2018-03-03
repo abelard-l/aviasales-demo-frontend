@@ -55,7 +55,9 @@ const Country = styled.div`
   text-transform: uppercase;
 `;
 
-const FromCity = styled.div``;
+const FromCity = styled.div`
+  margin-bottom: 5px;
+`;
 
 const Prices = styled.div`
   flex-basis: 40%;
@@ -63,6 +65,7 @@ const Prices = styled.div`
 
 const Price = styled.div`
   text-align: right;
+  margin-bottom: 5px;
 `;
 
 export default props => (
