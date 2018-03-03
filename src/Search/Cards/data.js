@@ -31,27 +31,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "00:05",
+      departureTime: 5,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "03:05",
+      arrivalTime: 185,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 5 }
+      duration: 300
     },
     flightBack: {
       type: "Direct",
-      departureTime: "10:35",
+      departureTime: 635,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:10",
+      arrivalTime: 1030,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 35 }
+      duration: 275
     }
   },
   {
@@ -77,27 +77,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "00:15",
+      departureTime: 15,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "03:10",
+      arrivalTime: 190,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 4, minute: 55 }
+      duration: 295
     },
     flightBack: {
       type: "CDG",
-      departureTime: "10:45",
+      departureTime: 645,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:15 ",
+      arrivalTime: 1035,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 30 }
+      duration: 270
     }
   },
   {
@@ -123,27 +123,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "00:15",
+      departureTime: 15,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "03:10",
+      arrivalTime: 190,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 4, minute: 55 }
+      duration: 295
     },
     flightBack: {
       type: "Direct",
-      departureTime: "10:45",
+      departureTime: 645,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:15",
+      arrivalTime: 1035,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 30 }
+      duration: 270
     }
   },
   {
@@ -190,27 +190,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "07:00",
+      departureTime: 420,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "09:30",
+      arrivalTime: 570,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 4, minute: 30 }
+      duration: 270
     },
     flightBack: {
       type: "Direct",
-      departureTime: "11:00",
+      departureTime: 660,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:10",
+      arrivalTime: 1030,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 10 }
+      duration: 250
     }
   },
   {
@@ -236,27 +236,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "00:05",
+      departureTime: 5,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "03:05",
+      arrivalTime: 185,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 5 }
+      duration: 300
     },
     flightBack: {
       type: "Direct",
-      departureTime: "11:00",
+      departureTime: 660,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:10",
+      arrivalTime: 1030,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 10 }
+      duration: 250
     }
   },
   {
@@ -303,27 +303,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "07:30",
+      departureTime: 450,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "09:50",
+      arrivalTime: 590,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 4, minute: 20 }
+      duration: 260
     },
     flightBack: {
       type: "Direct",
-      departureTime: "11:20",
+      departureTime: 680,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:35",
+      arrivalTime: 1055,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 15 }
+      duration: 255
     }
   },
   {
@@ -349,27 +349,27 @@ export const cardsData = [
     },
     flightForward: {
       type: "Direct",
-      departureTime: "00:05",
+      departureTime: 5,
       departureCity: "Moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
-      arrivalTime: "03:05",
+      arrivalTime: 185,
       arrivalCity: "Barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
-      duration: { hour: 5 }
+      duration: 300
     },
     flightBack: {
       type: "Direct",
-      departureTime: "11:20",
+      departureTime: 680,
       departureCity: "Barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
-      arrivalTime: "17:35",
+      arrivalTime: 1055,
       arrivalCity: "Moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
-      duration: { hour: 4, minute: 15 }
+      duration: 255
     }
   }
 ];

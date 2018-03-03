@@ -202,11 +202,22 @@ function formatDate(day) {
   });
 }
 
+function formatTime(time) {
+  let hours = "" + Math.floor(time / 60);
+  let minutes = "" + time % 60;
+
+  return (
+    (hours.length === 1 ? "0" + hours : hours) +
+    ":" +
+    (minutes.length === 1 ? "0" + minutes : minutes)
+  );
+}
+
 export default props => (
   <FlightRoute>
     <Departure>
       <Time alignLeft>
-        <Pin src={pin} /> {props.flight.departureTime}
+        <Pin src={pin} /> {formatTime(props.flight.departureTime)}
       </Time>
       <City>{translate(props.flight.departureCity)}</City>
       <TimeAndDay>{formatDate(props.flight.departureDate)}</TimeAndDay>
@@ -215,8 +226,9 @@ export default props => (
       <Duration>
         <PlaneUp src={planeTakingOff} />
         <Overall>
-          Всего: {props.flight.duration.hour} {"ч "}
-          {props.flight.duration.minute && props.flight.duration.minute + " м"}
+          Всего: {Math.floor(props.flight.duration / 60)} {"ч "}
+          {props.flight.duration % 60 !== 0 &&
+            props.flight.duration % 60 + " м"}
         </Overall>
         <PlaneDown src={planeTakingOff} />
       </Duration>
@@ -231,7 +243,7 @@ export default props => (
       </Airports>
     </Route>
     <Arrival>
-      <Time alignRight>{props.flight.arrivalTime}</Time>
+      <Time alignRight>{formatTime(props.flight.arrivalTime)}</Time>
       <City>{translate(props.flight.arrivalCity)}</City>
       <TimeAndDay>{formatDate(props.flight.arrivalDate)}</TimeAndDay>
     </Arrival>
@@ -244,8 +256,8 @@ export default props => (
       {props.flight.departureTime} - {props.flight.arrivalTime}
     </DepartureAndArriving>
     <Timing>
-      <Icons src={clock} /> {props.flight.duration.hour} {"ч "}
-      {props.flight.duration.minute && props.flight.duration.minute + " м"}
+      <Icons src={clock} /> {Math.floor(props.flight.duration / 60)} {"ч "}
+      {props.flight.duration % 60 !== 0 && props.flight.duration % 60 + " м"}
     </Timing>
     <Direction>{translate(props.flight.type)}</Direction>
   </FlightRoute>

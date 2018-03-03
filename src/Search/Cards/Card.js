@@ -118,15 +118,15 @@ const SpecSugg = styled.div`
 `;
 
 const SuggName = styled.div`
-  flex-basis: 50%;
-  max-width: 50%;
+  flex-basis: 60%;
+  max-width: 60%;
   text-align: left;
   margin-bottom: 4px;
 `;
 
 const SuggPrice = styled.div`
-  flex-basis: 50%;
-  max-width: 50%;
+  flex-basis: 40%;
+  max-width: 40%;
   text-align: right;
   margin-bottom: 4px;
 `;
