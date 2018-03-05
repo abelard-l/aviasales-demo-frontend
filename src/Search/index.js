@@ -12,7 +12,7 @@ const Search = styled.main`
   background-color: #eaeaea;
 
   @media (min-width: 1200px) {
-    padding-top: 56px;
+    padding-top: 20px;
   }
 `;
 

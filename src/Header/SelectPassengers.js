@@ -166,44 +166,31 @@ const Business = styled.span`
 class SelectPassengers extends Component {
   state = {
     mature: 1,
-    сhildren: 0,
+    children: 0,
     infants: 0
   };
 
-  change = (e, where, direction) => {
+  change = (e, where, changer) => {
     e.preventDefault();
 
-    let newMature = this.state.mature;
-    let newChildren = this.state.сhildren;
-    let newInfants = this.state.infants;
-
-    let changer = 0;
-    direction === "plus" ? (changer = 1) : (changer = -1);
-
-    switch (where) {
-      case "mature":
-        newMature =
-          this.state.mature + changer >= 0 ? this.state.mature + changer : 0;
-        break;
-      case "children":
-        newChildren =
-          this.state.сhildren + changer >= 0
-            ? this.state.сhildren + changer
-            : 0;
-        break;
-      case "infants":
-        newInfants =
-          this.state.infants + changer >= 0 ? this.state.infants + changer : 0;
-        break;
-      default:
-    }
+    const changeValue = value => {
+      return value + changer >= 0 ? value + changer : 0;
+    };
 
     this.setState({
-      mature: newMature,
-      сhildren: newChildren,
-      infants: newInfants
+      mature:
+        where === "mature" ? changeValue(this.state.mature) : this.state.mature,
+      children:
+        where === "children"
+          ? changeValue(this.state.children)
+          : this.state.children,
+      infants:
+        where === "infants"
+          ? changeValue(this.state.infants)
+          : this.state.infants
     });
   };
+
   render() {
     return (
       <Form
@@ -216,12 +203,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "mature", "minus")}
+                onClick={e => this.change(e, "mature", -1)}
               />
               <Num narrow={this.props.narrow}>{this.state.mature}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "mature", "plus")}
+                onClick={e => this.change(e, "mature", 1)}
               />
             </Control>
           </ControlWrap>
@@ -232,12 +219,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "children", "minus")}
+                onClick={e => this.change(e, "children", -1)}
               />
-              <Num narrow={this.props.narrow}>{this.state.сhildren}</Num>
+              <Num narrow={this.props.narrow}>{this.state.children}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "children", "plus")}
+                onClick={e => this.change(e, "children", 1)}
               />
             </Control>
           </ControlWrap>
@@ -251,12 +238,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "infants", "minus")}
+                onClick={e => this.change(e, "infants", -1)}
               />
               <Num narrow={this.props.narrow}>{this.state.infants}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "infants", "plus")}
+                onClick={e => this.change(e, "infants", 1)}
               />
             </Control>
           </ControlWrap>

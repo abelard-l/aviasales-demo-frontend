@@ -38,11 +38,6 @@ export const RoubleStyle = styled.span`
 
 export class Rouble extends Component {
   render() {
-    return <RoubleStyle {...this.props}>p</RoubleStyle>;
+    return <RoubleStyle>p</RoubleStyle>;
   }
 }
-
-export const headerNarrowGrid = "col-xs-offset-0 col-xs-12";
-
-export const headerLongGrid =
-  "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12";

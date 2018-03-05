@@ -49,12 +49,12 @@ const Baggage = styled.div`
   text-align: center;
 `;
 
-const Things1 = styled.div`
+const ThingsFree = styled.div`
   flex-basis: 50%;
   padding: 10px 0px;
 `;
 
-const Things1NoBaggage = styled.div`
+const ThingsFreeNoBaggage = styled.div`
   background: #f8fbfb;
   border: 1px solid #eaeaea;
   flex-basis: 50%;
@@ -68,7 +68,7 @@ const NoBaggageText = styled.div`
   text-align: center;
 `;
 
-const Things2 = styled.div`
+const ThingsForMoney = styled.div`
   flex-basis: 50%;
   padding: 10px 0px;
 `;
@@ -238,26 +238,24 @@ export default props => (
     <Card>
       <BaggageAndPrice>
         <Baggage>
-          {props.wholeCard.thingsRule2.showRule ? (
+          {props.wholeCard.thingsForMoney.showRule ? (
             <React.Fragment>
-              <Things1NoBaggage>
-                <BaggageRules rules={props.wholeCard.thingsRule1} />
-                <NoBaggageText>
-                  {props.wholeCard.thingsRule1.text}
-                </NoBaggageText>
-              </Things1NoBaggage>
-              <Things2>
-                <BaggageRules rules={props.wholeCard.thingsRule2} />
+              <ThingsFreeNoBaggage>
+                <BaggageRules rules={props.wholeCard.thingsFree} />
+                <NoBaggageText>{props.wholeCard.thingsFree.text}</NoBaggageText>
+              </ThingsFreeNoBaggage>
+              <ThingsForMoney>
+                <BaggageRules rules={props.wholeCard.thingsForMoney} />
                 <DiscountText>
-                  - {props.wholeCard.thingsRule2.discount}
+                  - {props.wholeCard.thingsForMoney.discount}
                   <Rouble />
                 </DiscountText>
-              </Things2>
+              </ThingsForMoney>
             </React.Fragment>
           ) : (
-            <Things1>
-              <BaggageRules rules={props.wholeCard.thingsRule1} />
-            </Things1>
+            <ThingsFree>
+              <BaggageRules rules={props.wholeCard.thingsFree} />
+            </ThingsFree>
           )}
         </Baggage>
         {props.wholeCard.general.ticketsRemain !== false && (

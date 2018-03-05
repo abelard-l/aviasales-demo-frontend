@@ -5,27 +5,27 @@ import molflag from "../../res/images/flag-moldavia.png";
 export const bestPricesData = [
   {
     flag: rusflag,
-    city: "Simferopol (Crimea)",
+    city: "Simferopol_Crimea",
     country: "Russia",
     fromCities: [
       {
-        name: "From Moscow",
+        name: "From_Moscow",
         price: 4813
       },
       {
-        name: "From St. Petersburg",
+        name: "From_St_Petersburg",
         price: 7857
       },
       {
-        name: "From Novosibirsk",
+        name: "From_Novosibirsk",
         price: 15127
       },
       {
-        name: "From Ekaterinburg",
+        name: "From_Ekaterinburg",
         price: 9275
       },
       {
-        name: "From Chelyabinsk",
+        name: "From_Chelyabinsk",
         price: 9148
       }
     ]
@@ -36,23 +36,23 @@ export const bestPricesData = [
     country: "Armenia",
     fromCities: [
       {
-        name: "From Moscow",
+        name: "From_Moscow",
         price: 6758
       },
       {
-        name: "From St. Petersburg",
+        name: "From_St_Petersburg",
         price: 9932
       },
       {
-        name: "From Sochi",
+        name: "From_Sochi",
         price: 11951
       },
       {
-        name: "From Krasnodar",
+        name: "From_Krasnodar",
         price: 11741
       },
       {
-        name: "From Rostov-on-Don",
+        name: "From_Rostov_on_Don",
         price: 11956
       }
     ]
@@ -63,23 +63,23 @@ export const bestPricesData = [
     country: "Moldova",
     fromCities: [
       {
-        name: "From Moscow",
+        name: "From_Moscow",
         price: 8319
       },
       {
-        name: "From St. Petersburg",
+        name: "From_St_Petersburg",
         price: 10800
       },
       {
-        name: "From Krasnodar",
+        name: "From_Krasnodar",
         price: 12098
       },
       {
-        name: "From Surgut",
+        name: "From_Surgut",
         price: 16277
       },
       {
-        name: "From New Urengoy",
+        name: "From_New_Urengoy",
         price: 15987
       }
     ]

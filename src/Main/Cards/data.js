@@ -19,7 +19,7 @@ export const cardsData = [
   {
     cityImage: sochi,
     flag: rusflag,
-    city: "Sochi (Adler)",
+    city: "Sochi_Adler",
     country: "Russia",
     price: 1334,
     date: "3-27"
@@ -27,7 +27,7 @@ export const cardsData = [
   {
     cityImage: peterburg,
     flag: rusflag,
-    city: "St. Petersburg",
+    city: "St_Petersburg",
     country: "Russia",
     price: 1508,
     date: "2-19"
@@ -35,7 +35,7 @@ export const cardsData = [
   {
     cityImage: minvodi,
     flag: rusflag,
-    city: "Mineralnye Vody",
+    city: "Mineralnye_Vody",
     country: "Russia",
     price: 2074,
     date: "3-13"
@@ -43,7 +43,7 @@ export const cardsData = [
   {
     cityImage: simferopol,
     flag: rusflag,
-    city: "Simferopol (Crimea)",
+    city: "Simferopol_Crimea",
     country: "Russia",
     price: 2407,
     date: "3-13"

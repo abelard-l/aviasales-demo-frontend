@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { headerNarrowGrid, headerLongGrid } from "../../commonComponents";
 import logo from "./logo.svg";
 import returnBack from "./return.svg";
 
@@ -93,6 +92,11 @@ const Money = styled.div`
   text-align: center;
   color: #ffffff;
 `;
+
+export const headerNarrowGrid = "col-xs-offset-0 col-xs-12";
+
+export const headerLongGrid =
+  "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12";
 
 export default ({ narrow }) => (
   <Top narrow={narrow}>

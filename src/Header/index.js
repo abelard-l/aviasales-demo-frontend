@@ -3,14 +3,13 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import DatePicker, { prices } from "./DatePicker";
 import SelectPassengers from "./SelectPassengers";
-import { headerNarrowGrid, headerLongGrid } from "../commonComponents";
 
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
 
 import "./datePicker.css";
 
-import Top from "./Top";
+import Top, { headerNarrowGrid, headerLongGrid } from "./Top";
 import arrows from "./arrow.svg";
 import arrowdown from "./arrow-down.svg";
 import calendar from "./calendar.svg";

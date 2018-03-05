@@ -18,12 +18,12 @@ export const cardsData = [
       ticketsRemain: false
     },
     specSugg: [],
-    thingsRule1: {
+    thingsFree: {
       hands: 5,
       baggage: 12,
       text: ""
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: false,
       hands: 5,
       baggage: "red",
@@ -59,17 +59,17 @@ export const cardsData = [
       airline: [nord],
       isCharter: false,
       price: 8029,
-      company: "Biletik Aero",
+      company: "Biletik_Aero",
       mark: "fastest",
       ticketsRemain: false
     },
     specSugg: [],
-    thingsRule1: {
+    thingsFree: {
       hands: 5,
       baggage: "red",
       text: ""
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: false,
       hands: 5,
       baggage: "red",
@@ -110,12 +110,12 @@ export const cardsData = [
       ticketsRemain: false
     },
     specSugg: [],
-    thingsRule1: {
+    thingsFree: {
       hands: 5,
       baggage: "none",
       text: ""
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: true,
       hands: 5,
       baggage: 12,
@@ -151,7 +151,7 @@ export const cardsData = [
       airline: [red],
       isCharter: true,
       price: 8240,
-      company: "Biletik Aero",
+      company: "Biletik_Aero",
       mark: "none",
       ticketsRemain: false
     },
@@ -177,12 +177,12 @@ export const cardsData = [
         price: 8376
       }
     ],
-    thingsRule1: {
+    thingsFree: {
       hands: 10,
       baggage: "none",
       text: "Нет багажа"
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: true,
       hands: 10,
       baggage: 20,
@@ -223,12 +223,12 @@ export const cardsData = [
       ticketsRemain: false
     },
     specSugg: [],
-    thingsRule1: {
+    thingsFree: {
       hands: 10,
       baggage: 15,
       text: ""
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: false,
       hands: 5,
       baggage: 12,
@@ -274,7 +274,7 @@ export const cardsData = [
         price: 9275
       },
       {
-        name: "Biletik Aero",
+        name: "Biletik_Aero",
         price: 9587
       },
       {
@@ -290,12 +290,12 @@ export const cardsData = [
         price: 8376
       }
     ],
-    thingsRule1: {
+    thingsFree: {
       hands: "none",
       baggage: 20,
       text: "Нет багажа"
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: false,
       hands: 10,
       baggage: 20,
@@ -336,12 +336,12 @@ export const cardsData = [
       ticketsRemain: false
     },
     specSugg: [],
-    thingsRule1: {
+    thingsFree: {
       hands: "none",
       baggage: 15,
       text: ""
     },
-    thingsRule2: {
+    thingsForMoney: {
       showRule: false,
       hands: 5,
       baggage: 12,
