@@ -9,7 +9,7 @@ import ruLocale from "date-fns/locale/ru";
 
 import "./datePicker.css";
 
-import Top, { headerNarrowGrid, headerLongGrid } from "./Top";
+import Top from "./Top";
 import arrows from "./arrow.svg";
 import arrowdown from "./arrow-down.svg";
 import calendar from "./calendar.svg";
