@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { BlueLink, Rouble } from "../../commonComponents";
-import { makeDigits, translate } from "../../commonFunctions";
-import { format } from "date-fns";
-import ruLocale from "date-fns/locale/ru";
+import React from 'react';
+import styled from 'styled-components';
+import { BlueLink, Rouble } from '../../commonComponents';
+import { makeDigits, translate } from '../../commonFunctions';
+import { format } from 'date-fns';
+import ruLocale from 'date-fns/locale/ru';
 
 const Card = styled.img`
   border-top-left-radius: 4px;
@@ -76,8 +76,8 @@ const Date = styled.div`
 `;
 
 function formatDate(day) {
-  return format(day, "D MMMM", {
-    locale: ruLocale
+  return format(day, 'D MMMM', {
+    locale: ruLocale,
   });
 }
 

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import hamburger from "./hamburger.svg";
+import React from 'react';
+import styled from 'styled-components';
+import hamburger from './hamburger.svg';
 
 const HamburgerWrap = styled.section`
   display: none;

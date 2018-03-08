@@ -1,18 +1,18 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import styled, { css } from 'styled-components';
 
-import circle from "./icons/circle.svg";
-import pin from "./icons/pin.svg";
-import planeTakingOff from "./icons/plane-taking-off.svg";
-import routeLine from "./icons/route-line.svg";
+import circle from './icons/circle.svg';
+import pin from './icons/pin.svg';
+import planeTakingOff from './icons/plane-taking-off.svg';
+import routeLine from './icons/route-line.svg';
 
-import { format } from "date-fns";
-import ruLocale from "date-fns/locale/ru";
-import { translate } from "../../commonFunctions";
+import { format } from 'date-fns';
+import ruLocale from 'date-fns/locale/ru';
+import { translate } from '../../commonFunctions';
 
-import clock from "./icons/clock.svg";
-import planeTo from "./icons/plane-to.svg";
-import planeReturn from "./icons/plane-return.svg";
+import clock from './icons/clock.svg';
+import planeTo from './icons/plane-to.svg';
+import planeReturn from './icons/plane-return.svg';
 
 const FlightRoute = styled.div`
   display: flex;
@@ -197,19 +197,19 @@ const Icons = styled.img`
 `;
 
 function formatDate(day) {
-  return format(new Date(day), "D MMM YYYY, dd", {
+  return format(new Date(day), 'D MMM YYYY, dd', {
     locale: ruLocale
   });
 }
 
 function formatTime(time) {
-  let hours = "" + Math.floor(time / 60);
-  let minutes = "" + time % 60;
+  let hours = '' + Math.floor(time / 60);
+  let minutes = '' + time % 60;
 
   return (
-    (hours.length === 1 ? "0" + hours : hours) +
-    ":" +
-    (minutes.length === 1 ? "0" + minutes : minutes)
+    (hours.length === 1 ? '0' + hours : hours) +
+    ':' +
+    (minutes.length === 1 ? '0' + minutes : minutes)
   );
 }
 
@@ -226,9 +226,9 @@ export default props => (
       <Duration>
         <PlaneUp src={planeTakingOff} />
         <Overall>
-          Всего: {Math.floor(props.flight.duration / 60)} {"ч "}
+          Всего: {Math.floor(props.flight.duration / 60)} {'ч '}
           {props.flight.duration % 60 !== 0 &&
-            props.flight.duration % 60 + " м"}
+            props.flight.duration % 60 + ' м'}
         </Overall>
         <PlaneDown src={planeTakingOff} />
       </Duration>
@@ -248,17 +248,17 @@ export default props => (
       <TimeAndDay>{formatDate(props.flight.arrivalDate)}</TimeAndDay>
     </Arrival>
     <DepartureAndArriving>
-      {props.direction === "to" ? (
+      {props.direction === 'to' ? (
         <Icons src={planeTo} />
       ) : (
         <Icons src={planeReturn} />
       )}
-      {formatTime(props.flight.departureTime)} -{" "}
+      {formatTime(props.flight.departureTime)} -{' '}
       {formatTime(props.flight.arrivalTime)}
     </DepartureAndArriving>
     <Timing>
-      <Icons src={clock} /> {Math.floor(props.flight.duration / 60)} {"ч "}
-      {props.flight.duration % 60 !== 0 && props.flight.duration % 60 + " м"}
+      <Icons src={clock} /> {Math.floor(props.flight.duration / 60)} {'ч '}
+      {props.flight.duration % 60 !== 0 && props.flight.duration % 60 + ' м'}
     </Timing>
     <Direction>{translate(props.flight.type)}</Direction>
   </FlightRoute>

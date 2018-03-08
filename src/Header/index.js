@@ -1,19 +1,20 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
-import DatePicker, { prices } from "./DatePicker";
-import SelectPassengers from "./SelectPassengers";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import DatePicker, { prices } from './DatePicker';
+import SelectPassengers from './SelectPassengers';
 
-import { format } from "date-fns";
-import ruLocale from "date-fns/locale/ru";
+import ruLocale from 'date-fns/locale/ru';
+import { format } from 'date-fns';
 
-import "./datePicker.css";
 
-import Top, { headerNarrowGrid, headerLongGrid } from "./Top";
-import arrows from "./arrow.svg";
-import arrowdown from "./arrow-down.svg";
-import calendar from "./calendar.svg";
-import aero from "./aero.svg";
+import './datePicker.css';
+
+import Top from './Top';
+import arrows from './arrow.svg';
+import arrowdown from './arrow-down.svg';
+import calendar from './calendar.svg';
+import aero from './aero.svg';
 
 const Header = styled.header`
   background: linear-gradient(
@@ -25,14 +26,14 @@ const Header = styled.header`
     #02abdb -14.46%,
     #196ebd 73.68%
   );
-  padding-bottom: ${props => (props.narrow ? "10px" : "88px")};
+  padding-bottom: ${props => (props.narrow ? '10px' : '88px')};
 
   @media (min-width: 768px) {
-    padding-bottom: ${props => (props.narrow ? "30px" : "122px")};
+    padding-bottom: ${props => (props.narrow ? '30px' : '122px')};
   }
 
   @media (min-width: 1200px) {
-    padding-bottom: ${props => (props.narrow ? "30px" : "250px")};
+    padding-bottom: ${props => (props.narrow ? '30px' : '250px')};
   }
 `;
 
@@ -65,7 +66,7 @@ const SubTitle = styled.h2`
 `;
 
 const TicketParams = styled.form`
-  display: ${props => (props.narrow ? "none" : "flex")};
+  display: ${props => (props.narrow ? 'none' : 'flex')};
   flex-wrap: wrap;
 
   @media (min-width: 768px) {
@@ -86,7 +87,7 @@ const DestFrom = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "17%" : "22%")};
+    flex-basis: ${props => (props.narrow ? '17%' : '22%')};
   }
 `;
 
@@ -134,7 +135,7 @@ const DestTo = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "17%" : "21%")};
+    flex-basis: ${props => (props.narrow ? '17%' : '21%')};
   }
 `;
 
@@ -169,7 +170,7 @@ const Dates = styled.div`
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "30%" : "36%")};
+    flex-basis: ${props => (props.narrow ? '30%' : '36%')};
   }
 `;
 
@@ -217,11 +218,11 @@ const FlightType = styled.div`
   position: relative;
 
   @media (min-width: 768px) {
-    flex-basis: ${props => (props.narrow ? "25%" : "50%")};
+    flex-basis: ${props => (props.narrow ? '25%' : '50%')};
   }
 
   @media (min-width: 1200px) {
-    flex-basis: ${props => (props.narrow ? "19%" : "21%")};
+    flex-basis: ${props => (props.narrow ? '19%' : '21%')};
   }
 `;
 
@@ -246,7 +247,7 @@ const Passenger = styled.div`
 
   @media (min-width: 768px) {
     border-bottom-left-radius: 0px;
-    font-size: ${props => (props.narrow ? "15px" : "16px")};
+    font-size: ${props => (props.narrow ? '15px' : '16px')};
   }
 
   @media (min-width: 1200px) {
@@ -260,7 +261,7 @@ const GrayerText = styled.span`
   font-size: 16px;
 
   @media (min-width: 768px) {
-    font-size: ${props => (props.narrow ? "15px" : "16px")};
+    font-size: ${props => (props.narrow ? '15px' : '16px')};
   }
 
   @media (min-width: 1200px) {
@@ -291,23 +292,23 @@ const RightInputField = styled.div`
 `;
 
 const WrapFindTickets = styled(Link)`
-  display: ${props => (props.narrow ? "block" : "flex")};
+  display: ${props => (props.narrow ? 'block' : 'flex')};
   justify-content: center;
   margin-top: 48px;
   flex-basis: 100%;
   max-width: 100%;
 
   @media (min-width: 768px) {
-    margin-top: ${props => (props.narrow ? "0px" : "48px")};
-    flex-basis: ${props => (props.narrow ? "25%" : "100%")};
-    max-width: ${props => (props.narrow ? "25%" : "100%")};
+    margin-top: ${props => (props.narrow ? '0px' : '48px')};
+    flex-basis: ${props => (props.narrow ? '25%' : '100%')};
+    max-width: ${props => (props.narrow ? '25%' : '100%')};
   }
 
   @media (min-width: 1200px) {
-    margin-left: ${props => (props.narrow ? "auto" : "0px")};
-    margin-top: ${props => (props.narrow ? "0px" : "48px")};
-    flex-basis: ${props => (props.narrow ? "16%" : "100%")};
-    max-width: ${props => (props.narrow ? "16%" : "100%")};
+    margin-left: ${props => (props.narrow ? 'auto' : '0px')};
+    margin-top: ${props => (props.narrow ? '0px' : '48px')};
+    flex-basis: ${props => (props.narrow ? '16%' : '100%')};
+    max-width: ${props => (props.narrow ? '16%' : '100%')};
   }
 `;
 
@@ -317,31 +318,31 @@ const FindTickets = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: ${props => (props.narrow ? "18px" : "24px")};
+  font-size: ${props => (props.narrow ? '18px' : '24px')};
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding: ${props => (props.narrow ? "15px 18px" : "15px 74px 16px 45px")};
+  padding: ${props => (props.narrow ? '15px 18px' : '15px 74px 16px 45px')};
   position: relative;
-  margin-left: ${props => (props.narrow ? "12px" : "0px")};
-  width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
+  margin-left: ${props => (props.narrow ? '12px' : '0px')};
+  width: ${props => (props.narrow ? 'calc(100% - 1px)' : 'inherit')};
 
   @media (min-width: 768px) {
-    font-size: ${props => (props.narrow ? "18px" : "28px")};
-    padding: ${props => (props.narrow ? "15px 12px" : "15px 74px 16px 45px")};
-    margin-top: ${props => (props.narrow ? "1px" : "0px")};
+    font-size: ${props => (props.narrow ? '18px' : '28px')};
+    padding: ${props => (props.narrow ? '15px 12px' : '15px 74px 16px 45px')};
+    margin-top: ${props => (props.narrow ? '1px' : '0px')};
     margin-left: 1px;
-    width: ${props => (props.narrow ? "calc(100% - 1px)" : "inherit")};
+    width: ${props => (props.narrow ? 'calc(100% - 1px)' : 'inherit')};
   }
 
   @media (min-width: 1200px) {
-    font-size: ${props => (props.narrow ? "18px" : "28px")};
+    font-size: ${props => (props.narrow ? '18px' : '28px')};
   }
 `;
 
 const FindTicketsRight = styled.div`
   align-items: center;
-  display: ${props => (props.narrow ? "none" : "flex")};
+  display: ${props => (props.narrow ? 'none' : 'flex')};
   height: 100%;
   justify-content: center;
   position: absolute;
@@ -384,7 +385,7 @@ const PriceDayPicker = styled.span`
 `;
 
 function formatDate(day) {
-  return format(new Date(day), "DD MMMM, dd", {
+  return format(new Date(day), 'DD MMMM, dd', {
     locale: ruLocale
   });
 }
@@ -393,23 +394,23 @@ export default class MainForm extends Component {
   state = {
     showFrom: false,
     showTo: false,
-    current: "from",
+    current: 'from',
     fromDate: new Date(),
     toDate: new Date(),
     isShowSelectPassengers: false
   };
 
   showDatePicker = direction => {
-    direction === "from"
+    direction === 'from'
       ? this.setState({
           showFrom: true,
           showTo: false,
-          current: "from"
+          current: 'from'
         })
       : this.setState({
           showFrom: false,
           showTo: true,
-          current: "to"
+          current: 'to'
         });
   };
 
@@ -433,7 +434,7 @@ export default class MainForm extends Component {
   };
 
   dayClick = day => {
-    this.state.current === "from"
+    this.state.current === 'from'
       ? this.setState({ fromDate: day })
       : this.setState({ toDate: day });
     this.clickOutside();
@@ -456,6 +457,7 @@ export default class MainForm extends Component {
   };
 
   render(narrow) {
+    console.log(narrow);
     return (
       <Header narrow={this.props.narrow}>
         <Top narrow={this.props.narrow} />
@@ -470,8 +472,8 @@ export default class MainForm extends Component {
             <div
               className={
                 this.props.narrow
-                  ? "col-xs-offset-0 col-xs-12"
-                  : "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12"
+                  ? 'col-xs-offset-0 col-xs-12'
+                  : 'col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12'
               }
             >
               <TicketParams narrow={this.props.narrow}>
@@ -492,22 +494,22 @@ export default class MainForm extends Component {
                       value={formatDate(this.state.fromDate)}
                       type="text"
                       placeholder="Туда"
-                      onClick={() => this.showDatePicker("from")}
+                      onClick={() => this.showDatePicker('from')}
                     />
                     <RightInputField
-                      onClick={() => this.showDatePicker("from")}
+                      onClick={() => this.showDatePicker('from')}
                     >
                       <DateBtn />
                     </RightInputField>
                   </DateFrom>
-                  <DateTo onClick={() => this.showDatePicker("to")}>
+                  <DateTo onClick={() => this.showDatePicker('to')}>
                     <DateToInput
                       readOnly
                       value={formatDate(this.state.toDate)}
                       type="text"
                       placeholder="Обратно"
                     />
-                    <RightInputField onClick={() => this.showDatePicker("to")}>
+                    <RightInputField onClick={() => this.showDatePicker('to')}>
                       <DateBtn />
                     </RightInputField>
                   </DateTo>

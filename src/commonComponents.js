@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 export const BlueLink = styled.a`
   color: #00ace2;

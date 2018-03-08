@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Header from "../Header";
-import { Helmet } from "react-helmet";
-import Filters from "./Filters";
-import Hamburger from "./Hamburger";
-import ToTop from "./ToTop";
-import Cards from "./Cards";
-import Filter from "./Filter";
+import React from 'react';
+import styled from 'styled-components';
+import Header from '../Header';
+import { Helmet } from 'react-helmet';
+import Filters from './Filters';
+import Hamburger from './Hamburger';
+import ToTop from './ToTop';
+import Cards from './Cards';
+import Filter from './Filter';
 
 const Search = styled.main`
   background-color: #eaeaea;

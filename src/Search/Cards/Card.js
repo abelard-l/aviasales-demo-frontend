@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import FlightRoute from "./FlightRoute";
-import BaggageRules from "./BaggageRules";
-import Mark from "./Mark";
-import { Rouble } from "../../commonComponents";
-import { makeDigits, translate } from "../../commonFunctions";
-import arrowDown from "./icons/arrow-down.svg";
-import followArrow from "./icons/follow-arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import FlightRoute from './FlightRoute';
+import BaggageRules from './BaggageRules';
+import Mark from './Mark';
+import { Rouble } from '../../commonComponents';
+import { makeDigits, translate } from '../../commonFunctions';
+import arrowDown from './icons/arrow-down.svg';
+import followArrow from './icons/follow-arrow.svg';
 
 const WrapCard = styled.div``;
 
@@ -232,7 +232,7 @@ const Price = styled.div`
 
 export default props => (
   <WrapCard>
-    {props.wholeCard.general.mark !== "none" && (
+    {props.wholeCard.general.mark !== 'none' && (
       <Mark type={props.wholeCard.general.mark} />
     )}
     <Card>
@@ -292,7 +292,7 @@ export default props => (
       <FullFlightInfo>
         <FullFlightHeader>
           <AviaCompany>
-            {props.wholeCard.general.airline !== "" &&
+            {props.wholeCard.general.airline !== '' &&
               props.wholeCard.general.airline.map((item, i) => {
                 return <AviaCompanyImg key={i} src={item} />;
               })}
@@ -316,7 +316,7 @@ export default props => (
             <Rouble />
           </Price>
           <AviaCompany>
-            {props.wholeCard.general.airline !== "" &&
+            {props.wholeCard.general.airline !== '' &&
               props.wholeCard.general.airline.map((item, i) => {
                 return <AviaCompanyImg key={i} src={item} />;
               })}
@@ -324,7 +324,7 @@ export default props => (
         </PriceAndAvia>
         <FullFlightBody>
           <FlightRoute
-            direction={"to"}
+            direction={'to'}
             flight={props.wholeCard.flightForward}
           />
           <FlightRoute flight={props.wholeCard.flightBack} />

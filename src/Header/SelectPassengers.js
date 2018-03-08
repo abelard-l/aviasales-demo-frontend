@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
-import { withClickOutside } from "react-clickoutside";
+import React, { Component } from 'react';
+import styled, { css } from 'styled-components';
+import { withClickOutside } from 'react-clickoutside';
 
-import add from "./add.svg";
-import minus from "./minus.svg";
-import rectangleChecked from "./checked.svg";
-import rectangle from "./rectangle.svg";
+import add from './add.svg';
+import minus from './minus.svg';
+import rectangleChecked from './checked.svg';
+import rectangle from './rectangle.svg';
 
 const Form = withClickOutside()(styled.div`
   background: #ffffff;
@@ -19,7 +19,7 @@ const Form = withClickOutside()(styled.div`
 
   @media (min-width: 768px) {
     padding: ${props =>
-      props.narrow ? "22px 8px 6px 8px" : "22px 20px 6px 20px"};
+      props.narrow ? '22px 8px 6px 8px' : '22px 20px 6px 20px'};
   }
 
   @media (min-width: 1200px) {
@@ -46,8 +46,8 @@ const Text = styled.div`
   white-space: nowrap;
 
   @media (min-width: 768px) {
-    flex-basis: ${props => (props.narrow ? "55%" : "70%")};
-    max-width: ${props => (props.narrow ? "55%" : "70%")};
+    flex-basis: ${props => (props.narrow ? '55%' : '70%')};
+    max-width: ${props => (props.narrow ? '55%' : '70%')};
   }
 
   @media (min-width: 1200px) {
@@ -67,8 +67,8 @@ const ControlWrap = styled.div`
   max-width: 45%;
 
   @media (min-width: 768px) {
-    flex-basis: ${props => (props.narrow ? "45%" : "30%")};
-    max-width: ${props => (props.narrow ? "45%" : "30%")};
+    flex-basis: ${props => (props.narrow ? '45%' : '30%')};
+    max-width: ${props => (props.narrow ? '45%' : '30%')};
   }
 
   @media (min-width: 1200px) {
@@ -94,7 +94,7 @@ const MinusBtn = styled.button`
   max-width: 33%;
 
   @media (min-width: 768px) {
-    padding: ${props => (props.narrow ? "15px 3px;" : "15px 11px;")};
+    padding: ${props => (props.narrow ? '15px 3px;' : '15px 11px;')};
   }
 
   @media (min-width: 1200px) {
@@ -114,7 +114,7 @@ const Num = styled.div`
   padding: 8px;
 
   @media (min-width: 768px) {
-    padding: ${props => (props.narrow ? "2px" : "8px")};
+    padding: ${props => (props.narrow ? '2px' : '8px')};
   }
 
   @media (min-width: 1200px) {
@@ -130,7 +130,7 @@ const PlusBtn = styled.button`
   max-width: 33%;
 
   @media (min-width: 768px) {
-    padding: ${props => (props.narrow ? "15px 3px;" : "15px 11px;")};
+    padding: ${props => (props.narrow ? '15px 3px;' : '15px 11px;')};
   }
 
   @media (min-width: 1200px) {
@@ -194,12 +194,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "mature", -1)}
+                onClick={e => this.change(e, 'mature', -1)}
               />
               <Num narrow={this.props.narrow}>{this.state.mature}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "mature", 1)}
+                onClick={e => this.change(e, 'mature', 1)}
               />
             </Control>
           </ControlWrap>
@@ -210,12 +210,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "children", -1)}
+                onClick={e => this.change(e, 'children', -1)}
               />
               <Num narrow={this.props.narrow}>{this.state.children}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "children", 1)}
+                onClick={e => this.change(e, 'children', 1)}
               />
             </Control>
           </ControlWrap>
@@ -229,12 +229,12 @@ class SelectPassengers extends Component {
             <Control>
               <MinusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "infants", -1)}
+                onClick={e => this.change(e, 'infants', -1)}
               />
               <Num narrow={this.props.narrow}>{this.state.infants}</Num>
               <PlusBtn
                 narrow={this.props.narrow}
-                onClick={e => this.change(e, "infants", 1)}
+                onClick={e => this.change(e, 'infants', 1)}
               />
             </Control>
           </ControlWrap>

@@ -6,6 +6,7 @@
     "date-fns": "^1.29.0",
     "flexboxgrid2": "^7.1.0",
     "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-clickoutside": "^2.0.0",
     "react-day-picker": "^7.0.7",
@@ -22,6 +23,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "16.1.0",
     "typescript": "^2.7.1",
     "typescript-styled-plugin": "^0.5.0"
   }

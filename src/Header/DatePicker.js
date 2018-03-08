@@ -1,43 +1,43 @@
-import React from "react";
-import styled from "styled-components";
-import { withClickOutside } from "react-clickoutside";
+import React from 'react';
+import styled from 'styled-components';
+import { withClickOutside } from 'react-clickoutside';
 
-import DayPicker from "react-day-picker";
-import "react-day-picker/lib/style.css";
+import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
 
-const DAYS_SHORT = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+const DAYS_SHORT = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 
 const MONTHS = [
-  "Январь",
-  "Февраль",
-  "Март",
-  "Апрель",
-  "Май",
-  "Июнь",
-  "Июль",
-  "Август",
-  "Сентябрь",
-  "Октябрь",
-  "Ноябрь",
-  "Декабрь"
+  'Январь',
+  'Февраль',
+  'Март',
+  'Апрель',
+  'Май',
+  'Июнь',
+  'Июль',
+  'Август',
+  'Сентябрь',
+  'Октябрь',
+  'Ноябрь',
+  'Декабрь',
 ];
 
 const DAYS_LONG = [
-  "Воскресенье",
-  "Понедельник",
-  "Вторник",
-  "Среда",
-  "Четверг",
-  "Пятница",
-  "Суббота"
+  'Воскресенье',
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
 ];
 
 export const prices = {
-  24: { value: "43606", isBest: false },
-  25: { value: "43606", isBest: false },
-  26: { value: "41920", isBest: true },
-  27: { value: "42140", isBest: true },
-  28: { value: "42130", isBest: true }
+  24: { value: '43606', isBest: false },
+  25: { value: '43606', isBest: false },
+  26: { value: '41920', isBest: true },
+  27: { value: '42140', isBest: true },
+  28: { value: '42130', isBest: true },
 };
 
 const WrapDayPicker = withClickOutside()(styled.div`
@@ -78,7 +78,7 @@ const TogglePricesGraphic = styled.span`
   :before {
     background: #cdd1da;
     border-radius: 11px;
-    content: "";
+    content: '';
     height: 24px;
     left: 0;
     position: absolute;
@@ -89,7 +89,7 @@ const TogglePricesGraphic = styled.span`
   :after {
     background: white;
     border-radius: 10px;
-    content: "";
+    content: '';
     height: 20px;
     left: 2px;
     position: absolute;

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { HeaderCenter } from "../../commonComponents";
-import calendar from "./calendar.svg";
-import { bestPricesData } from "./data";
-import BestPrice from "./BestPrice";
+import React from 'react';
+import styled from 'styled-components';
+import { HeaderCenter } from '../../commonComponents';
+import calendar from './calendar.svg';
+import { bestPricesData } from './data';
+import BestPrice from './BestPrice';
 
 const BestPrices = styled.section``;
 
@@ -58,14 +58,10 @@ export default () => (
         </div>
       </div>
       <TextCenter>
-        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
-        мира.<br /> Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
-        авиакомпаний.
+        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран мира.<br /> Поиск и
+        сравнение цен на авиабилеты среди 100 агентств и 728 авиакомпаний.
       </TextCenter>
-      <SubText>
-        Цены, найденные пользователями за последние 48 часов, не являются
-        офертой.
-      </SubText>
+      <SubText>Цены, найденные пользователями за последние 48 часов, не являются офертой.</SubText>
     </div>
   </BestPrices>
 );

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import baggage from "./icons/baggage.svg";
-import baggageRed from "./icons/baggage-no-red.svg";
-import handsBaggage from "./icons/hands-baggage.svg";
+import baggage from './icons/baggage.svg';
+import baggageRed from './icons/baggage-no-red.svg';
+import handsBaggage from './icons/hands-baggage.svg';
 
 const BaggageRules = styled.div`
   align-items: center;
@@ -47,14 +47,10 @@ const BagRed = styled.span`
 
 export default props => (
   <BaggageRules>
-    {props.rules.hands === "none" ? (
-      <HandsBagBlur />
-    ) : (
-      <HandsBag>{props.rules.hands}</HandsBag>
-    )}
-    {props.rules.baggage === "red" ? (
+    {props.rules.hands === 'none' ? <HandsBagBlur /> : <HandsBag>{props.rules.hands}</HandsBag>}
+    {props.rules.baggage === 'red' ? (
       <BagRed />
-    ) : props.rules.baggage === "none" ? (
+    ) : props.rules.baggage === 'none' ? (
       <Bag>X</Bag>
     ) : (
       <Bag>{props.rules.baggage}</Bag>

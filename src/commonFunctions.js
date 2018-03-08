@@ -1,4 +1,4 @@
-import { lang } from "./res/languages/rus.loc.js";
+import lang from './res/languages/rus.loc';
 
 export function makeDigits(price) {
   return price.toLocaleString();

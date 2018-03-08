@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import smile from "./icons/smile.png";
-import light from "./icons/light.png";
-import love from "./icons/love.png";
+import smile from './icons/smile.png';
+import light from './icons/light.png';
+import love from './icons/love.png';
 
 const Mark = styled.div`
   font-weight: 900;
@@ -37,11 +37,11 @@ const MarkImage = styled.img`
 
 export default props => (
   <Mark>
-    {props.type === "cheapest" ? (
+    {props.type === 'cheapest' ? (
       <Cheapest>
         Самый дешевый <MarkImage src={smile} />
       </Cheapest>
-    ) : props.type === "fastest" ? (
+    ) : props.type === 'fastest' ? (
       <Fastest>
         Самый быстрый <MarkImage src={light} />
       </Fastest>

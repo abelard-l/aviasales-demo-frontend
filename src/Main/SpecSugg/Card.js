@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Rouble } from "../../commonComponents";
-import { makeDigits, translate } from "../../commonFunctions";
+import React from 'react';
+import styled from 'styled-components';
+import { Rouble } from '../../commonComponents';
+import { makeDigits, translate } from '../../commonFunctions';
 
 const Card = styled.div`
   background: white;

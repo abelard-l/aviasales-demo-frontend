@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import twitter from "./twitter.png";
-import facebook from "./facebook.png";
-import vk from "./vk.png";
-import rss from "./rss.png";
-import imgTopBorder from "./border-top.png";
+import React from 'react';
+import styled from 'styled-components';
+import twitter from './twitter.png';
+import facebook from './facebook.png';
+import vk from './vk.png';
+import rss from './rss.png';
+import imgTopBorder from './border-top.png';
 
 const WannaKnowWrap = styled.section`
   background: url(${imgTopBorder}) repeat-x top center;
@@ -97,8 +97,7 @@ export default () => (
             <WannaDiscount>
               <Caption>Хотите знать всё о скидках на авиабилеты?</Caption>
               <br />
-              Вы можете подписаться на нашу рассылку через соцсети или по
-              электронной почте.
+              Вы можете подписаться на нашу рассылку через соцсети или по электронной почте.
             </WannaDiscount>
             <SocialMedias>
               <SocialMedia src={twitter} />

@@ -1,15 +1,15 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { Rouble } from "../../commonComponents";
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { Rouble } from '../../commonComponents';
 
-import arrow from "./icons/arrow.svg";
-import arrowDown from "./icons/arrow-down.svg";
-import disk from "./icons/disk.svg";
-import plane from "./icons/plane.svg";
-import rectangleChecked from "./icons/checked.svg";
-import rectangle from "./icons/rectangle.svg";
-import clear from "./icons/clear.svg";
-import blueline from "./icons/blueline.png";
+import arrow from './icons/arrow.svg';
+import arrowDown from './icons/arrow-down.svg';
+import disk from './icons/disk.svg';
+import plane from './icons/plane.svg';
+import rectangleChecked from './icons/checked.svg';
+import rectangle from './icons/rectangle.svg';
+import clear from './icons/clear.svg';
+import blueline from './icons/blueline.png';
 
 const Filters = styled.section`
   background: white;
@@ -284,8 +284,7 @@ export default () => (
     </Checkbox>
 
     <InfoText>
-      Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями,
-      включая выбранную
+      Показывать билеты с перелетами, выполняемыми несколькими авиакомпаниями, включая выбранную
     </InfoText>
 
     <SubHeader>Альянсы</SubHeader>

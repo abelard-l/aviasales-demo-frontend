@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { GrayLink } from "../../commonComponents";
-import vk from "./vk.svg";
-import facebook from "./facebook.svg";
-import instagram from "./instagram.svg";
-import twitter from "./twitter.svg";
-import viber from "./viber.svg";
-import apple from "./applestore.png";
-import google from "./googleplay.png";
-import winphone from "./windowsphone.png";
+import React from 'react';
+import styled from 'styled-components';
+import { GrayLink } from '../../commonComponents';
+import vk from './vk.svg';
+import facebook from './facebook.svg';
+import instagram from './instagram.svg';
+import twitter from './twitter.svg';
+import viber from './viber.svg';
+import apple from './applestore.png';
+import google from './googleplay.png';
+import winphone from './windowsphone.png';
 
 const SocialAndStores = styled.section`
   font-size: 12px;

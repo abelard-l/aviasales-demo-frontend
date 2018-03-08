@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import logo from "./logo.svg";
-import returnBack from "./return.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import logo from './logo.svg';
+import returnBack from './return.svg';
 
-const Top = styled.section`
+const Container = styled.section`
   font-size: 20px;
   line-height: 25px;
-  margin-bottom: ${props => (props.narrow ? "10px" : "47px")};
+  margin-bottom: ${props => (props.narrow ? '10px' : '47px')};
   padding-top: 12px;
 
   @media (min-width: 768px) {
-    margin-bottom: ${props => (props.narrow ? "40px" : "81px")};
+    margin-bottom: ${props => (props.narrow ? '40px' : '81px')};
   }
 
   @media (min-width: 1200px) {
-    margin-bottom: ${props => (props.narrow ? "40px" : "200px")};
+    margin-bottom: ${props => (props.narrow ? '40px' : '200px')};
   }
 `;
 
@@ -29,7 +30,7 @@ const Logo = styled.img`
 `;
 
 const SiteName = styled(Link)`
-  display: ${props => (props.narrow ? "none" : "flex")};
+  display: ${props => (props.narrow ? 'none' : 'flex')};
   align-items: center;
   color: white;
 
@@ -93,16 +94,16 @@ const Money = styled.div`
   color: #ffffff;
 `;
 
-export default ({ narrow }) => (
-  <Top narrow={narrow}>
+const Top = ({ narrow }) => (
+  <Container narrow={narrow}>
     <div className="container">
       <LogoWrap>
         <div className="row middle-xs">
           <div
             className={
               narrow
-                ? "col-xs-offset-0 col-xs-12"
-                : "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12"
+                ? 'col-xs-offset-0 col-xs-12'
+                : 'col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12'
             }
           >
             <TopInformation>
@@ -117,9 +118,7 @@ export default ({ narrow }) => (
               {narrow && (
                 <Filter>
                   <UserRoute>Москва — Барселона</UserRoute>
-                  <DateAndPassangers>
-                    24 фев — 3 март, 1 пассажир
-                  </DateAndPassangers>
+                  <DateAndPassangers>24 фев — 3 март, 1 пассажир</DateAndPassangers>
                 </Filter>
               )}
               {narrow && <Money>RUB</Money>}
@@ -128,5 +127,15 @@ export default ({ narrow }) => (
         </div>
       </LogoWrap>
     </div>
-  </Top>
+  </Container>
 );
+
+Top.defaultProps = {
+  narrow: false,
+};
+
+Top.propTypes = {
+  narrow: PropTypes.bool,
+};
+
+export default Top;

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { BlueLink, Rouble } from "../../commonComponents";
-import { makeDigits, translate } from "../../commonFunctions";
+import React from 'react';
+import styled from 'styled-components';
+import { BlueLink, Rouble } from '../../commonComponents';
+import { makeDigits, translate } from '../../commonFunctions';
 
 const Card = styled.div`
   flex-basis: 100%;

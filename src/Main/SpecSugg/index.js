@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { specData } from "./data";
-import Card from "./Card";
+import React from 'react';
+import styled from 'styled-components';
+import { specData } from './data';
+import Card from './Card';
 
 const SpecSugg = styled.section`
   background: linear-gradient(106.41deg, #00b0de -42.02%, #196ebd 57.98%);

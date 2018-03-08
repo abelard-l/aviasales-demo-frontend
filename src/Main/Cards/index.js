@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Card from "./Card";
-import { cardsData } from "./data";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Card from './Card';
+import { cardsData } from './data';
 
 const Cards = styled.section`
   padding-bottom: 44px;
