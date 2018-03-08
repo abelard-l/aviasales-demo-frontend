@@ -59,7 +59,7 @@ export const cardsData = [
       airline: [nord],
       isCharter: false,
       price: 8029,
-      company: "Biletik_Aero",
+      company: "BiletikAero",
       mark: "fastest",
       ticketsRemain: false
     },
@@ -151,7 +151,7 @@ export const cardsData = [
       airline: [red],
       isCharter: true,
       price: 8240,
-      company: "Biletik_Aero",
+      company: "BiletikAero",
       mark: "none",
       ticketsRemain: false
     },
@@ -274,7 +274,7 @@ export const cardsData = [
         price: 9275
       },
       {
-        name: "Biletik_Aero",
+        name: "BiletikAero",
         price: 9587
       },
       {

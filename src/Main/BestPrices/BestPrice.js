@@ -81,40 +81,40 @@ export default props => (
     </Title>
     <CitiesAndPrices>
       <Cities>
-        <FromCity>{translate(props.bestPriceInfo.fromCities[0].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.fromCities[1].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.fromCities[2].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.fromCities[3].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.fromCities[4].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.cities[0].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.cities[1].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.cities[2].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.cities[3].name)}</FromCity>
+        <FromCity>{translate(props.bestPriceInfo.cities[4].name)}</FromCity>
       </Cities>
       <Prices>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.fromCities[0].price)}
+            от {makeDigits(props.bestPriceInfo.cities[0].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.fromCities[1].price)}
+            от {makeDigits(props.bestPriceInfo.cities[1].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.fromCities[2].price)}
+            от {makeDigits(props.bestPriceInfo.cities[2].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.fromCities[3].price)}
+            от {makeDigits(props.bestPriceInfo.cities[3].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.fromCities[4].price)}
+            от {makeDigits(props.bestPriceInfo.cities[4].price)}
             <Rouble />
           </BlueLink>
         </Price>

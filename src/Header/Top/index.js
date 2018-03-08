@@ -93,17 +93,18 @@ const Money = styled.div`
   color: #ffffff;
 `;
 
-export const headerNarrowGrid = "col-xs-offset-0 col-xs-12";
-
-export const headerLongGrid =
-  "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12";
-
 export default ({ narrow }) => (
   <Top narrow={narrow}>
     <div className="container">
       <LogoWrap>
         <div className="row middle-xs">
-          <div className={narrow ? headerNarrowGrid : headerLongGrid}>
+          <div
+            className={
+              narrow
+                ? "col-xs-offset-0 col-xs-12"
+                : "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12"
+            }
+          >
             <TopInformation>
               <SiteName to="/" narrow={narrow && narrow.toString()}>
                 <Logo src={logo} />aviasales

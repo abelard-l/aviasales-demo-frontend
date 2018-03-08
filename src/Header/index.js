@@ -468,7 +468,11 @@ export default class MainForm extends Component {
         <div className="container">
           <div className="row">
             <div
-              className={this.props.narrow ? headerNarrowGrid : headerLongGrid}
+              className={
+                this.props.narrow
+                  ? "col-xs-offset-0 col-xs-12"
+                  : "col-md-offset-1 col-md-10 col-xs-offset-0 col-xs-12"
+              }
             >
               <TicketParams narrow={this.props.narrow}>
                 <DestFrom narrow={this.props.narrow}>

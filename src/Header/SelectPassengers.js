@@ -178,16 +178,7 @@ class SelectPassengers extends Component {
     };
 
     this.setState({
-      mature:
-        where === "mature" ? changeValue(this.state.mature) : this.state.mature,
-      children:
-        where === "children"
-          ? changeValue(this.state.children)
-          : this.state.children,
-      infants:
-        where === "infants"
-          ? changeValue(this.state.infants)
-          : this.state.infants
+      [where]: changeValue(this.state[where])
     });
   };
 

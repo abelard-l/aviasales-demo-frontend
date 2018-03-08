@@ -1,7 +1,7 @@
 import { lang } from "./res/languages/rus.loc.js";
 
 export function makeDigits(price) {
-  return price.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
+  return price.toLocaleString();
 }
 
 export function translate(str) {
