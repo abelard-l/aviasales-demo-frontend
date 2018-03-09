@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { withClickOutside } from 'react-clickoutside';
 
@@ -18,8 +19,7 @@ const Form = withClickOutside()(styled.div`
   width: calc(100% - 2px);
 
   @media (min-width: 768px) {
-    padding: ${props =>
-      props.narrow ? '22px 8px 6px 8px' : '22px 20px 6px 20px'};
+    padding: ${props => (props.narrow ? '22px 8px 6px 8px' : '22px 20px 6px 20px')};
   }
 
   @media (min-width: 1200px) {
@@ -167,40 +167,29 @@ class SelectPassengers extends Component {
   state = {
     mature: 1,
     children: 0,
-    infants: 0
+    infants: 0,
   };
 
   change = (e, where, changer) => {
     e.preventDefault();
 
-    const changeValue = value => {
-      return value + changer >= 0 ? value + changer : 0;
-    };
+    const changeValue = value => (value + changer >= 0 ? value + changer : 0);
 
     this.setState({
-      [where]: changeValue(this.state[where])
+      [where]: changeValue(this.state[where]),
     });
   };
 
   render() {
     return (
-      <Form
-        onClickOutside={this.props.onClickOutside}
-        narrow={this.props.narrow}
-      >
+      <Form onClickOutside={this.props.onClickOutside} narrow={this.props.narrow}>
         <TicketsPicker>
           <Text narrow={this.props.narrow}>Взрослые</Text>
           <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'mature', -1)}
-              />
+              <MinusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'mature', -1)} />
               <Num narrow={this.props.narrow}>{this.state.mature}</Num>
-              <PlusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'mature', 1)}
-              />
+              <PlusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'mature', 1)} />
             </Control>
           </ControlWrap>
         </TicketsPicker>
@@ -208,15 +197,9 @@ class SelectPassengers extends Component {
           <Text narrow={this.props.narrow}>Дети до 12 лет</Text>
           <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'children', -1)}
-              />
+              <MinusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'children', -1)} />
               <Num narrow={this.props.narrow}>{this.state.children}</Num>
-              <PlusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'children', 1)}
-              />
+              <PlusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'children', 1)} />
             </Control>
           </ControlWrap>
         </TicketsPicker>
@@ -227,15 +210,9 @@ class SelectPassengers extends Component {
           </Text>
           <ControlWrap narrow={this.props.narrow}>
             <Control>
-              <MinusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'infants', -1)}
-              />
+              <MinusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'infants', -1)} />
               <Num narrow={this.props.narrow}>{this.state.infants}</Num>
-              <PlusBtn
-                narrow={this.props.narrow}
-                onClick={e => this.change(e, 'infants', 1)}
-              />
+              <PlusBtn narrow={this.props.narrow} onClick={e => this.change(e, 'infants', 1)} />
             </Control>
           </ControlWrap>
         </TicketsPicker>
@@ -246,5 +223,15 @@ class SelectPassengers extends Component {
     );
   }
 }
+
+SelectPassengers.defaultProps = {
+  onClickOutside: undefined,
+  narrow: false,
+};
+
+SelectPassengers.propTypes = {
+  onClickOutside: PropTypes.func,
+  narrow: PropTypes.bool,
+};
 
 export default SelectPassengers;

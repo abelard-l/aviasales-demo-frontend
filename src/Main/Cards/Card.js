@@ -1,11 +1,12 @@
+import { format } from 'date-fns';
+import ruLocale from 'date-fns/locale/ru';
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { BlueLink, Rouble } from '../../commonComponents';
 import { makeDigits, translate } from '../../commonFunctions';
-import { format } from 'date-fns';
-import ruLocale from 'date-fns/locale/ru';
 
-const Card = styled.img`
+const CardPic = styled.img`
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   width: 100%;
@@ -81,26 +82,32 @@ function formatDate(day) {
   });
 }
 
-export default props => (
+const Card = ({ cardInfo }) => (
   <React.Fragment>
-    <Card src={props.cardInfo.cityImage} />
+    <CardPic src={cardInfo.cityImage} />
     <WrapCard>
       <WrapFlag>
-        <Flag src={props.cardInfo.flag} />
+        <Flag src={cardInfo.flag} />
       </WrapFlag>
       <CityAndCountry>
-        <City>{translate(props.cardInfo.city)}</City>
-        <Country>{translate(props.cardInfo.country)}</Country>
+        <City>{translate(cardInfo.city)}</City>
+        <Country>{translate(cardInfo.country)}</Country>
       </CityAndCountry>
       <PriceAndDate>
         <Price>
           <BlueLink>
-            Найти от {makeDigits(props.cardInfo.price)}
+            Найти от {makeDigits(cardInfo.price)}
             <Rouble />
           </BlueLink>
         </Price>
-        <Date>{formatDate(props.cardInfo.date)}</Date>
+        <Date>{formatDate(cardInfo.date)}</Date>
       </PriceAndDate>
     </WrapCard>
   </React.Fragment>
 );
+
+Card.propTypes = {
+  cardInfo: PropTypes.shape({}).isRequired,
+};
+
+export default Card;

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Rouble } from '../../commonComponents';
 import { makeDigits, translate } from '../../commonFunctions';
 
-const Card = styled.div`
+const CardWrap = styled.div`
   background: white;
   flex-basis: 96%;
   margin-bottom: 12px;
@@ -110,25 +111,31 @@ const DiscoverDetails = styled.button`
   width: calc(100% - 32px);
 `;
 
-export default props => (
-  <Card>
+const Card = ({ specData }) => (
+  <CardWrap>
     <Top>
-      {translate(props.specData.title)}
+      {translate(specData.title)}
       <TopRightSide>
-        <TopRightContent src={props.specData.topImg} />
+        <TopRightContent src={specData.topImg} />
       </TopRightSide>
     </Top>
     <AviacompanyAndPrices>
-      <Aviacompany src={props.specData.aviaImg} />
+      <Aviacompany src={specData.aviaImg} />
       <PricesAndDays>
         <Price>
-          от {makeDigits(props.specData.price)}
+          от {makeDigits(specData.price)}
           <Rouble />
         </Price>
-        <Days>Осталось {props.specData.days} дней</Days>
+        <Days>Осталось {specData.days} дней</Days>
       </PricesAndDays>
     </AviacompanyAndPrices>
-    <Information>{translate(props.specData.description)}</Information>
+    <Information>{translate(specData.description)}</Information>
     <DiscoverDetails>Узнать подробности</DiscoverDetails>
-  </Card>
+  </CardWrap>
 );
+
+Card.propTypes = {
+  specData: PropTypes.shape({}).isRequired,
+};
+
+export default Card;

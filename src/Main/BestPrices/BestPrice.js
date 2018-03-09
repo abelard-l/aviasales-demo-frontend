@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BlueLink, Rouble } from '../../commonComponents';
 import { makeDigits, translate } from '../../commonFunctions';
@@ -68,53 +69,53 @@ const Price = styled.div`
   margin-bottom: 5px;
 `;
 
-export default props => (
+const BestPrice = ({ bestPriceInfo }) => (
   <Card>
     <Title>
       <WrapFlag>
-        <Flag src={props.bestPriceInfo.flag} />
+        <Flag src={bestPriceInfo.flag} />
       </WrapFlag>
       <TitleInfo>
-        <City>{translate(props.bestPriceInfo.city)}</City>
-        <Country>{translate(props.bestPriceInfo.country)}</Country>
+        <City>{translate(bestPriceInfo.city)}</City>
+        <Country>{translate(bestPriceInfo.country)}</Country>
       </TitleInfo>
     </Title>
     <CitiesAndPrices>
       <Cities>
-        <FromCity>{translate(props.bestPriceInfo.cities[0].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[1].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[2].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[3].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[4].name)}</FromCity>
+        <FromCity>{translate(bestPriceInfo.cities[0].name)}</FromCity>
+        <FromCity>{translate(bestPriceInfo.cities[1].name)}</FromCity>
+        <FromCity>{translate(bestPriceInfo.cities[2].name)}</FromCity>
+        <FromCity>{translate(bestPriceInfo.cities[3].name)}</FromCity>
+        <FromCity>{translate(bestPriceInfo.cities[4].name)}</FromCity>
       </Cities>
       <Prices>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[0].price)}
+            от {makeDigits(bestPriceInfo.cities[0].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[1].price)}
+            от {makeDigits(bestPriceInfo.cities[1].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[2].price)}
+            от {makeDigits(bestPriceInfo.cities[2].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[3].price)}
+            от {makeDigits(bestPriceInfo.cities[3].price)}
             <Rouble />
           </BlueLink>
         </Price>
         <Price>
           <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[4].price)}
+            от {makeDigits(bestPriceInfo.cities[4].price)}
             <Rouble />
           </BlueLink>
         </Price>
@@ -122,3 +123,9 @@ export default props => (
     </CitiesAndPrices>
   </Card>
 );
+
+BestPrice.propTypes = {
+  bestPriceInfo: PropTypes.shape({}).isRequired,
+};
+
+export default BestPrice;

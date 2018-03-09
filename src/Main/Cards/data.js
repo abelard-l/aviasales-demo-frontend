@@ -7,7 +7,7 @@ import barcelona from './barcelona.jpg';
 import rusflag from '../../res/images/flag-russia.png';
 import spaflag from '../../res/images/flag-spain.png';
 
-export const cardsData = [
+const cardsData = [
   {
     cityImage: krasnodar,
     flag: rusflag,
@@ -57,3 +57,5 @@ export const cardsData = [
     date: '3-24',
   },
 ];
+
+export default cardsData;

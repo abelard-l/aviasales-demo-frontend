@@ -10,7 +10,12 @@ import fly from './images/fly.png';
 const cardsData = [
   {
     general: {
-      airline: [russia],
+      airline: [
+        {
+          id: 1,
+          name: russia,
+        },
+      ],
       isCharter: true,
       price: 7712,
       company: 'Clickavia',
@@ -56,7 +61,12 @@ const cardsData = [
   },
   {
     general: {
-      airline: [nord],
+      airline: [
+        {
+          id: 1,
+          name: nord,
+        },
+      ],
       isCharter: false,
       price: 8029,
       company: 'BiletikAero',
@@ -102,7 +112,12 @@ const cardsData = [
   },
   {
     general: {
-      airline: [nordAir],
+      airline: [
+        {
+          id: 1,
+          name: nordAir,
+        },
+      ],
       isCharter: true,
       price: 8164,
       company: 'Aviakassa',
@@ -148,7 +163,12 @@ const cardsData = [
   },
   {
     general: {
-      airline: [red],
+      airline: [
+        {
+          id: 1,
+          name: red,
+        },
+      ],
       isCharter: true,
       price: 8240,
       company: 'BiletikAero',
@@ -157,22 +177,27 @@ const cardsData = [
     },
     specSugg: [
       {
+        id: 1,
         name: 'Clickavia',
         price: 8302,
       },
       {
+        id: 2,
         name: 'Aviakassa',
         price: 8376,
       },
       {
+        id: 3,
         name: 'Aviakassa',
         price: 8376,
       },
       {
+        id: 4,
         name: 'Aviakassa',
         price: 8376,
       },
       {
+        id: 5,
         name: 'Aviakassa',
         price: 8376,
       },
@@ -215,7 +240,16 @@ const cardsData = [
   },
   {
     general: {
-      airline: [redShrt, russiaShrt],
+      airline: [
+        {
+          id: 1,
+          name: redShrt,
+        },
+        {
+          id: 2,
+          name: russiaShrt,
+        },
+      ],
       isCharter: true,
       price: 9108,
       company: 'Clickavia',
@@ -261,7 +295,12 @@ const cardsData = [
   },
   {
     general: {
-      airline: [fly],
+      airline: [
+        {
+          id: 1,
+          name: fly,
+        },
+      ],
       isCharter: true,
       price: 9269,
       company: 'Biletix',
@@ -270,22 +309,27 @@ const cardsData = [
     },
     specSugg: [
       {
+        id: 1,
         name: 'Svyaznoy Travel',
         price: 9275,
       },
       {
+        id: 2,
         name: 'BiletikAero',
         price: 9587,
       },
       {
+        id: 3,
         name: 'Aviakassa',
         price: 8376,
       },
       {
+        id: 4,
         name: 'Aviakassa',
         price: 8376,
       },
       {
+        id: 5,
         name: 'Aviakassa',
         price: 8376,
       },
@@ -328,7 +372,16 @@ const cardsData = [
   },
   {
     general: {
-      airline: [russiaShrt, namelessCmp],
+      airline: [
+        {
+          id: 1,
+          name: russiaShrt,
+        },
+        {
+          id: 2,
+          name: namelessCmp,
+        },
+      ],
       isCharter: true,
       price: 9485,
       company: 'Clickavia',

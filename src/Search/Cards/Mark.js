@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import smile from './icons/smile.png';
 import light from './icons/light.png';
 import love from './icons/love.png';
 
-const Mark = styled.div`
+const Container = styled.div`
   font-weight: 900;
   line-height: 18px;
   font-size: 14px;
@@ -35,20 +36,30 @@ const MarkImage = styled.img`
   margin-left: 8px;
 `;
 
-export default props => (
-  <Mark>
-    {props.type === 'cheapest' ? (
+const Mark = props => (
+  <Container>
+    {props.type === 'cheapest' && (
       <Cheapest>
         Самый дешевый <MarkImage src={smile} />
       </Cheapest>
-    ) : props.type === 'fastest' ? (
+    )}
+
+    {props.type === 'fastest' && (
       <Fastest>
         Самый быстрый <MarkImage src={light} />
       </Fastest>
-    ) : (
+    )}
+
+    {props.type === 'thebest' && (
       <TheBest>
         Лучший билет <MarkImage src={love} />
       </TheBest>
     )}
-  </Mark>
+  </Container>
 );
+
+Mark.propTypes = {
+  type: PropTypes.string.isRequired,
+};
+
+export default Mark;

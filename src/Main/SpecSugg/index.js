@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { specData } from './data';
+import specData from './data';
 import Card from './Card';
 
 const SpecSugg = styled.section`

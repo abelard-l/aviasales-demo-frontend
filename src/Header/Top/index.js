@@ -107,7 +107,7 @@ const Top = ({ narrow }) => (
             }
           >
             <TopInformation>
-              <SiteName to="/" narrow={narrow && narrow.toString()}>
+              <SiteName to="/" narrow={narrow ? narrow.toString() : undefined}>
                 <Logo src={logo} />aviasales
               </SiteName>
               {narrow && (
@@ -130,12 +130,12 @@ const Top = ({ narrow }) => (
   </Container>
 );
 
-Top.defaultProps = {
-  narrow: false,
-};
-
 Top.propTypes = {
   narrow: PropTypes.bool,
+};
+
+Top.defaultProps = {
+  narrow: false,
 };
 
 export default Top;

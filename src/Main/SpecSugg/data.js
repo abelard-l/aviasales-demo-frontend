@@ -2,7 +2,7 @@ import lufthansa from './lufthansa.png';
 import pobeda from './pobeda.png';
 import circle from './tr-circle.png';
 
-export const specData = [
+const specData = [
   {
     title: 'TicketsFrom499Rub',
     topImg: null,
@@ -28,3 +28,5 @@ export const specData = [
     description: 'TicketsLosAngelesOffer',
   },
 ];
+
+export default specData;

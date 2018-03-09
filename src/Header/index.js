@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import DatePicker, { prices } from './DatePicker';
-import SelectPassengers from './SelectPassengers';
-
 import ruLocale from 'date-fns/locale/ru';
 import { format } from 'date-fns';
 
-
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import DatePicker, { prices } from './DatePicker';
+import SelectPassengers from './SelectPassengers';
 import './datePicker.css';
 
 import Top from './Top';
@@ -386,61 +385,65 @@ const PriceDayPicker = styled.span`
 
 function formatDate(day) {
   return format(new Date(day), 'DD MMMM, dd', {
-    locale: ruLocale
+    locale: ruLocale,
   });
 }
 
-export default class MainForm extends Component {
+class MainForm extends Component {
   state = {
     showFrom: false,
     showTo: false,
     current: 'from',
     fromDate: new Date(),
     toDate: new Date(),
-    isShowSelectPassengers: false
+    isShowSelectPassengers: false,
   };
 
-  showDatePicker = direction => {
-    direction === 'from'
-      ? this.setState({
-          showFrom: true,
-          showTo: false,
-          current: 'from'
-        })
-      : this.setState({
-          showFrom: false,
-          showTo: true,
-          current: 'to'
-        });
+  showDatePicker = (direction) => {
+    if (direction === 'from') {
+      this.setState({
+        showFrom: true,
+        showTo: false,
+        current: 'from',
+      });
+    } else {
+      this.setState({
+        showFrom: false,
+        showTo: true,
+        current: 'to',
+      });
+    }
   };
 
   clickOutside = () => {
     this.setState({
       showFrom: false,
-      showTo: false
+      showTo: false,
     });
   };
 
   showSelectPassengers = () => {
     this.setState({
-      isShowSelectPassengers: true
+      isShowSelectPassengers: true,
     });
   };
 
   clickOutsideSelectPassengers = () => {
     this.setState({
-      isShowSelectPassengers: false
+      isShowSelectPassengers: false,
     });
   };
 
-  dayClick = day => {
-    this.state.current === 'from'
-      ? this.setState({ fromDate: day })
-      : this.setState({ toDate: day });
+  dayClick = (day) => {
+    if (this.state.current === 'from') {
+      this.setState({ fromDate: day });
+    } else {
+      this.setState({ toDate: day });
+    }
     this.clickOutside();
   };
 
-  renderDay = fullDay => {
+  renderDay = (fullDay) => {
     const day = fullDay.getDate();
 
     return (
@@ -456,8 +459,7 @@ export default class MainForm extends Component {
     );
   };
 
-  render(narrow) {
-    console.log(narrow);
+  render() {
     return (
       <Header narrow={this.props.narrow}>
         <Top narrow={this.props.narrow} />
@@ -496,9 +498,7 @@ export default class MainForm extends Component {
                       placeholder="Туда"
                       onClick={() => this.showDatePicker('from')}
                     />
-                    <RightInputField
-                      onClick={() => this.showDatePicker('from')}
-                    >
+                    <RightInputField onClick={() => this.showDatePicker('from')}>
                       <DateBtn />
                     </RightInputField>
                   </DateFrom>
@@ -530,10 +530,7 @@ export default class MainForm extends Component {
                     />
                   )}
                 </Dates>
-                <FlightType
-                  narrow={this.props.narrow}
-                  onClick={() => this.showSelectPassengers()}
-                >
+                <FlightType narrow={this.props.narrow} onClick={() => this.showSelectPassengers()}>
                   <Passenger narrow={this.props.narrow}>
                     1 пассажир,
                     <GrayerText narrow={this.props.narrow}>эконом</GrayerText>
@@ -549,7 +546,7 @@ export default class MainForm extends Component {
                   )}
                 </FlightType>
                 <WrapFindTickets
-                  narrow={this.props.narrow && this.props.narrow.toString()}
+                  narrow={this.props.narrow ? this.props.narrow.toString() : undefined}
                   to="/search"
                 >
                   <FindTickets narrow={this.props.narrow}>
@@ -567,3 +564,13 @@ export default class MainForm extends Component {
     );
   }
 }
+
+MainForm.propTypes = {
+  narrow: PropTypes.bool,
+};
+
+MainForm.defaultProps = {
+  narrow: false,
+};
+
+export default MainForm;

@@ -1,20 +1,21 @@
+import { format } from 'date-fns';
+import ruLocale from 'date-fns/locale/ru';
 import React from 'react';
 import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
 import circle from './icons/circle.svg';
 import pin from './icons/pin.svg';
 import planeTakingOff from './icons/plane-taking-off.svg';
 import routeLine from './icons/route-line.svg';
 
-import { format } from 'date-fns';
-import ruLocale from 'date-fns/locale/ru';
 import { translate } from '../../commonFunctions';
 
 import clock from './icons/clock.svg';
 import planeTo from './icons/plane-to.svg';
 import planeReturn from './icons/plane-return.svg';
 
-const FlightRoute = styled.div`
+const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 25px;
@@ -144,13 +145,6 @@ const Arrival = styled.div`
   }
 `;
 
-const Mob = styled.div`
-  display: block;
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
 const DepartureAndArriving = styled.div`
   display: block;
   flex-basis: 40%;
@@ -198,37 +192,34 @@ const Icons = styled.img`
 
 function formatDate(day) {
   return format(new Date(day), 'D MMM YYYY, dd', {
-    locale: ruLocale
+    locale: ruLocale,
   });
 }
 
 function formatTime(time) {
-  let hours = '' + Math.floor(time / 60);
-  let minutes = '' + time % 60;
+  const hours = Math.floor(time / 60).toString();
+  const minutes = (time % 60).toString();
 
-  return (
-    (hours.length === 1 ? '0' + hours : hours) +
-    ':' +
-    (minutes.length === 1 ? '0' + minutes : minutes)
-  );
+  return `${hours.length === 1 ? `0${hours}` : hours}:${
+    minutes.length === 1 ? `0${minutes}` : minutes
+  }`;
 }
 
-export default props => (
-  <FlightRoute>
+const FlightRoute = ({ direction, flight }) => (
+  <Container>
     <Departure>
       <Time alignLeft>
-        <Pin src={pin} /> {formatTime(props.flight.departureTime)}
+        <Pin src={pin} /> {formatTime(flight.departureTime)}
       </Time>
-      <City>{translate(props.flight.departureCity)}</City>
-      <TimeAndDay>{formatDate(props.flight.departureDate)}</TimeAndDay>
+      <City>{translate(flight.departureCity)}</City>
+      <TimeAndDay>{formatDate(flight.departureDate)}</TimeAndDay>
     </Departure>
     <Route>
       <Duration>
         <PlaneUp src={planeTakingOff} />
         <Overall>
-          Всего: {Math.floor(props.flight.duration / 60)} {'ч '}
-          {props.flight.duration % 60 !== 0 &&
-            props.flight.duration % 60 + ' м'}
+          Всего: {Math.floor(flight.duration / 60)} {'ч '}
+          {flight.duration % 60 !== 0 && `${flight.duration % 60} м`}
         </Overall>
         <PlaneDown src={planeTakingOff} />
       </Duration>
@@ -238,28 +229,34 @@ export default props => (
         <Circle src={circle} />
       </RouteLine>
       <Airports>
-        <AirportFrom>{props.flight.departureAirport}</AirportFrom>
-        <AirportTo>{props.flight.arrivalAirport}</AirportTo>
+        <AirportFrom>{flight.departureAirport}</AirportFrom>
+        <AirportTo>{flight.arrivalAirport}</AirportTo>
       </Airports>
     </Route>
     <Arrival>
-      <Time alignRight>{formatTime(props.flight.arrivalTime)}</Time>
-      <City>{translate(props.flight.arrivalCity)}</City>
-      <TimeAndDay>{formatDate(props.flight.arrivalDate)}</TimeAndDay>
+      <Time alignRight>{formatTime(flight.arrivalTime)}</Time>
+      <City>{translate(flight.arrivalCity)}</City>
+      <TimeAndDay>{formatDate(flight.arrivalDate)}</TimeAndDay>
     </Arrival>
     <DepartureAndArriving>
-      {props.direction === 'to' ? (
-        <Icons src={planeTo} />
-      ) : (
-        <Icons src={planeReturn} />
-      )}
-      {formatTime(props.flight.departureTime)} -{' '}
-      {formatTime(props.flight.arrivalTime)}
+      {direction === 'to' ? <Icons src={planeTo} /> : <Icons src={planeReturn} />}
+      {formatTime(flight.departureTime)} - {formatTime(flight.arrivalTime)}
     </DepartureAndArriving>
     <Timing>
-      <Icons src={clock} /> {Math.floor(props.flight.duration / 60)} {'ч '}
-      {props.flight.duration % 60 !== 0 && props.flight.duration % 60 + ' м'}
+      <Icons src={clock} /> {Math.floor(flight.duration / 60)} {'ч '}
+      {flight.duration % 60 !== 0 && `${flight.duration % 60} м`}
     </Timing>
-    <Direction>{translate(props.flight.type)}</Direction>
-  </FlightRoute>
+    <Direction>{translate(flight.type)}</Direction>
+  </Container>
 );
+
+FlightRoute.propTypes = {
+  flight: PropTypes.shape({}).isRequired,
+  direction: PropTypes.string,
+};
+
+FlightRoute.defaultProps = {
+  direction: 'from',
+};
+
+export default FlightRoute;

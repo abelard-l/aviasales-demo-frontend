@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import FlightRoute from './FlightRoute';
 import BaggageRules from './BaggageRules';
 import Mark from './Mark';
@@ -10,7 +11,7 @@ import followArrow from './icons/follow-arrow.svg';
 
 const WrapCard = styled.div``;
 
-const Card = styled.div`
+const CardWrap = styled.div`
   background: #ffffff;
   border-radius: 4px;
   display: block;
@@ -230,61 +231,53 @@ const Price = styled.div`
   color: #ff9241;
 `;
 
-export default props => (
+const Card = ({ wholeCard }) => (
   <WrapCard>
-    {props.wholeCard.general.mark !== 'none' && (
-      <Mark type={props.wholeCard.general.mark} />
-    )}
-    <Card>
+    {wholeCard.general.mark !== 'none' && <Mark type={wholeCard.general.mark} />}
+    <CardWrap>
       <BaggageAndPrice>
         <Baggage>
-          {props.wholeCard.thingsForMoney.showRule ? (
+          {wholeCard.thingsForMoney.showRule ? (
             <React.Fragment>
               <ThingsFreeNoBaggage>
-                <BaggageRules rules={props.wholeCard.thingsFree} />
-                <NoBaggageText>{props.wholeCard.thingsFree.text}</NoBaggageText>
+                <BaggageRules rules={wholeCard.thingsFree} />
+                <NoBaggageText>{wholeCard.thingsFree.text}</NoBaggageText>
               </ThingsFreeNoBaggage>
               <ThingsForMoney>
-                <BaggageRules rules={props.wholeCard.thingsForMoney} />
+                <BaggageRules rules={wholeCard.thingsForMoney} />
                 <DiscountText>
-                  - {props.wholeCard.thingsForMoney.discount}
+                  - {wholeCard.thingsForMoney.discount}
                   <Rouble />
                 </DiscountText>
               </ThingsForMoney>
             </React.Fragment>
           ) : (
             <ThingsFree>
-              <BaggageRules rules={props.wholeCard.thingsFree} />
+              <BaggageRules rules={wholeCard.thingsFree} />
             </ThingsFree>
           )}
         </Baggage>
-        {props.wholeCard.general.ticketsRemain !== false && (
-          <TicketsRemain>
-            Осталось {props.wholeCard.general.ticketsRemain} билета
-          </TicketsRemain>
+        {wholeCard.general.ticketsRemain !== false && (
+          <TicketsRemain>Осталось {wholeCard.general.ticketsRemain} билета</TicketsRemain>
         )}
         <BuyTicket>
-          Купить<br /> за {makeDigits(props.wholeCard.general.price)}
+          Купить<br /> за {makeDigits(wholeCard.general.price)}
           <Rouble />
         </BuyTicket>
-        <BuyWhere>На {translate(props.wholeCard.general.company)}</BuyWhere>
-        {props.wholeCard.specSugg.length !== 0 && (
+        <BuyWhere>На {translate(wholeCard.general.company)}</BuyWhere>
+        {wholeCard.specSugg.length !== 0 && (
           <SpecSuggestions>
-            {props.wholeCard.specSugg.slice(0, 2).map((item, i) => {
-              return (
-                <SpecSugg key={i}>
-                  <SuggName>{translate(item.name)}</SuggName>
-                  <SuggPrice>
-                    {makeDigits(item.price)}
-                    <Rouble />
-                  </SuggPrice>
-                </SpecSugg>
-              );
-            })}
-            {props.wholeCard.specSugg.length > 2 && (
-              <AddSugg>
-                + Еще {props.wholeCard.specSugg.length - 2} предложения
-              </AddSugg>
+            {wholeCard.specSugg.slice(0, 2).map(item => (
+              <SpecSugg key={item.id}>
+                <SuggName>{translate(item.name)}</SuggName>
+                <SuggPrice>
+                  {makeDigits(item.price)}
+                  <Rouble />
+                </SuggPrice>
+              </SpecSugg>
+            ))}
+            {wholeCard.specSugg.length > 2 && (
+              <AddSugg>+ Еще {wholeCard.specSugg.length - 2} предложения</AddSugg>
             )}
           </SpecSuggestions>
         )}
@@ -292,44 +285,43 @@ export default props => (
       <FullFlightInfo>
         <FullFlightHeader>
           <AviaCompany>
-            {props.wholeCard.general.airline !== '' &&
-              props.wholeCard.general.airline.map((item, i) => {
-                return <AviaCompanyImg key={i} src={item} />;
-              })}
+            {wholeCard.general.airline.length !== 0 &&
+              wholeCard.general.airline.map(item => (
+                <AviaCompanyImg key={item.id} src={item.name} />
+              ))}
           </AviaCompany>
-          <Charter>
-            {props.wholeCard.general.isCharter && (
-              <CharterText>Чартер</CharterText>
-            )}
-          </Charter>
+          <Charter>{wholeCard.general.isCharter && <CharterText>Чартер</CharterText>}</Charter>
         </FullFlightHeader>
         <FullFlightBody>
-          <FlightRoute flight={props.wholeCard.flightForward} />
-          <FlightRoute flight={props.wholeCard.flightBack} />
+          <FlightRoute flight={wholeCard.flightForward} />
+          <FlightRoute flight={wholeCard.flightBack} />
         </FullFlightBody>
       </FullFlightInfo>
       <AddInfo />
       <Mob>
         <PriceAndAvia>
           <Price>
-            {makeDigits(props.wholeCard.general.price)}
+            {makeDigits(wholeCard.general.price)}
             <Rouble />
           </Price>
           <AviaCompany>
-            {props.wholeCard.general.airline !== '' &&
-              props.wholeCard.general.airline.map((item, i) => {
-                return <AviaCompanyImg key={i} src={item} />;
-              })}
+            {wholeCard.general.airline.length !== 0 &&
+              wholeCard.general.airline.map(item => (
+                <AviaCompanyImg key={item.id} src={item.name} />
+              ))}
           </AviaCompany>
         </PriceAndAvia>
         <FullFlightBody>
-          <FlightRoute
-            direction={'to'}
-            flight={props.wholeCard.flightForward}
-          />
-          <FlightRoute flight={props.wholeCard.flightBack} />
+          <FlightRoute direction="to" flight={wholeCard.flightForward} />
+          <FlightRoute flight={wholeCard.flightBack} />
         </FullFlightBody>
       </Mob>
-    </Card>
+    </CardWrap>
   </WrapCard>
 );
+
+Card.propTypes = {
+  wholeCard: PropTypes.shape({}).isRequired,
+};
+
+export default Card;

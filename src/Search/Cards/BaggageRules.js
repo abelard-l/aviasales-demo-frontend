@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import baggage from './icons/baggage.svg';
 import baggageRed from './icons/baggage-no-red.svg';
 import handsBaggage from './icons/hands-baggage.svg';
 
-const BaggageRules = styled.div`
+const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
@@ -45,15 +46,17 @@ const BagRed = styled.span`
   width: 17px;
 `;
 
-export default props => (
-  <BaggageRules>
-    {props.rules.hands === 'none' ? <HandsBagBlur /> : <HandsBag>{props.rules.hands}</HandsBag>}
-    {props.rules.baggage === 'red' ? (
-      <BagRed />
-    ) : props.rules.baggage === 'none' ? (
-      <Bag>X</Bag>
-    ) : (
-      <Bag>{props.rules.baggage}</Bag>
-    )}
-  </BaggageRules>
+const BaggageRules = ({ rules }) => (
+  <Container>
+    {rules.hands === 'none' ? <HandsBagBlur /> : <HandsBag>{rules.hands}</HandsBag>}
+    {rules.baggage === 'red' && <BagRed />}
+    {rules.baggage === 'none' && <Bag>X</Bag>}
+    {rules.baggage !== 'red' && rules.baggage !== 'none' && <Bag>{rules.baggage}</Bag>}
+  </Container>
 );
+
+BaggageRules.propTypes = {
+  rules: PropTypes.shape({}).isRequired,
+};
+
+export default BaggageRules;
