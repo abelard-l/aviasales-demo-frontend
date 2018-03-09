@@ -81,43 +81,21 @@ export default props => (
     </Title>
     <CitiesAndPrices>
       <Cities>
-        <FromCity>{translate(props.bestPriceInfo.cities[0].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[1].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[2].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[3].name)}</FromCity>
-        <FromCity>{translate(props.bestPriceInfo.cities[4].name)}</FromCity>
+        {props.bestPriceInfo.cities.map(city => (
+          <FromCity>{translate(city.name)}</FromCity>
+        ))}
       </Cities>
       <Prices>
-        <Price>
-          <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[0].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[1].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[2].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[3].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(props.bestPriceInfo.cities[4].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
+        {props.bestPriceInfo.cities.map(city => {
+          return (
+            <Price>
+              <BlueLink>
+                {makeDigits(city.price)}
+                <Rouble />
+              </BlueLink>
+            </Price>
+          );
+        })}
       </Prices>
     </CitiesAndPrices>
   </Card>

@@ -5,81 +5,81 @@ import molflag from "../../res/images/flag-moldavia.png";
 export const bestPricesData = [
   {
     flag: rusflag,
-    city: "SimferopolCrimea",
-    country: "Russia",
+    city: "simferopol_crimea",
+    country: "russia",
     cities: [
       {
-        name: "FromMoscow",
+        name: "from_moscow",
         price: 4813
       },
       {
-        name: "FromStPetersburg",
+        name: "from_st_petersburg",
         price: 7857
       },
       {
-        name: "FromNovosibirsk",
+        name: "from_novosibirsk",
         price: 15127
       },
       {
-        name: "FromEkaterinburg",
+        name: "from_ekaterinburg",
         price: 9275
       },
       {
-        name: "FromChelyabinsk",
+        name: "from_chelyabinsk",
         price: 9148
       }
     ]
   },
   {
     flag: armflag,
-    city: "Yerevan",
-    country: "Armenia",
+    city: "yerevan",
+    country: "armenia",
     cities: [
       {
-        name: "FromMoscow",
+        name: "from_moscow",
         price: 6758
       },
       {
-        name: "FromStPetersburg",
+        name: "from_st_petersburg",
         price: 9932
       },
       {
-        name: "FromSochi",
+        name: "from_sochi",
         price: 11951
       },
       {
-        name: "FromKrasnodar",
+        name: "from_krasnodar",
         price: 11741
       },
       {
-        name: "FromRostovOnDon",
+        name: "from_rostov_on_don",
         price: 11956
       }
     ]
   },
   {
     flag: molflag,
-    city: "Kishinev",
-    country: "Moldova",
+    city: "kishinev",
+    country: "moldova",
     cities: [
       {
-        name: "FromMoscow",
+        name: "from_moscow",
         price: 8319
       },
       {
-        name: "FromStPetersburg",
+        name: "from_st_petersburg",
         price: 10800
       },
       {
-        name: "FromKrasnodar",
+        name: "from_krasnodar",
         price: 12098
       },
       {
-        name: "FromSurgut",
+        name: "from_surgut",
         price: 16277
       },
       {
-        name: "FromNewUrengoy",
+        name: "from_new_urengoy",
         price: 15987
       }
     ]

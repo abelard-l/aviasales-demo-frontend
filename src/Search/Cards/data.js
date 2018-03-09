@@ -30,25 +30,25 @@ export const cardsData = [
       discount: 136
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 5,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 185,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 300
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 635,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1030,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 275
@@ -59,7 +59,7 @@ export const cardsData = [
       airline: [nord],
       isCharter: false,
       price: 8029,
-      company: "BiletikAero",
+      company: "biletik_aero",
       mark: "fastest",
       ticketsRemain: false
     },
@@ -76,13 +76,13 @@ export const cardsData = [
       discount: 136
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 15,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 190,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 295
@@ -90,11 +90,11 @@ export const cardsData = [
     flightBack: {
       type: "CDG",
       departureTime: 645,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1035,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 270
@@ -122,25 +122,25 @@ export const cardsData = [
       discount: 136
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 15,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 190,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 295
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 645,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1035,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 270
@@ -151,7 +151,7 @@ export const cardsData = [
       airline: [red],
       isCharter: true,
       price: 8240,
-      company: "BiletikAero",
+      company: "biletik_aero",
       mark: "none",
       ticketsRemain: false
     },
@@ -189,25 +189,25 @@ export const cardsData = [
       discount: 267
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 420,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 570,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 270
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 660,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1030,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 250
@@ -235,25 +235,25 @@ export const cardsData = [
       discount: 136
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 5,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 185,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 300
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 660,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1030,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 250
@@ -274,7 +274,7 @@ export const cardsData = [
         price: 9275
       },
       {
-        name: "BiletikAero",
+        name: "biletik_aero",
         price: 9587
       },
       {
@@ -302,25 +302,25 @@ export const cardsData = [
       discount: 267
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 450,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 590,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 260
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 680,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1055,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 255
@@ -348,25 +348,25 @@ export const cardsData = [
       discount: 136
     },
     flightForward: {
-      type: "Direct",
+      type: "direct",
       departureTime: 5,
-      departureCity: "Moscow",
+      departureCity: "moscow",
       departureDate: "2-24-2018",
       departureAirport: "VKO",
       arrivalTime: 185,
-      arrivalCity: "Barcelona",
+      arrivalCity: "barcelona",
       arrivalDate: "2-24-2018",
       arrivalAirport: "BCN",
       duration: 300
     },
     flightBack: {
-      type: "Direct",
+      type: "direct",
       departureTime: 680,
-      departureCity: "Barcelona",
+      departureCity: "barcelona",
       departureDate: "3-3-2018",
       departureAirport: "BCN",
       arrivalTime: 1055,
-      arrivalCity: "Moscow",
+      arrivalCity: "moscow",
       arrivalDate: "3-3-2018",
       arrivalAirport: "SVO",
       duration: 255
