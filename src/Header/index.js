@@ -399,7 +399,7 @@ class MainForm extends Component {
     isShowSelectPassengers: false,
   };
 
-  showDatePicker = (direction) => {
+  showDatePicker = direction => {
     if (direction === 'from') {
       this.setState({
         showFrom: true,
@@ -434,7 +434,7 @@ class MainForm extends Component {
     });
   };
 
-  dayClick = (day) => {
+  dayClick = day => {
     if (this.state.current === 'from') {
       this.setState({ fromDate: day });
     } else {
@@ -443,7 +443,7 @@ class MainForm extends Component {
     this.clickOutside();
   };
 
-  renderDay = (fullDay) => {
+  renderDay = fullDay => {
     const day = fullDay.getDate();
 
     return (
