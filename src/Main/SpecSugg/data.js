@@ -4,28 +4,28 @@ import circle from './tr-circle.png';
 
 const specData = [
   {
-    title: 'TicketsFrom499Rub',
+    title: 'tickets_from_499_rub',
     topImg: null,
     aviaImg: pobeda,
     price: 499,
     days: 45,
-    description: 'TicketsFrom499RubOffer',
+    description: 'tickets_from_499_rub_offer',
   },
   {
-    title: 'TicketsNewYork',
+    title: 'tickets_new_york',
     topImg: circle,
     aviaImg: lufthansa,
     price: 20680,
     days: 19,
-    description: 'TicketsNewYorkOffer',
+    description: 'tickets_new_york_offer',
   },
   {
-    title: 'TicketsLosAngeles',
+    title: 'tickets_los_angeles',
     topImg: circle,
     aviaImg: lufthansa,
     price: 20360,
     days: 19,
-    description: 'TicketsLosAngelesOffer',
+    description: 'tickets_los_angeles_offer',
   },
 ];
 

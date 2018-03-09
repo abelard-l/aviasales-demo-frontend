@@ -82,43 +82,19 @@ const BestPrice = ({ bestPriceInfo }) => (
     </Title>
     <CitiesAndPrices>
       <Cities>
-        <FromCity>{translate(bestPriceInfo.cities[0].name)}</FromCity>
-        <FromCity>{translate(bestPriceInfo.cities[1].name)}</FromCity>
-        <FromCity>{translate(bestPriceInfo.cities[2].name)}</FromCity>
-        <FromCity>{translate(bestPriceInfo.cities[3].name)}</FromCity>
-        <FromCity>{translate(bestPriceInfo.cities[4].name)}</FromCity>
+        {bestPriceInfo.cities.map(city => (
+          <FromCity key={city.id}>{translate(city.name)}</FromCity>
+        ))}
       </Cities>
       <Prices>
-        <Price>
-          <BlueLink>
-            от {makeDigits(bestPriceInfo.cities[0].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(bestPriceInfo.cities[1].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(bestPriceInfo.cities[2].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(bestPriceInfo.cities[3].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
-        <Price>
-          <BlueLink>
-            от {makeDigits(bestPriceInfo.cities[4].price)}
-            <Rouble />
-          </BlueLink>
-        </Price>
+        {bestPriceInfo.cities.map(city => (
+          <Price key={city.id}>
+            <BlueLink>
+              {makeDigits(city.price)}
+              <Rouble />
+            </BlueLink>
+          </Price>
+        ))}
       </Prices>
     </CitiesAndPrices>
   </Card>
