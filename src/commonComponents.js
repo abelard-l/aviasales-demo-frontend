@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
 
 export const BlueLink = styled.a`
   color: #00ace2;
@@ -30,3 +31,13 @@ export const HeaderCenter = styled.h2`
   margin-top: 20px;
   text-align: center;
 `;
+
+export const RoubleStyle = styled.span`
+  font-family: Rouble;
+`;
+
+export class Rouble extends Component {
+  render() {
+    return <RoubleStyle>p</RoubleStyle>;
+  }
+}

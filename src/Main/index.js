@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "../Header";
 import Top from "./Top";
 import Cards from "./Cards";
 import BestPrices from "./BestPrices";
@@ -14,14 +15,17 @@ const Main = styled.main`
 `;
 
 export default () => (
-  <Main>
-    <Top />
-    <Cards />
-    <BestPrices />
-    <PricelessTickets />
-    <WannaKnow />
-    <SpecSugg />
-    <Information />
-    <DownloadMobApp />
-  </Main>
+  <React.Fragment>
+    <Header />
+    <Main>
+      <Top />
+      <Cards />
+      <BestPrices />
+      <PricelessTickets />
+      <WannaKnow />
+      <SpecSugg />
+      <Information />
+      <DownloadMobApp />
+    </Main>
+  </React.Fragment>
 );

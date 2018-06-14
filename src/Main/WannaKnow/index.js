@@ -66,18 +66,21 @@ const Caption = styled.span`
 const Input = styled.input`
   border: 1px solid #a0b0b9;
   border-radius: 2px;
+  box-sizing: border-box;
   color: #a0b0b9;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
-  max-width: 191x;
+  max-width: 171px;
   padding: 7px;
 `;
+
 const Subscribe = styled.button`
   color: white;
   background-color: #ff8e41;
   border: none;
+  box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
   max-width: 139px;
