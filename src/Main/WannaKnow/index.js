@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import twitter from "./twitter.png";
-import facebook from "./facebook.png";
-import vk from "./vk.png";
-import rss from "./rss.png";
-import imgTopBorder from "./border-top.png";
+import React from 'react';
+import styled from 'styled-components';
+import twitter from './twitter.png';
+import facebook from './facebook.png';
+import vk from './vk.png';
+import rss from './rss.png';
+import imgTopBorder from './border-top.png';
 
 const WannaKnowWrap = styled.section`
   background: url(${imgTopBorder}) repeat-x top center;
@@ -66,18 +66,21 @@ const Caption = styled.span`
 const Input = styled.input`
   border: 1px solid #a0b0b9;
   border-radius: 2px;
+  box-sizing: border-box;
   color: #a0b0b9;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
-  max-width: 191x;
+  max-width: 171px;
   padding: 7px;
 `;
+
 const Subscribe = styled.button`
   color: white;
   background-color: #ff8e41;
   border: none;
+  box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
   max-width: 139px;
@@ -94,8 +97,7 @@ export default () => (
             <WannaDiscount>
               <Caption>Хотите знать всё о скидках на авиабилеты?</Caption>
               <br />
-              Вы можете подписаться на нашу рассылку через соцсети или по
-              электронной почте.
+              Вы можете подписаться на нашу рассылку через соцсети или по электронной почте.
             </WannaDiscount>
             <SocialMedias>
               <SocialMedia src={twitter} />

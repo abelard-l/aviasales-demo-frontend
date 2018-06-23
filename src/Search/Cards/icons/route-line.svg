@@ -1,0 +1,12 @@
+<svg width="205" height="1" viewBox="0 0 205 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>segmentRoutePathLine</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6124 -511)">
+<g id="segmentRoutePathLine">
+<use xlink:href="#path0_fill" transform="translate(6124 511)" fill="#A0B0B9"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 205 0L 205 1L 0 1L 0 0Z"/>
+</defs>
+</svg>

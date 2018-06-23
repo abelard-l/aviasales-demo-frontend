@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const LinksToInformation = styled.section`
   border-bottom: 1px solid #e0e6e8;

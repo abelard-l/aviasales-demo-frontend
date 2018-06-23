@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import bgIphone from "./iphone.png";
-import apple from "./apple.svg";
-import android from "./android.svg";
-import wf from "./wf.svg";
-import star from "./star.svg";
-import halfStar from "./halfstar.svg";
+import React from 'react';
+import styled from 'styled-components';
+import bgIphone from './iphone.png';
+import apple from './apple.svg';
+import android from './android.svg';
+import wf from './wf.svg';
+import star from './star.svg';
+import halfStar from './halfstar.svg';
 
 const DownloadMobApp = styled.section`
   border: 1px solid #ffffff;

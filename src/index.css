@@ -1,7 +1,16 @@
+@font-face {
+  font-family: Rouble;
+  src: url(res/fonts/rouble.ttf);
+}
+
 body {
   color: #4a4a4a;
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }

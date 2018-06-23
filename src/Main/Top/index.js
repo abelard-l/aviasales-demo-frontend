@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import compass from "./compass.svg";
-import pen from "./edit.svg";
-import { BlueLink, HeaderCenter } from "../../commonComponents";
-import anywhere from "./anywhere.svg";
-import sunandsea from "./sunandsea.svg";
-import shopping from "./shopping.svg";
-import culture from "./culture.svg";
-import nightlife from "./night-life.svg";
-import children from "./children.svg";
+import React from 'react';
+import styled from 'styled-components';
+import compass from './compass.svg';
+import pen from './edit.svg';
+import { BlueLink, HeaderCenter } from '../../commonComponents';
+import anywhere from './anywhere.svg';
+import sunandsea from './sunandsea.svg';
+import shopping from './shopping.svg';
+import culture from './culture.svg';
+import nightlife from './night-life.svg';
+import children from './children.svg';
 
 const Top = styled.section`
   margin-bottom: 55px;

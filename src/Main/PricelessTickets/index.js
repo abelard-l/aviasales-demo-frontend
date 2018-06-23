@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import aeroflot from "./aeroflot.png";
-import airlines from "./airlines.png";
-import onetwortip from "./onetwortip.png";
-import koreanair from "./korean-air.png";
-import elal from "./elal.png";
-import arrow from "./arrow.svg";
+import React from 'react';
+import styled from 'styled-components';
+import aeroflot from './aeroflot.png';
+import airlines from './airlines.png';
+import onetwortip from './onetwortip.png';
+import koreanair from './korean-air.png';
+import elal from './elal.png';
+import arrow from './arrow.svg';
 
 const PricelessTickets = styled.section`
   display: none;
