@@ -1,4 +1,4 @@
-export const lang = {
+const lang = {
   krasnodar: 'Краснодар',
   russia: 'Россия',
   sochi_adler: 'Сочи (Адлер)',

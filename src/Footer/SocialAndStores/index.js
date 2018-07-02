@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GrayLink } from '../../commonComponents';
+import { GrayLink } from '../../Common/commonComponents';
 import vk from './vk.svg';
 import facebook from './facebook.svg';
 import instagram from './instagram.svg';

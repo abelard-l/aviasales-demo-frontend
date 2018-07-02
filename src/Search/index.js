@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Header from '../Header';
-import Filters from './Filters';
+import Filter from './Filter';
 import Hamburger from './Hamburger';
 import ToTop from './ToTop';
 import Cards from './Cards';
-import Filter from './Filter';
+import MoreTickets from './MoreTickets';
 
 const Search = styled.main`
   background-color: #eaeaea;
@@ -28,11 +28,11 @@ export default () => (
         <Hamburger />
         <div className="row">
           <div className="col-xl-3 hidden-lg hidden-md hidden-sm hidden-xs">
-            <Filters />
+            <Filter />
           </div>
           <div className="col-xl-7">
             <Cards />
-            <Filter />
+            <MoreTickets />
           </div>
         </div>
       </div>

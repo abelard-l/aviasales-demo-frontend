@@ -3,8 +3,8 @@ import ruLocale from 'date-fns/locale/ru';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { BlueLink, Rouble } from '../../commonComponents';
-import { makeDigits, translate } from '../../commonFunctions';
+import { BlueLink, Rouble } from '../../Common/commonComponents';
+import { makeDigits, translate } from '../../Common/commonFunctions';
 
 const CardPic = styled.img`
   border-top-left-radius: 4px;

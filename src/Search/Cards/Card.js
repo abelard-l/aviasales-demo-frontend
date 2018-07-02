@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import FlightRoute from './FlightRoute';
 import BaggageRules from './BaggageRules';
 import Mark from './Mark';
-import { Rouble } from '../../commonComponents';
-import { makeDigits, translate } from '../../commonFunctions';
+import { Rouble } from '../../Common/commonComponents';
+import { makeDigits, translate } from '../../Common/commonFunctions';
 import arrowDown from './icons/arrow-down.svg';
 import followArrow from './icons/follow-arrow.svg';
 

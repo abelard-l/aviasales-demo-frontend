@@ -9,7 +9,7 @@ import pin from './icons/pin.svg';
 import planeTakingOff from './icons/plane-taking-off.svg';
 import routeLine from './icons/route-line.svg';
 
-import { translate } from '../../commonFunctions';
+import { translate } from '../../Common/commonFunctions';
 
 import clock from './icons/clock.svg';
 import planeTo from './icons/plane-to.svg';

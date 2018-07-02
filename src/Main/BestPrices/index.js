@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeaderCenter } from '../../commonComponents';
+import { HeaderCenter } from '../../Common/commonComponents';
 import calendar from './calendar.svg';
 import bestPricesData from './data';
 import BestPrice from './BestPrice';

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import compass from './compass.svg';
 import pen from './edit.svg';
-import { BlueLink, HeaderCenter } from '../../commonComponents';
+import { BlueLink, HeaderCenter } from '../../Common/commonComponents';
 import anywhere from './anywhere.svg';
 import sunandsea from './sunandsea.svg';
 import shopping from './shopping.svg';

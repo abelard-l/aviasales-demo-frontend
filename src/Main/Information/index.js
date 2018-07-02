@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import plane from './plane.png';
 import at from './at.png';
 import list from './list.png';
-import { BlueLink } from '../../commonComponents';
+import { BlueLink } from '../../Common/commonComponents';
 
 const Information = styled.section``;
 

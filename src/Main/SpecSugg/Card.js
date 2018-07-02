@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Rouble } from '../../commonComponents';
-import { makeDigits, translate } from '../../commonFunctions';
+import { Rouble } from '../../Common/commonComponents';
+import { makeDigits, translate } from '../../Common/commonFunctions';
 
 const CardWrap = styled.div`
   background: white;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { BlueLink, Rouble } from '../../commonComponents';
-import { makeDigits, translate } from '../../commonFunctions';
+import { BlueLink, Rouble } from '../../Common/commonComponents';
+import { makeDigits, translate } from '../../Common/commonFunctions';
 
 const Card = styled.div`
   flex-basis: 100%;
