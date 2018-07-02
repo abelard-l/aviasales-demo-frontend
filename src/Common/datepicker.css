@@ -1,5 +1,13 @@
 /* DayPicker styles */
 
+.DayPicker {
+  box-sizing: border-box;
+}
+
+.DayPicker * {
+  box-sizing: inherit;
+}
+
 .DayPicker-Caption {
   text-align: center;
 }

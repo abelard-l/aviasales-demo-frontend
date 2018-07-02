@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Header from '../Header';
+import Header from './Header';
 import Filter from './Filter';
 import Hamburger from './Hamburger';
 import ToTop from './ToTop';
